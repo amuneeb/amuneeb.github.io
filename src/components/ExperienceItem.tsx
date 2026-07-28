@@ -15,7 +15,10 @@ export function ExperienceItem({ role }: { role: Role }) {
       <ul className="mt-3 space-y-1.5 text-sm text-neutral-700 dark:text-neutral-300">
         {role.highlights.map((highlight) => (
           <li key={highlight} className="flex gap-2">
-            <span aria-hidden="true" className="text-teal-600 dark:text-teal-400">
+            <span
+              aria-hidden="true"
+              className="text-accent-600 dark:text-accent-400"
+            >
               —
             </span>
             {highlight}

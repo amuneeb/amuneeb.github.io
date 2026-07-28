@@ -1,3 +1,46 @@
+/**
+ * All site content in one place. Components render this data and never
+ * hard-code copy, so editing the site means editing this file only.
+ */
+
+export type ProjectLink = {
+  label: string;
+  href: string;
+};
+
+export type ProjectImage = {
+  /** Path under /public. */
+  src: string;
+  alt: string;
+};
+
+export type Project = {
+  /** Stable id used for DOM ids and React keys. */
+  slug: string;
+  name: string;
+  /** Short status label rendered as the card badge. */
+  badge: "Live" | "In progress" | "Production";
+  description: string;
+  /** Headline outcome, rendered prominently on the card. */
+  impact?: string;
+  stack: readonly string[];
+  links: readonly ProjectLink[];
+  image: ProjectImage | null;
+};
+
+export type Role = {
+  company: string;
+  title: string;
+  period: string;
+  summary: string;
+  highlights: readonly string[];
+};
+
+export type SkillGroup = {
+  group: string;
+  items: readonly string[];
+};
+
 export const profile = {
   name: "Muneeb Abbasi",
   title: "Principal AI Engineer",
@@ -9,42 +52,27 @@ export const profile = {
   resumeUrl: "/Muneeb-Abbasi-Resume.pdf",
   intro:
     "I build enterprise AI platforms that turn messy business workflows into intelligent, automated systems — from RAG knowledge platforms and AI copilots to cloud-native automation on Azure. I've spent 15+ years shipping software at enterprise scale, including a decade at Microsoft, and I care most about pairing hands-on engineering with real, measurable business outcomes.",
-};
+} as const;
 
-export type Project = {
-  /** Stable id used for DOM ids and keys. */
-  slug: string;
-  name: string;
-  status: "Live demo" | "MVP" | "In progress";
-  description: string;
-  stack: string[];
-  demoUrl: string | null;
-  repoUrl: string | null;
-  /** Path under /public to a screenshot, plus its alt text. */
-  image: { src: string; alt: string } | null;
-};
-
-export const projects: Project[] = [
+export const featuredProjects: readonly Project[] = [
   {
     slug: "career-vault",
     name: "Career Vault",
-    status: "Live demo",
+    badge: "In progress",
     description:
       "AI-powered career dashboard — track applications, tailor resumes with LLMs, and surface insights about your job search in one place.",
     stack: ["React", "FastAPI", "LLM agents", "PostgreSQL"],
-    demoUrl: null,
-    repoUrl: null,
+    links: [],
     image: null,
   },
   {
     slug: "falah-academy",
     name: "Falah Academy",
-    status: "MVP",
+    badge: "Live",
     description:
       "Website for Kent's first full-time Islamic school — programs, admissions, and events, designed and shipped end to end on a custom domain.",
     stack: ["Web design", "Static site", "GitHub Pages"],
-    demoUrl: "https://www.falahacademywa.org",
-    repoUrl: null,
+    links: [{ label: "Visit website", href: "https://www.falahacademywa.org" }],
     image: {
       src: "/images/falah-academy.png",
       alt: "Screenshot of the Falah Academy website homepage",
@@ -52,25 +80,74 @@ export const projects: Project[] = [
   },
 ];
 
-export type Role = {
-  company: string;
-  title: string;
-  period: string;
-  summary: string;
-  highlights: string[];
-};
+export const enterpriseProjects: readonly Project[] = [
+  {
+    slug: "ai-operations-platform",
+    name: "AI inventory & operations platform",
+    badge: "Production",
+    description:
+      "Enterprise AI platform unifying inventory, supply chain, procurement, and customer operations with LLMs, RAG, AI agents, and semantic search.",
+    impact: "Reduced manual reconciliation by 90%",
+    stack: ["Python", "FastAPI", "React", "PostgreSQL", "Microservices"],
+    links: [],
+    image: null,
+  },
+  {
+    slug: "network-infrastructure-copilot",
+    name: "Network Infrastructure Copilot",
+    badge: "Production",
+    description:
+      "AI copilot at Microsoft giving engineers natural language access to telemetry, KPIs, and incidents — accelerating investigation and decision-making.",
+    impact: "Increased engineering productivity by 35%",
+    stack: ["LLMs", "RAG", "Semantic search", "Telemetry"],
+    links: [],
+    image: null,
+  },
+  {
+    slug: "ai-knowledge-platform",
+    name: "Enterprise AI knowledge platform",
+    badge: "Production",
+    description:
+      "RAG and vector-search platform at Microsoft unifying knowledge across engineering systems, documentation, and operational repositories.",
+    impact: "Cut engineering research time by 60%",
+    stack: ["RAG", "Vector search", "Azure OpenAI"],
+    links: [],
+    image: null,
+  },
+  {
+    slug: "network-device-automation",
+    name: "Network device automation system",
+    badge: "Production",
+    description:
+      "Cloud-native platform at Microsoft orchestrating scheduling, deployment, validation, and monitoring for global network infrastructure upgrades.",
+    impact: "60% less manual scheduling · 99.9% availability",
+    stack: [".NET Core", "Azure Functions", "Event-driven"],
+    links: [],
+    image: null,
+  },
+  {
+    slug: "process-optimization-platform",
+    name: "Business process optimization platform",
+    badge: "Production",
+    description:
+      "Workflow orchestration platform at Microsoft combining telemetry, operational intelligence, and AI-driven recommendations to remove process bottlenecks.",
+    impact: "Improved process efficiency by 40%",
+    stack: ["Workflow orchestration", "Telemetry", "Operational analytics"],
+    links: [],
+    image: null,
+  },
+];
 
-export const experience: Role[] = [
+export const experience: readonly Role[] = [
   {
     company: "Global e-commerce & retail company",
     title: "Principal AI Engineer",
     period: "Feb 2025 – Present",
     summary:
-      "Enterprise AI platform for inventory, supply chain, and customer operations — LLMs, RAG, AI agents, and semantic search over unified enterprise data.",
+      "Own end-to-end delivery of an enterprise AI platform for inventory, supply chain, and customer operations.",
     highlights: [
-      "Reduced manual reconciliation by 90% with LLM- and agent-powered workflows",
-      "Designed and delivered the platform end to end: Python, FastAPI, React, PostgreSQL, microservices",
-      "Led customer-facing discovery, architecture, and solution demos through to production adoption",
+      "Partner directly with customers and stakeholders to translate business challenges into scalable AI solutions",
+      "Lead technical discovery, solution architecture, workshops, and demonstrations through to production adoption",
     ],
   },
   {
@@ -80,20 +157,14 @@ export const experience: Role[] = [
     summary:
       "A decade building cloud-native automation and AI platforms for Microsoft's global network infrastructure — from workflow orchestration to enterprise AI copilots.",
     highlights: [
-      "Built an AI copilot (LLMs + RAG + telemetry) that increased engineering productivity by 35%",
-      "Cut engineering research time by 60% with an enterprise AI knowledge platform",
-      "Reduced manual network device scheduling by 60%; 99.9% platform availability",
-      "Shipped event-driven microservices on .NET Core and Azure Functions at global scale",
+      "Led technical discovery and solution architecture with engineering customers, program managers, and infrastructure stakeholders",
+      "Designed event-driven microservices on .NET Core and Azure Functions operating at global scale",
+      "Presented architectures and technical demonstrations to stakeholders, owning solutions from requirements to production",
     ],
   },
 ];
 
-export type SkillGroup = {
-  group: string;
-  items: string[];
-};
-
-export const skills: SkillGroup[] = [
+export const skills: readonly SkillGroup[] = [
   {
     group: "AI & LLMs",
     items: [

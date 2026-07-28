@@ -1,5 +1,12 @@
-import { profile, projects, experience, skills } from "@/data/profile";
-import { ExternalLink } from "@/components/ExternalLink";
+import {
+  profile,
+  featuredProjects,
+  enterpriseProjects,
+  experience,
+  skills,
+} from "@/data/profile";
+import { ButtonLink } from "@/components/ui/ButtonLink";
+import { InlineLink } from "@/components/ui/InlineLink";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ExperienceItem } from "@/components/ExperienceItem";
@@ -10,7 +17,7 @@ export default function Home() {
     <>
       <main id="main" className="mx-auto w-full max-w-3xl px-6 py-16 sm:py-24">
         <header className="mb-20">
-          <p className="mb-3 text-sm font-medium text-teal-700 dark:text-teal-400">
+          <p className="text-accent-700 dark:text-accent-400 mb-3 text-sm font-medium">
             {profile.location}
           </p>
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -23,31 +30,18 @@ export default function Home() {
             {profile.intro}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#projects"
-              className="rounded-lg bg-neutral-900 px-4 py-2 text-sm font-medium text-white hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
-            >
+            <ButtonLink href="#projects" variant="primary">
               View projects
-            </a>
-            <a
-              href={profile.resumeUrl}
-              download
-              className="rounded-lg border border-neutral-300 px-4 py-2 text-sm font-medium hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-800"
-            >
+            </ButtonLink>
+            <ButtonLink href={profile.resumeUrl} download>
               Download resume<span className="sr-only"> (PDF)</span>
-            </a>
-            <ExternalLink
-              href={profile.github}
-              className="rounded-lg border border-neutral-300 px-4 py-2 text-sm font-medium hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-800"
-            >
+            </ButtonLink>
+            <ButtonLink href={profile.github} external>
               GitHub
-            </ExternalLink>
-            <ExternalLink
-              href={profile.linkedin}
-              className="rounded-lg border border-neutral-300 px-4 py-2 text-sm font-medium hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-800"
-            >
+            </ButtonLink>
+            <ButtonLink href={profile.linkedin} external>
               LinkedIn
-            </ExternalLink>
+            </ButtonLink>
           </div>
         </header>
 
@@ -56,9 +50,27 @@ export default function Home() {
           aria-labelledby="projects-heading"
           className="mb-20 scroll-mt-8"
         >
-          <SectionHeading id="projects-heading">Featured projects</SectionHeading>
+          <SectionHeading id="projects-heading">
+            Featured projects
+          </SectionHeading>
           <div className="mt-6 grid gap-5 sm:grid-cols-2">
-            {projects.map((project) => (
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+        </section>
+
+        <section aria-labelledby="enterprise-heading" className="mb-20">
+          <SectionHeading id="enterprise-heading">
+            Enterprise platform work
+          </SectionHeading>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+            Production platforms I designed and delivered for Microsoft and a
+            global e-commerce company. Proprietary systems — no public demos —
+            but each shipped at enterprise scale with measured outcomes.
+          </p>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2">
+            {enterpriseProjects.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
@@ -95,28 +107,19 @@ export default function Home() {
           </p>
           <ul className="mt-4 flex flex-wrap gap-4 text-sm font-medium">
             <li>
-              <a
-                href={`mailto:${profile.email}`}
-                className="text-teal-700 hover:underline dark:text-teal-400"
-              >
+              <InlineLink href={`mailto:${profile.email}`}>
                 {profile.email}
-              </a>
+              </InlineLink>
             </li>
             <li>
-              <ExternalLink
-                href={profile.github}
-                className="text-teal-700 hover:underline dark:text-teal-400"
-              >
+              <InlineLink href={profile.github} external>
                 GitHub
-              </ExternalLink>
+              </InlineLink>
             </li>
             <li>
-              <ExternalLink
-                href={profile.linkedin}
-                className="text-teal-700 hover:underline dark:text-teal-400"
-              >
+              <InlineLink href={profile.linkedin} external>
                 LinkedIn
-              </ExternalLink>
+              </InlineLink>
             </li>
           </ul>
           <p className="mt-10 text-xs text-neutral-500">

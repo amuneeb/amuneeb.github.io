@@ -12,6 +12,20 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/*
+ * Accent design tokens. Components reference accent-* classes only, so
+ * rebranding the site is a change to this block alone.
+ */
+@theme {
+  --color-accent-50: #f0fdfa;
+  --color-accent-300: #5eead4;
+  --color-accent-400: #2dd4bf;
+  --color-accent-600: #0d9488;
+  --color-accent-700: #0f766e;
+  --color-accent-800: #115e59;
+  --color-accent-950: #042f2e;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -32,6 +46,6 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid #0d9488;
+  outline: 2px solid var(--color-accent-600);
   outline-offset: 2px;
 }

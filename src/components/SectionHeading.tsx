@@ -10,7 +10,7 @@ export function SectionHeading({ id, children }: SectionHeadingProps) {
   return (
     <h2
       id={id}
-      className="text-sm font-medium tracking-widest uppercase text-teal-700 dark:text-teal-400"
+      className="text-accent-700 dark:text-accent-400 text-sm font-medium tracking-widest uppercase"
     >
       {children}
     </h2>
