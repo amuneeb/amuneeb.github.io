@@ -5,7 +5,7 @@ export const profile = {
   location: "Kent, WA",
   email: "abbasiamuneeb@outlook.com",
   github: "https://github.com/amuneeb",
-  linkedin: "https://www.linkedin.com/in/muneeb-abbasi",
+  linkedin: "https://www.linkedin.com/in/abdul-muneeb-abbasi/",
   intro:
     "I build enterprise AI platforms that turn messy business workflows into intelligent, automated systems — from RAG knowledge platforms and AI copilots to cloud-native automation on Azure. I've spent 15+ years shipping software at enterprise scale, including a decade at Microsoft, and I care most about pairing hands-on engineering with real, measurable business outcomes.",
 };
