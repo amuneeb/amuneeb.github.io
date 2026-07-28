@@ -1,15 +1,51 @@
 import Image from "next/image";
-import type { Project } from "@/data/profile";
+import type { Project, ProjectImage } from "@/data/profile";
 import { InlineLink } from "@/components/ui/InlineLink";
 
-/** Rendered dimensions of card screenshots (8:5 aspect ratio). */
-const CARD_IMAGE = { width: 800, height: 500 } as const;
+const CARD_IMAGE_CLASSES =
+  "h-auto w-full border-b border-neutral-200 dark:border-neutral-800";
 
 const BADGE_CLASSES =
   "rounded-full bg-accent-50 px-2.5 py-0.5 text-xs font-medium text-accent-800 dark:bg-accent-950 dark:text-accent-300";
 
 const STACK_ITEM_CLASSES =
   "rounded-md bg-neutral-100 px-2 py-0.5 text-xs text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400";
+
+/**
+ * Card header image. Animated images declare a staticSrc, which is
+ * served to users who prefer reduced motion (WCAG 2.2.2).
+ */
+function CardImage({ image }: { image: ProjectImage }) {
+  if (!image.staticSrc) {
+    return (
+      <Image
+        src={image.src}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        className={CARD_IMAGE_CLASSES}
+      />
+    );
+  }
+  return (
+    <>
+      <Image
+        src={image.src}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        className={`motion-reduce:hidden ${CARD_IMAGE_CLASSES}`}
+      />
+      <Image
+        src={image.staticSrc}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        className={`hidden motion-reduce:block ${CARD_IMAGE_CLASSES}`}
+      />
+    </>
+  );
+}
 
 export function ProjectCard({ project }: { project: Project }) {
   const headingId = `project-${project.slug}`;
@@ -19,15 +55,7 @@ export function ProjectCard({ project }: { project: Project }) {
       aria-labelledby={headingId}
       className="flex flex-col overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800"
     >
-      {project.image && (
-        <Image
-          src={project.image.src}
-          alt={project.image.alt}
-          width={CARD_IMAGE.width}
-          height={CARD_IMAGE.height}
-          className="aspect-8/5 w-full border-b border-neutral-200 object-cover object-top dark:border-neutral-800"
-        />
-      )}
+      {project.image && <CardImage image={project.image} />}
       <div className="flex flex-1 flex-col p-5">
         <div className="mb-2 flex items-center justify-between gap-2">
           <h3 id={headingId} className="font-semibold">

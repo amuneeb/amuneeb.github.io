@@ -12,6 +12,13 @@ export type ProjectImage = {
   /** Path under /public. */
   src: string;
   alt: string;
+  width: number;
+  height: number;
+  /**
+   * Non-animated equivalent, shown when the user prefers reduced
+   * motion. Required whenever src is animated.
+   */
+  staticSrc?: string;
 };
 
 export type Project = {
@@ -70,12 +77,14 @@ export const featuredProjects: readonly Project[] = [
     name: "Falah Academy",
     badge: "Live",
     description:
-      "Website for Kent's first full-time Islamic school — programs, admissions, and events, designed and shipped end to end on a custom domain.",
+      "Website for Kent's first full-time Islamic school — programs, admissions, and events, designed and shipped end to end on a custom domain. Launched as an MVP, with additional functionality in active development.",
     stack: ["Web design", "Static site", "GitHub Pages"],
     links: [{ label: "Visit website", href: "https://www.falahacademywa.org" }],
     image: {
       src: "/images/falah-academy.png",
       alt: "Screenshot of the Falah Academy website homepage",
+      width: 800,
+      height: 500,
     },
   },
 ];
@@ -89,8 +98,19 @@ export const enterpriseProjects: readonly Project[] = [
       "Enterprise AI platform unifying inventory, supply chain, procurement, and customer operations with LLMs, RAG, AI agents, and semantic search.",
     impact: "Reduced manual reconciliation by 90%",
     stack: ["Python", "FastAPI", "React", "PostgreSQL", "Microservices"],
-    links: [],
-    image: null,
+    links: [
+      {
+        label: "View full architecture",
+        href: "/images/ai-operations-architecture.png",
+      },
+    ],
+    image: {
+      src: "/images/ai-operations-architecture.gif",
+      staticSrc: "/images/ai-operations-architecture.png",
+      alt: "Architecture diagram of the AI-powered ERP platform, highlighting each layer in turn: user channels, edge and security, AI platform, business microservices, data, integration, and cloud infrastructure, connected by an event-driven backbone",
+      width: 880,
+      height: 587,
+    },
   },
   {
     slug: "network-infrastructure-copilot",
