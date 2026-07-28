@@ -11,6 +11,8 @@ export const profile = {
 };
 
 export type Project = {
+  /** Stable id used for DOM ids and keys. */
+  slug: string;
   name: string;
   status: "Live demo" | "MVP" | "In progress";
   description: string;
@@ -21,6 +23,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "career-vault",
     name: "Career Vault",
     status: "Live demo",
     description:
@@ -30,6 +33,7 @@ export const projects: Project[] = [
     repoUrl: null,
   },
   {
+    slug: "falah-academy",
     name: "Falah Academy",
     status: "MVP",
     description:
@@ -76,7 +80,12 @@ export const experience: Role[] = [
   },
 ];
 
-export const skills: { group: string; items: string[] }[] = [
+export type SkillGroup = {
+  group: string;
+  items: string[];
+};
+
+export const skills: SkillGroup[] = [
   {
     group: "AI & LLMs",
     items: [

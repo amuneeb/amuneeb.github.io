@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://amuneeb.github.io"),
   title: "Muneeb Abbasi — Principal AI Engineer",
   description:
     "Principal AI Engineer building enterprise AI platforms — LLMs, RAG, AI agents, and cloud-native systems on Azure. 15+ years of experience, ex-Microsoft.",
@@ -44,7 +45,15 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-neutral-900 focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white dark:focus:bg-white dark:focus:text-neutral-900"
+        >
+          Skip to main content
+        </a>
+        {children}
+      </body>
     </html>
   );
 }
