@@ -62,12 +62,22 @@ export const featuredProjects: readonly Project[] = [
   {
     slug: "career-vault",
     name: "Career Vault",
-    badge: "In progress",
+    badge: "Live",
     description:
-      "AI-powered career dashboard — track applications, tailor resumes with LLMs, and surface insights about your job search in one place.",
+      "AI-powered career dashboard — track applications, interviews, and connections, and surface insights about your job search in one place. The live demo runs on synthetic data.",
     stack: ["React", "FastAPI", "LLM agents", "PostgreSQL"],
-    links: [],
-    image: null,
+    links: [
+      {
+        label: "Try the live demo",
+        href: "https://career-vault-demo.pages.dev/",
+      },
+    ],
+    image: {
+      src: "/images/career-vault.png",
+      alt: "Screenshot of the Career Vault dashboard showing a two-week calendar and job-search stat tiles",
+      width: 800,
+      height: 500,
+    },
   },
   {
     slug: "falah-academy",
