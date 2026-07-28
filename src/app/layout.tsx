@@ -23,6 +23,20 @@ export const metadata: Metadata = {
     description: site.ogDescription,
     url: site.url,
     type: "website",
+    images: [
+      {
+        url: site.ogImage.path,
+        width: site.ogImage.width,
+        height: site.ogImage.height,
+        alt: site.ogImage.alt,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.title,
+    description: site.ogDescription,
+    images: [site.ogImage.path],
   },
 };
 

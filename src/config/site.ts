@@ -15,4 +15,10 @@ export const site = {
     "Azure",
     "Seattle",
   ],
+  ogImage: {
+    path: "/images/og.png",
+    width: 1200,
+    height: 630,
+    alt: "Muneeb Abbasi — Principal AI Engineer. LLMs, RAG & agentic systems, 15+ years, ex-Microsoft.",
+  },
 } as const;
