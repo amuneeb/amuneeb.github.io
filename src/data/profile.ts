@@ -14,11 +14,8 @@ export type ProjectImage = {
   alt: string;
   width: number;
   height: number;
-  /**
-   * Non-animated equivalent, shown when the user prefers reduced
-   * motion. Required whenever src is animated.
-   */
-  staticSrc?: string;
+  /** Apply casual-copy deterrents (no context menu, drag, or select). */
+  protect?: boolean;
 };
 
 export type Project = {
@@ -98,18 +95,13 @@ export const enterpriseProjects: readonly Project[] = [
       "Enterprise AI platform unifying inventory, supply chain, procurement, and customer operations with LLMs, RAG, AI agents, and semantic search.",
     impact: "Reduced manual reconciliation by 90%",
     stack: ["Python", "FastAPI", "React", "PostgreSQL", "Microservices"],
-    links: [
-      {
-        label: "View full architecture",
-        href: "/images/ai-operations-architecture.png",
-      },
-    ],
+    links: [],
     image: {
-      src: "/images/ai-operations-architecture.gif",
-      staticSrc: "/images/ai-operations-architecture.png",
-      alt: "Architecture diagram of the AI-powered ERP platform, highlighting each layer in turn: user channels, edge and security, AI platform, business microservices, data, integration, and cloud infrastructure, connected by an event-driven backbone",
-      width: 880,
-      height: 587,
+      src: "/images/ai-operations-architecture.png",
+      alt: "Architecture diagram of the AI inventory and operations platform: user channels, edge and security, AI platform, business microservices, data, integration, and cloud infrastructure layers, connected by an event-driven backbone",
+      width: 1100,
+      height: 733,
+      protect: true,
     },
   },
   {
