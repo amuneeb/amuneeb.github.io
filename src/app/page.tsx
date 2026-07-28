@@ -29,6 +29,13 @@ export default function Home() {
             >
               View projects
             </a>
+            <a
+              href={profile.resumeUrl}
+              download
+              className="rounded-lg border border-neutral-300 px-4 py-2 text-sm font-medium hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-800"
+            >
+              Download resume<span className="sr-only"> (PDF)</span>
+            </a>
             <ExternalLink
               href={profile.github}
               className="rounded-lg border border-neutral-300 px-4 py-2 text-sm font-medium hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-800"

@@ -6,6 +6,7 @@ export const profile = {
   email: "abbasiamuneeb@outlook.com",
   github: "https://github.com/amuneeb",
   linkedin: "https://www.linkedin.com/in/abdul-muneeb-abbasi/",
+  resumeUrl: "/Muneeb-Abbasi-Resume.pdf",
   intro:
     "I build enterprise AI platforms that turn messy business workflows into intelligent, automated systems — from RAG knowledge platforms and AI copilots to cloud-native automation on Azure. I've spent 15+ years shipping software at enterprise scale, including a decade at Microsoft, and I care most about pairing hands-on engineering with real, measurable business outcomes.",
 };
@@ -19,6 +20,8 @@ export type Project = {
   stack: string[];
   demoUrl: string | null;
   repoUrl: string | null;
+  /** Path under /public to a screenshot, plus its alt text. */
+  image: { src: string; alt: string } | null;
 };
 
 export const projects: Project[] = [
@@ -31,16 +34,21 @@ export const projects: Project[] = [
     stack: ["React", "FastAPI", "LLM agents", "PostgreSQL"],
     demoUrl: null,
     repoUrl: null,
+    image: null,
   },
   {
     slug: "falah-academy",
     name: "Falah Academy",
     status: "MVP",
     description:
-      "Online learning platform built end to end — course catalog, enrollment, and the full student experience.",
-    stack: ["Next.js", "TypeScript", "Full-stack"],
-    demoUrl: null,
+      "Website for Kent's first full-time Islamic school — programs, admissions, and events, designed and shipped end to end on a custom domain.",
+    stack: ["Web design", "Static site", "GitHub Pages"],
+    demoUrl: "https://www.falahacademywa.org",
     repoUrl: null,
+    image: {
+      src: "/images/falah-academy.png",
+      alt: "Screenshot of the Falah Academy website homepage",
+    },
   },
 ];
 
