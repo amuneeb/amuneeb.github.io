@@ -58,6 +58,8 @@ export type CaseStudy = {
   links: readonly CaseStudyLink[];
   stack: readonly string[];
   image: ProjectImage | null;
+  /** Architecture diagram rendered in its own section. */
+  architecture: ProjectImage | null;
 };
 
 export type Role = {
@@ -176,6 +178,12 @@ export const careerVaultCaseStudy: CaseStudy = {
     alt: "Screenshot of the Career Vault dashboard showing a two-week calendar and job-search stat tiles",
     width: 800,
     height: 500,
+  },
+  architecture: {
+    src: "/images/career-vault-architecture.svg",
+    alt: "Career Vault architecture diagram: sources (email accounts, company scout, job boards, GitHub activity) feed a seven-step GitHub Actions pipeline — fetch and parse, email triage, application and status tracking, fit scoring, hygiene, enrichment, and an integrity audit — writing to a git repository as the database, served by a React dashboard and API functions on Cloudflare Pages behind Zero Trust, with a human reviewing and applying and a Claude agent loop building tailored application packages",
+    width: 940,
+    height: 1660,
   },
 };
 

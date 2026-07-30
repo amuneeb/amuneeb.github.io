@@ -78,6 +78,24 @@ export default function CareerVaultPage() {
         </ul>
       </section>
 
+      {study.architecture && (
+        <section aria-labelledby="architecture-heading" className="mb-14">
+          <SectionHeading id="architecture-heading">
+            Architecture
+          </SectionHeading>
+          <div className="mt-4 overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
+            <ImageLightbox
+              src={study.architecture.src}
+              alt={study.architecture.alt}
+              width={study.architecture.width}
+              height={study.architecture.height}
+              protect={study.architecture.protect}
+              thumbnailClassName="h-auto w-full"
+            />
+          </div>
+        </section>
+      )}
+
       <section aria-labelledby="stack-heading" className="mb-14">
         <SectionHeading id="stack-heading">Built with</SectionHeading>
         <ul

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="1660" viewBox="0 0 940 1660" font-family="Segoe UI, system-ui, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#5a6a85"/>
+    </marker>
+    <marker id="arrCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#3fd0e9"/>
+    </marker>
+  </defs>
+
+  <rect width="940" height="1660" fill="#070b14"/>
+  <text x="40" y="56" fill="#e8edf6" font-size="30" font-weight="700">Career Vault — Architecture</text>
+  <text x="40" y="84" fill="#8b99b3" font-size="15">Agentic job-search operations platform · $0 infrastructure</text>
+  <text x="40" y="104" fill="#8b99b3" font-size="15">GitHub Actions free tier · Cloudflare free tier · keyless public APIs</text>
+
+  <!-- ============ SOURCES ============ -->
+  <text x="40" y="150" fill="#4f8ef7" font-size="14" font-weight="700" letter-spacing="2">1 · SOURCES — SWEPT EVERY REFRESH</text>
+  <g>
+    <rect x="40" y="164" width="426" height="112" rx="12" fill="#0b101d" stroke="#232e45" stroke-width="1.5"/>
+    <text x="58" y="194" fill="#e8edf6" font-size="17" font-weight="650">✉  Email accounts ×4</text>
+    <text x="58" y="220" fill="#8b99b3" font-size="14">Gmail + Outlook (Graph API): job-alert digests,</text>
+    <text x="58" y="240" fill="#8b99b3" font-size="14">ATS confirmations, status mail, calendars</text>
+
+    <rect x="474" y="164" width="426" height="112" rx="12" fill="#0b101d" stroke="#e6a23c" stroke-width="1.5"/>
+    <text x="492" y="194" fill="#e8edf6" font-size="17" font-weight="650">⌖  Company Scout — 2,800+ targets</text>
+    <text x="492" y="220" fill="#8b99b3" font-size="13.2">Public ATS APIs: Greenhouse, Lever, Ashby, SmartRecruiters</text>
+    <text x="492" y="240" fill="#8b99b3" font-size="14">Watchlist grows from pasted lists + companies named</text>
+    <text x="492" y="260" fill="#8b99b3" font-size="14">in LinkedIn hiring &amp; funding posts</text>
+
+    <rect x="40" y="288" width="426" height="112" rx="12" fill="#0b101d" stroke="#232e45" stroke-width="1.5"/>
+    <text x="58" y="318" fill="#e8edf6" font-size="17" font-weight="650">🌐  Boards &amp; feeds</text>
+    <text x="58" y="344" fill="#8b99b3" font-size="14">Dice API · Workday enterprise watchlist ·</text>
+    <text x="58" y="364" fill="#8b99b3" font-size="14">HN "Who is hiring?" · Remotive · RemoteOK</text>
+
+    <rect x="474" y="288" width="426" height="112" rx="12" fill="#0b101d" stroke="#232e45" stroke-width="1.5"/>
+    <text x="492" y="318" fill="#e8edf6" font-size="17" font-weight="650">⚙  GitHub activity</text>
+    <text x="492" y="344" fill="#8b99b3" font-size="14">Own-repo signal feed:</text>
+    <text x="492" y="364" fill="#8b99b3" font-size="14">commits, workflow health</text>
+  </g>
+  <line x1="470" y1="408" x2="470" y2="446" stroke="#5a6a85" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ============ PIPELINE ============ -->
+  <text x="40" y="472" fill="#4f8ef7" font-size="14" font-weight="700" letter-spacing="2">2 · PIPELINE — GITHUB ACTIONS, EVERY 2H + ON-DEMAND</text>
+  <rect x="40" y="486" width="860" height="392" rx="12" fill="#0b101d" stroke="#232e45" stroke-width="1.5"/>
+  <g>
+    <rect x="60" y="506" width="410" height="80" rx="10" fill="#0e1524" stroke="#232e45"/>
+    <text x="76" y="534" fill="#e8edf6" font-size="15" font-weight="650">① Fetch &amp; parse</text>
+    <text x="76" y="558" fill="#8b99b3" font-size="13.5">every source, per-source failure isolation</text>
+
+    <rect x="490" y="506" width="390" height="80" rx="10" fill="#0e1524" stroke="#232e45"/>
+    <text x="506" y="534" fill="#e8edf6" font-size="15" font-weight="650">② Deep email triage</text>
+    <text x="506" y="558" fill="#8b99b3" font-size="13.5">every email categorized (10 categories)</text>
+
+    <rect x="60" y="598" width="410" height="80" rx="10" fill="#0e1524" stroke="#8b7cf6"/>
+    <text x="76" y="626" fill="#e8edf6" font-size="15" font-weight="650">③ Application &amp; status tracking</text>
+    <text x="76" y="650" fill="#8b99b3" font-size="13.5">detect · fold duplicates · flip to rejected/</text>
+    <text x="76" y="668" fill="#8b99b3" font-size="13.5">interview/offer with the email as evidence</text>
+
+    <rect x="490" y="598" width="390" height="80" rx="10" fill="#0e1524" stroke="#4f8ef7"/>
+    <text x="506" y="626" fill="#e8edf6" font-size="15" font-weight="650">④ Fit scoring 1–10</text>
+    <text x="506" y="650" fill="#8b99b3" font-size="13.5">title + full-JD keywords, seniority synergy,</text>
+    <text x="506" y="668" fill="#8b99b3" font-size="13.5">location &amp; foreign floors, recency</text>
+
+    <rect x="60" y="690" width="410" height="80" rx="10" fill="#0e1524" stroke="#232e45"/>
+    <text x="76" y="718" fill="#e8edf6" font-size="15" font-weight="650">⑤ Hygiene</text>
+    <text x="76" y="742" fill="#8b99b3" font-size="13.5">cross-source dedupe · applied &amp; dismissed</text>
+    <text x="76" y="760" fill="#8b99b3" font-size="13.5">roles can never resurface</text>
+
+    <rect x="490" y="690" width="390" height="80" rx="10" fill="#0e1524" stroke="#232e45"/>
+    <text x="506" y="718" fill="#e8edf6" font-size="15" font-weight="650">⑥ Enrichment</text>
+    <text x="506" y="742" fill="#8b99b3" font-size="13.5">full JDs (company site first, board fallback),</text>
+    <text x="506" y="760" fill="#8b99b3" font-size="13.5">server-validated company logos</text>
+
+    <rect x="60" y="782" width="820" height="76" rx="10" fill="#0e1524" stroke="#34c07c"/>
+    <text x="76" y="810" fill="#e8edf6" font-size="15" font-weight="650">⑦ ✓ Integrity audit — every rule re-checked against the final data, every refresh</text>
+    <text x="76" y="834" fill="#8b99b3" font-size="13.5">violations are investigated to root cause and pinned with a test · 58 tests distilled from real incidents run in CI</text>
+  </g>
+  <line x1="470" y1="886" x2="470" y2="924" stroke="#5a6a85" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ============ DATA ============ -->
+  <rect x="130" y="928" width="680" height="96" rx="12" fill="#0b101d" stroke="#3fd0e9" stroke-width="1.5"/>
+  <text x="470" y="966" fill="#e8edf6" font-size="18" font-weight="700" text-anchor="middle">🗄  Git repository = the database</text>
+  <text x="470" y="994" fill="#8b99b3" font-size="14" text-anchor="middle">/data JSON: opportunities · applications · scout list · package requests · meta + audit</text>
+
+  <line x1="470" y1="1032" x2="470" y2="1070" stroke="#3fd0e9" stroke-width="2" marker-end="url(#arrCyan)"/>
+
+  <!-- ============ EDGE ============ -->
+  <rect x="40" y="1074" width="860" height="126" rx="12" fill="#0b101d" stroke="#232e45" stroke-width="1.5"/>
+  <text x="58" y="1104" fill="#3fd0e9" font-size="14" font-weight="700" letter-spacing="2">3 · EDGE — CLOUDFLARE PAGES + ZERO TRUST</text>
+  <text x="58" y="1132" fill="#e8edf6" font-size="15" font-weight="650">React dashboard  <tspan fill="#8b99b3" font-weight="400">fit-ranked grids · search everything · sorting · Scout tab · status control</tspan></text>
+  <text x="58" y="1160" fill="#e8edf6" font-size="15" font-weight="650">/api/* Functions  <tspan fill="#8b99b3" font-weight="400">apply · dismiss · set status · scout · refresh — conflict-safe commits back to the repo</tspan></text>
+  <text x="58" y="1184" fill="#5a6a85" font-size="13">behind Cloudflare Access (email-pinned OTP) · secrets only in Actions secrets + Pages env vars</text>
+
+  <line x1="470" y1="1208" x2="470" y2="1246" stroke="#5a6a85" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ============ HUMAN ============ -->
+  <rect x="40" y="1250" width="860" height="104" rx="12" fill="#0b101d" stroke="#e6a23c" stroke-width="1.5"/>
+  <text x="58" y="1280" fill="#e6a23c" font-size="14" font-weight="700" letter-spacing="2">4 · HUMAN IN THE LOOP</text>
+  <text x="58" y="1308" fill="#e8edf6" font-size="15">Reviews the ranked grid → clicks <tspan font-weight="700">Apply</tspan> / Dismiss → submits with tailored documents → interviews</text>
+  <text x="58" y="1336" fill="#8b99b3" font-size="13.5">manual status edits are locked — automation never overrides a human decision</text>
+
+  <line x1="470" y1="1362" x2="470" y2="1400" stroke="#5a6a85" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ============ AGENT ============ -->
+  <rect x="40" y="1404" width="860" height="152" rx="12" fill="#0b101d" stroke="#34c07c" stroke-width="1.5"/>
+  <text x="58" y="1434" fill="#34c07c" font-size="14" font-weight="700" letter-spacing="2">5 · AGENT LOOP — CLAUDE</text>
+  <text x="58" y="1462" fill="#e8edf6" font-size="15" font-weight="650">⚡ Instant wake:  <tspan fill="#8b99b3" font-weight="400">Apply click → commit → Action → PR-comment webhook → agent starts in seconds</tspan></text>
+  <text x="58" y="1490" fill="#8b99b3" font-size="14">Builds tailored resume + cover letter (docx/pdf) from a master profile — strict no-fabrication,</text>
+  <text x="58" y="1510" fill="#8b99b3" font-size="14">keyword coverage + honest gap report · files everything in a versioned vault repo</text>
+  <text x="58" y="1538" fill="#8b99b3" font-size="14">Hourly guardian: audit review · status sync · package backstop — results committed back to the same data</text>
+
+  <text x="40" y="1596" fill="#5a6a85" font-size="13">Reliability details that turned out to matter: chunked base64 commits · SHA-conflict retry writes · collision-proof row keys ·</text>
+  <text x="40" y="1616" fill="#5a6a85" font-size="13">applied-role resurfacing protection · manual-status locks · lossy-cron fallback dispatchers · scout quality gate at collection</text>
+</svg>
