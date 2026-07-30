@@ -5,10 +5,12 @@ import { ImageLightbox } from "@/components/ui/ImageLightbox";
 const CARD_IMAGE_CLASSES =
   "h-auto w-full border-b border-neutral-200 dark:border-neutral-800";
 
-const BADGE_CLASSES =
+/** Status-badge styling, shared with the case-study page. */
+export const BADGE_CLASSES =
   "rounded-full bg-accent-50 px-2.5 py-0.5 text-xs font-medium text-accent-800 dark:bg-accent-950 dark:text-accent-300";
 
-const STACK_ITEM_CLASSES =
+/** Tech-chip styling, shared with the case-study page. */
+export const STACK_ITEM_CLASSES =
   "rounded-md bg-neutral-100 px-2 py-0.5 text-xs text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400";
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -58,7 +60,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <ul className="flex gap-3 text-sm font-medium">
             {project.links.map((link) => (
               <li key={link.href}>
-                <InlineLink href={link.href} external>
+                <InlineLink href={link.href} external={!link.internal}>
                   {link.label}
                   <span aria-hidden="true"> →</span>
                 </InlineLink>

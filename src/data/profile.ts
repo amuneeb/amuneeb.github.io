@@ -6,6 +6,8 @@
 export type ProjectLink = {
   label: string;
   href: string;
+  /** Same-site link: renders without new-tab behavior. */
+  internal?: boolean;
 };
 
 export type ProjectImage = {
@@ -29,6 +31,32 @@ export type Project = {
   impact?: string;
   stack: readonly string[];
   links: readonly ProjectLink[];
+  image: ProjectImage | null;
+};
+
+export type CaseStudyLink = {
+  label: string;
+  href: string;
+  /** Rendered as the primary (filled) button. */
+  primary?: boolean;
+};
+
+/** A featured project with its own detail page. */
+export type CaseStudy = {
+  slug: string;
+  name: string;
+  badge: Project["badge"];
+  /** Eyebrow label above the page title. */
+  kicker: string;
+  /** One-paragraph pitch rendered under the title. */
+  pitch: string;
+  /** Meta description for the page (~160 chars). */
+  metaDescription: string;
+  /** Caveat rendered beside the links. */
+  demoNote: string;
+  highlights: readonly string[];
+  links: readonly CaseStudyLink[];
+  stack: readonly string[];
   image: ProjectImage | null;
 };
 
@@ -64,12 +92,17 @@ export const featuredProjects: readonly Project[] = [
     name: "Career Vault",
     badge: "Live",
     description:
-      "AI-powered career dashboard — track applications, interviews, and connections, and surface insights about your job search in one place. The live demo runs on synthetic data.",
-    stack: ["React", "FastAPI", "LLM agents", "PostgreSQL"],
+      "Autonomous job-search operations platform I built and operate — a GitHub Actions pipeline sweeps 7 free sources, scores every role against my profile, tracks application status from inbound email, and hands high-fit roles to a Claude agent that builds tailored application packages. Runs on $0 infrastructure. Public demo with synthetic data.",
+    stack: ["Python", "React", "GitHub Actions", "Claude API / agents", "MCP"],
     links: [
       {
         label: "Try the live demo",
         href: "https://career-vault-demo.pages.dev/",
+      },
+      {
+        label: "How it's built",
+        href: "/career-vault",
+        internal: true,
       },
     ],
     image: {
@@ -95,6 +128,56 @@ export const featuredProjects: readonly Project[] = [
     },
   },
 ];
+
+export const careerVaultCaseStudy: CaseStudy = {
+  slug: "career-vault",
+  name: "Career Vault",
+  badge: "Live",
+  kicker: "Featured project",
+  pitch:
+    "Career Vault is an autonomous job-search operations platform I built and operate. A GitHub Actions pipeline sweeps seven free sources — email alert parsing, Dice, a company-scout engine probing public ATS APIs, a Workday watchlist, Hacker News Who-is-hiring, Remotive, and RemoteOK — scores every role against my profile, deduplicates, and tracks application status automatically from inbound email. High-fit roles are handed to a Claude agent that builds a tailored application package. The whole system runs on $0 infrastructure: the GitHub Actions free tier, Cloudflare Pages, and a git repo as the database.",
+  metaDescription:
+    "Career Vault: an autonomous job-search operations platform — 7 data sources, fit scoring, automated status tracking, and Claude-built application packages on $0 infrastructure.",
+  demoNote:
+    "Public demo with synthetic data — no real applications or personal information.",
+  highlights: [
+    "7 data sources",
+    "Fit-scoring engine",
+    "Automated status tracking",
+    "Post-refresh integrity audit",
+    "58 tests from real incidents",
+    "$0 infrastructure",
+  ],
+  links: [
+    {
+      label: "Live demo",
+      href: "https://career-vault-demo.pages.dev/",
+      primary: true,
+    },
+    {
+      label: "How it works (docs)",
+      href: "https://github.com/amuneeb/career-vault-demo#readme",
+    },
+    {
+      label: "Architecture & ADRs",
+      href: "https://github.com/amuneeb/career-vault-demo/tree/main/docs",
+    },
+  ],
+  stack: [
+    "Python",
+    "React",
+    "GitHub Actions",
+    "Cloudflare Pages",
+    "Claude API / agents",
+    "MCP",
+  ],
+  image: {
+    src: "/images/career-vault.png",
+    alt: "Screenshot of the Career Vault dashboard showing a two-week calendar and job-search stat tiles",
+    width: 800,
+    height: 500,
+  },
+};
 
 export const enterpriseProjects: readonly Project[] = [
   {
