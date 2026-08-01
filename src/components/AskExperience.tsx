@@ -2,7 +2,12 @@
 
 import { useMemo, useState } from "react";
 import { buildCorpus } from "@/data/corpus";
-import { createIndex, search, type SearchResult } from "@/lib/retrieval";
+import {
+  createIndex,
+  search,
+  URL_PATTERN,
+  type SearchResult,
+} from "@/lib/retrieval";
 import { InlineLink } from "@/components/ui/InlineLink";
 
 const SUGGESTED_QUESTIONS = [
@@ -20,13 +25,22 @@ export function AskExperience() {
   const index = useMemo(() => createIndex(buildCorpus()), []);
   const [query, setQuery] = useState("");
   const [asked, setAsked] = useState<string | null>(null);
+  const [askedHadUrl, setAskedHadUrl] = useState(false);
   const [results, setResults] = useState<readonly SearchResult[]>([]);
 
   const ask = (question: string) => {
     const trimmed = question.trim();
     if (!trimmed) return;
     setQuery(trimmed);
-    setAsked(trimmed);
+    // Display the question without any pasted link; tokenize() already
+    // ignores URLs for scoring. Fresh non-global regex: URL_PATTERN has
+    // the g flag, which makes .test() stateful.
+    const withoutUrls = trimmed
+      .replace(URL_PATTERN, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    setAsked(withoutUrls || "your question");
+    setAskedHadUrl(new RegExp(URL_PATTERN.source, "i").test(trimmed));
     setResults(search(index, trimmed));
   };
 
@@ -74,9 +88,17 @@ export function AskExperience() {
       </ul>
 
       <div aria-live="polite" className="mt-6">
+        {askedHadUrl && (
+          <p className="mb-4 rounded-lg bg-neutral-100 px-4 py-3 text-sm leading-relaxed text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400">
+            Looks like you pasted a link — this panel can&apos;t open external
+            pages. It searched the rest of your question instead. For the best
+            match against a specific role, paste the job description&apos;s key
+            requirements as text.
+          </p>
+        )}
         {asked && results.length > 0 && (
           <>
-            <h3 className="text-sm font-semibold">
+            <h3 className="text-sm font-semibold break-words">
               Most relevant to “{asked}”
             </h3>
             <ul className="mt-3 space-y-3">

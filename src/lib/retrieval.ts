@@ -140,12 +140,16 @@ const ALIASES: ReadonlyMap<string, string> = new Map([
   ["opportunity", "opportunities"],
 ]);
 
+/** Matches URLs so pasted links don't pollute scoring with junk tokens. */
+export const URL_PATTERN = /(?:https?:\/\/|www\.)\S+/gi;
+
 /**
- * Lowercase, strip punctuation, drop stopwords, fold aliases, and
- * singularize plurals so "agents" matches "agent".
+ * Lowercase, strip URLs and punctuation, drop stopwords, fold aliases,
+ * and singularize plurals so "agents" matches "agent".
  */
 export function tokenize(text: string): string[] {
   return text
+    .replace(URL_PATTERN, " ")
     .toLowerCase()
     .split(/[^a-z0-9.+#-]+/)
     .map((raw) => {

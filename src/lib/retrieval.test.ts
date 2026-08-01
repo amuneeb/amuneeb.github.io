@@ -37,6 +37,13 @@ describe("tokenize", () => {
     expect(tokenize("chatbot")).toEqual(tokenize("copilot"));
   });
 
+  it("ignores pasted URLs", () => {
+    expect(
+      tokenize("https://jobs.example.com/evenup/f41eab94-6361 senior role"),
+    ).toEqual(["senior", "role"]);
+    expect(tokenize("www.example.com/careers agentic")).toEqual(["agentic"]);
+  });
+
   it("folds conversational phrasings onto corpus vocabulary", () => {
     expect(tokenize("working now")).toEqual(tokenize("works currently"));
     expect(tokenize("current job")).toEqual(tokenize("current role"));
