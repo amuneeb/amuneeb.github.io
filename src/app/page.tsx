@@ -12,6 +12,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { ExperienceItem } from "@/components/ExperienceItem";
 import { SkillGroup } from "@/components/SkillGroup";
 import { AskExperience } from "@/components/AskExperience";
+import { RoleFitCheck } from "@/components/RoleFitCheck";
 
 export default function Home() {
   return (
@@ -61,6 +62,9 @@ export default function Home() {
           </p>
           <div className="mt-6">
             <AskExperience />
+          </div>
+          <div className="mt-10 border-t border-neutral-200 pt-8 dark:border-neutral-800">
+            <RoleFitCheck />
           </div>
         </section>
 

@@ -91,9 +91,9 @@ export function AskExperience() {
         {askedHadUrl && (
           <p className="mb-4 rounded-lg bg-neutral-100 px-4 py-3 text-sm leading-relaxed text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400">
             Looks like you pasted a link — this panel can&apos;t open external
-            pages. It searched the rest of your question instead. For the best
-            match against a specific role, paste the job description&apos;s key
-            requirements as text.
+            pages. It searched the rest of your question instead. To match a
+            specific role, paste the job description text into the fit checker
+            below.
           </p>
         )}
         {asked && results.length > 0 && (
