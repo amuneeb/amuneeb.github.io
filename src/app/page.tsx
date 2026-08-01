@@ -12,7 +12,6 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { ExperienceItem } from "@/components/ExperienceItem";
 import { SkillGroup } from "@/components/SkillGroup";
 import { AskExperience } from "@/components/AskExperience";
-import { RoleFitCheck } from "@/components/RoleFitCheck";
 
 export default function Home() {
   return (
@@ -56,15 +55,12 @@ export default function Home() {
             Ask about my experience
           </SectionHeading>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
-            Retrieval over this site&apos;s content, running entirely in your
-            browser. You get my actual experience back — verbatim, not
-            AI-generated.
+            Ask a question about my work — or paste a whole job description to
+            see how well the role fits (my bar is 7.5 / 10). Everything runs in
+            your browser; nothing you type leaves this page.
           </p>
           <div className="mt-6">
             <AskExperience />
-          </div>
-          <div className="mt-10 border-t border-neutral-200 pt-8 dark:border-neutral-800">
-            <RoleFitCheck />
           </div>
         </section>
 

@@ -8,6 +8,7 @@ import {
   URL_PATTERN,
   type SearchResult,
 } from "@/lib/retrieval";
+import { assessFit, INTEREST_THRESHOLD, type FitAssessment } from "@/lib/fit";
 import { InlineLink } from "@/components/ui/InlineLink";
 
 const SUGGESTED_QUESTIONS = [
@@ -16,10 +17,21 @@ const SUGGESTED_QUESTIONS = [
   "What impact did his AI platforms have?",
 ] as const;
 
+/** Inputs at or above this many words are treated as a pasted job
+ * description and scored for fit instead of searched. */
+const FIT_MODE_MIN_WORDS = 30;
+
+const VERDICT_COPY: Record<FitAssessment["verdict"], string> = {
+  strong: `Clears Muneeb's interest bar (${INTEREST_THRESHOLD}+). He'd likely be interested — get in touch.`,
+  partial: `Below the ${INTEREST_THRESHOLD} interest bar, but close — could be worth a conversation.`,
+  weak: "Not a strong match for this profile.",
+};
+
 /**
- * "Ask about my experience": client-side retrieval over the site's
- * own content. Returns matching passages verbatim — no generation, no
- * server, no cost, no hallucination.
+ * One input, two behaviors: short questions retrieve matching passages
+ * from the site's content; pasted job descriptions get a fit score.
+ * Both run entirely in the visitor's browser — no server, no cost,
+ * nothing generated.
  */
 export function AskExperience() {
   const index = useMemo(() => createIndex(buildCorpus()), []);
@@ -27,18 +39,32 @@ export function AskExperience() {
   const [asked, setAsked] = useState<string | null>(null);
   const [askedHadUrl, setAskedHadUrl] = useState(false);
   const [results, setResults] = useState<readonly SearchResult[]>([]);
+  const [fit, setFit] = useState<FitAssessment | null>(null);
 
-  const ask = (question: string) => {
-    const trimmed = question.trim();
+  const ask = (input: string) => {
+    const trimmed = input.trim();
     if (!trimmed) return;
     setQuery(trimmed);
-    // Display the question without any pasted link; tokenize() already
-    // ignores URLs for scoring. Fresh non-global regex: URL_PATTERN has
-    // the g flag, which makes .test() stateful.
+
+    const wordCount = trimmed.split(/\s+/).length;
+    const jdFit =
+      wordCount >= FIT_MODE_MIN_WORDS ? assessFit(trimmed, index) : null;
+    if (jdFit) {
+      setFit(jdFit);
+      setAsked(null);
+      setAskedHadUrl(false);
+      setResults([]);
+      return;
+    }
+
+    // Question mode. Display the question without any pasted link;
+    // tokenize() already ignores URLs for scoring. Fresh non-global
+    // regex: URL_PATTERN has the g flag, which makes .test() stateful.
     const withoutUrls = trimmed
       .replace(URL_PATTERN, "")
       .replace(/\s+/g, " ")
       .trim();
+    setFit(null);
     setAsked(withoutUrls || "your question");
     setAskedHadUrl(new RegExp(URL_PATTERN.source, "i").test(trimmed));
     setResults(search(index, trimmed));
@@ -51,19 +77,25 @@ export function AskExperience() {
           event.preventDefault();
           ask(query);
         }}
-        className="flex flex-wrap gap-3"
+        className="flex flex-wrap items-start gap-3"
       >
         <label htmlFor="ask-input" className="sr-only">
-          Ask a question about my experience
+          Ask a question, or paste a job description to score the fit
         </label>
-        <input
+        <textarea
           id="ask-input"
-          type="text"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Has Muneeb built agentic systems on Azure?"
+          onKeyDown={(event) => {
+            if (event.key === "Enter" && !event.shiftKey) {
+              event.preventDefault();
+              ask(query);
+            }
+          }}
+          rows={2}
+          placeholder="Ask a question — or paste a job description to score the fit…"
           autoComplete="off"
-          className="min-w-0 flex-1 rounded-lg border border-neutral-300 bg-transparent px-4 py-2 text-sm placeholder:text-neutral-400 dark:border-neutral-700 dark:placeholder:text-neutral-600"
+          className="min-w-0 flex-1 resize-y rounded-lg border border-neutral-300 bg-transparent px-4 py-2.5 text-sm placeholder:text-neutral-400 dark:border-neutral-700 dark:placeholder:text-neutral-600"
         />
         <button
           type="submit"
@@ -91,11 +123,77 @@ export function AskExperience() {
         {askedHadUrl && (
           <p className="mb-4 rounded-lg bg-neutral-100 px-4 py-3 text-sm leading-relaxed text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400">
             Looks like you pasted a link — this panel can&apos;t open external
-            pages. It searched the rest of your question instead. To match a
-            specific role, paste the job description text into the fit checker
-            below.
+            pages, so it searched the rest of your question instead. To score a
+            specific role, paste the job description&apos;s text here.
           </p>
         )}
+
+        {fit && (
+          <div className="rounded-xl border border-neutral-200 p-5 dark:border-neutral-800">
+            <p className="flex flex-wrap items-baseline gap-3">
+              <span
+                className={`text-3xl font-semibold ${
+                  fit.verdict === "strong"
+                    ? "text-accent-700 dark:text-accent-400"
+                    : ""
+                }`}
+              >
+                {fit.score.toFixed(1)} / 10
+              </span>
+              <span className="text-sm text-neutral-600 dark:text-neutral-400">
+                {VERDICT_COPY[fit.verdict]}
+              </span>
+            </p>
+            {fit.verdict === "strong" && (
+              <p className="mt-2 text-sm font-medium">
+                <InlineLink href="/#contact-heading">
+                  Get in touch about this role →
+                </InlineLink>
+              </p>
+            )}
+            {fit.matchedTerms.length > 0 && (
+              <div className="mt-4">
+                <p className="text-xs font-medium tracking-wide text-neutral-500 uppercase">
+                  Matched from his experience
+                </p>
+                <ul className="mt-2 flex flex-wrap gap-1.5">
+                  {fit.matchedTerms.map((term) => (
+                    <li
+                      key={term}
+                      className="bg-accent-50 text-accent-800 dark:bg-accent-950 dark:text-accent-300 rounded-md px-2 py-0.5 text-xs"
+                    >
+                      {term}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {fit.gapTerms.length > 0 && (
+              <div className="mt-3">
+                <p className="text-xs font-medium tracking-wide text-neutral-500 uppercase">
+                  Not found in his profile
+                </p>
+                <ul className="mt-2 flex flex-wrap gap-1.5">
+                  {fit.gapTerms.map((term) => (
+                    <li
+                      key={term}
+                      className="rounded-md bg-neutral-100 px-2 py-0.5 text-xs text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400"
+                    >
+                      {term}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <p className="mt-4 text-xs leading-relaxed text-neutral-500">
+              Keyword-coverage estimate over {fit.consideredCount} distinct
+              terms, computed entirely in your browser — nothing you paste
+              leaves this page. A Claude-powered semantic assessment is on the
+              roadmap.
+            </p>
+          </div>
+        )}
+
         {asked && results.length > 0 && (
           <>
             <h3 className="text-sm font-semibold break-words">
@@ -132,11 +230,12 @@ export function AskExperience() {
       <details className="mt-6 text-sm text-neutral-600 dark:text-neutral-400">
         <summary className="cursor-pointer font-medium">How this works</summary>
         <p className="mt-2 max-w-2xl leading-relaxed">
-          Your question is matched against this site&apos;s content with BM25
-          ranking, entirely in your browser — no server, no API calls, no
-          tracking. Results are my actual experience, verbatim, so nothing is
-          AI-generated or hallucinated. A conversational, Claude-powered version
-          is on the roadmap.
+          Questions are matched against this site&apos;s content with BM25
+          ranking; pasted job descriptions are scored by keyword coverage
+          against the same content — all entirely in your browser, with no
+          server, no API calls, and no tracking. Results are my actual
+          experience, verbatim, so nothing is AI-generated or hallucinated. A
+          conversational, Claude-powered version is on the roadmap.
         </p>
       </details>
     </div>
