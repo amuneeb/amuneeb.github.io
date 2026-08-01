@@ -40,6 +40,8 @@ describe("tokenize", () => {
   it("folds conversational phrasings onto corpus vocabulary", () => {
     expect(tokenize("working now")).toEqual(tokenize("works currently"));
     expect(tokenize("current job")).toEqual(tokenize("current role"));
+    expect(tokenize("hiring interest")).toEqual(tokenize("role interested"));
+    expect(tokenize("opportunity")).toEqual(tokenize("opportunities"));
   });
 });
 
