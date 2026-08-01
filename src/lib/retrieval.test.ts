@@ -36,6 +36,11 @@ describe("tokenize", () => {
     expect(tokenize("GenAI")).toEqual(tokenize("generative"));
     expect(tokenize("chatbot")).toEqual(tokenize("copilot"));
   });
+
+  it("folds conversational phrasings onto corpus vocabulary", () => {
+    expect(tokenize("working now")).toEqual(tokenize("works currently"));
+    expect(tokenize("current job")).toEqual(tokenize("current role"));
+  });
 });
 
 describe("search", () => {

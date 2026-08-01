@@ -60,10 +60,15 @@ export function buildCorpus(): Passage[] {
   }
 
   for (const role of experience) {
+    const isCurrent = role.period.includes("Present");
     passages.push({
       id: `role-${role.company.toLowerCase().replace(/[^a-z]+/g, "-")}`,
       title: `${role.title} · ${role.company} (${role.period})`,
-      text: `${role.summary} ${role.highlights.join(". ")}.`,
+      text: `${
+        isCurrent
+          ? `Muneeb's current role: he works as ${role.title} at a ${role.company.toLowerCase()}. `
+          : ""
+      }${role.summary} ${role.highlights.join(". ")}.`,
       href: "/#experience-heading",
     });
   }

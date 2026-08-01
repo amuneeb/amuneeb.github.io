@@ -127,6 +127,13 @@ const ALIASES: ReadonlyMap<string, string> = new Map([
   ["studied", "education"],
   ["degree", "education"],
   ["degrees", "education"],
+  ["working", "work"],
+  ["worked", "work"],
+  ["now", "currently"],
+  ["today", "currently"],
+  ["current", "currently"],
+  ["job", "role"],
+  ["employer", "company"],
 ]);
 
 /**
