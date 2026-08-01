@@ -15,9 +15,11 @@ Live at **[amuneeb.github.io](https://amuneeb.github.io)**.
 | Path | Responsibility |
 | --- | --- |
 | `src/data/profile.ts` | All site content (typed). Editing the site means editing this file. |
+| `src/data/corpus.ts` | Retrieval corpus for "Ask about my experience", derived from `profile.ts`. |
+| `src/lib/retrieval.ts` | Client-side BM25 retrieval (unit-tested; `npm test`). |
 | `src/config/site.ts` | Site-level configuration (URL, metadata). |
-| `src/components/ui/` | Reusable primitives (`ButtonLink`, `InlineLink`, `ExternalLink`) — the single source of link/button styling. |
-| `src/components/` | Section components (`ProjectCard`, `ExperienceItem`, `SkillGroup`, `SectionHeading`). |
+| `src/components/ui/` | Reusable primitives (`ButtonLink`, `InlineLink`, `ExternalLink`, `ImageLightbox`) — the single source of link/button styling. |
+| `src/components/` | Section components (`ProjectCard`, `ExperienceItem`, `SkillGroup`, `SectionHeading`, `AskExperience`). |
 | `src/app/` | App Router layout, page composition, and global styles. Accent design tokens live in `globals.css`. |
 | `.github/workflows/deploy.yml` | CI: build and deploy to GitHub Pages. |
 
@@ -40,6 +42,7 @@ Before committing:
 npm run lint
 npm run typecheck
 npm run format:check
+npm test
 ```
 
 ## Build

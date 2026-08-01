@@ -11,6 +11,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ExperienceItem } from "@/components/ExperienceItem";
 import { SkillGroup } from "@/components/SkillGroup";
+import { AskExperience } from "@/components/AskExperience";
 
 export default function Home() {
   return (
@@ -44,6 +45,24 @@ export default function Home() {
             </ButtonLink>
           </div>
         </header>
+
+        <section
+          id="ask"
+          aria-labelledby="ask-heading"
+          className="mb-20 scroll-mt-8"
+        >
+          <SectionHeading id="ask-heading">
+            Ask about my experience
+          </SectionHeading>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+            Retrieval over this site&apos;s content, running entirely in your
+            browser. You get my actual experience back — verbatim, not
+            AI-generated.
+          </p>
+          <div className="mt-6">
+            <AskExperience />
+          </div>
+        </section>
 
         <section
           id="projects"
