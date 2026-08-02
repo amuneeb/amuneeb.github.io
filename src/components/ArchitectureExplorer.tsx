@@ -1,18 +1,27 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, type ReactNode } from "react";
 import type { ArchitectureLayer } from "@/data/ai-operations-case-study";
 import { track } from "@/lib/analytics";
 
 /**
  * Interactive layer-by-layer walkthrough of the platform architecture.
  * Implements the WAI-ARIA tabs pattern: arrow keys move between layers,
- * the panel updates in place.
+ * the panel updates in place. One layer may carry an expandable deep
+ * dive, passed as children and revealed by a toggle inside its panel.
  */
 export function ArchitectureExplorer({
   layers,
+  expandLayerId,
+  expandLabel,
+  children,
 }: {
   layers: readonly ArchitectureLayer[];
+  /** Layer whose panel offers the expandable deep dive. */
+  expandLayerId?: string;
+  /** Toggle label for the deep dive. */
+  expandLabel?: string;
+  children?: ReactNode;
 }) {
   const [activeId, setActiveId] = useState(layers[0].id);
   const tabRefs = useRef(new Map<string, HTMLButtonElement>());
@@ -97,6 +106,21 @@ export function ArchitectureExplorer({
             </li>
           ))}
         </ul>
+        {children && active.id === expandLayerId && (
+          <details
+            className="mt-4 border-t border-neutral-200 pt-4 dark:border-neutral-800"
+            onToggle={(event) => {
+              if ((event.target as HTMLDetailsElement).open) {
+                track("ai-layer-deep-dive");
+              }
+            }}
+          >
+            <summary className="text-accent-700 dark:text-accent-400 cursor-pointer text-sm font-semibold">
+              {expandLabel}
+            </summary>
+            <div className="mt-4">{children}</div>
+          </details>
+        )}
       </div>
     </div>
   );

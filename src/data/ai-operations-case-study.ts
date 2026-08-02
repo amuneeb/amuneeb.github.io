@@ -226,14 +226,6 @@ export const aiOperationsCaseStudy = {
       title: "How the agents coordinate",
       summary:
         "The platform uses a supervisor-orchestrated, domain-agent architecture. Agents never communicate freely with each other: they coordinate through a central orchestrator using structured requests, approved tools, and controlled outputs.",
-      flow: [
-        "User request or business event",
-        "AI gateway — authentication and policy",
-        "Supervisor orchestrator — intent, execution plan, permissions",
-        "Domain agents — narrowly scoped tasks, parallel where independent",
-        "Business microservices — approved APIs, the systems of record",
-        "Authoritative data stores",
-      ],
       mechanics: [
         {
           id: "execution-plan",
