@@ -6,6 +6,7 @@ import {
   experience,
   skills,
 } from "@/data/profile";
+import { aiOperationsCaseStudy } from "@/data/ai-operations-case-study";
 import type { Passage } from "@/lib/retrieval";
 
 /**
@@ -44,6 +45,20 @@ export function buildCorpus(): Passage[] {
       title: `${careerVaultCaseStudy.name} — how it's built`,
       text: `${careerVaultCaseStudy.pitch} Highlights: ${careerVaultCaseStudy.highlights.join(", ")}. Built with ${careerVaultCaseStudy.stack.join(", ")}.`,
       href: "/career-vault",
+    },
+    {
+      id: "case-study-ai-operations",
+      title: `${aiOperationsCaseStudy.name} — case study`,
+      text: `${aiOperationsCaseStudy.approach} Role: ${aiOperationsCaseStudy.role}; team of ${aiOperationsCaseStudy.team}. ${aiOperationsCaseStudy.problem}`,
+      href: "/ai-operations-platform",
+    },
+    {
+      id: "decision-domain-agents",
+      title: "Architecture decision: domain-scoped AI agents",
+      text: aiOperationsCaseStudy.decisions
+        .map((decision) => `${decision.title}: ${decision.choice}`)
+        .join(" "),
+      href: "/ai-operations-platform",
     },
   ];
 

@@ -195,8 +195,14 @@ export const enterpriseProjects: readonly Project[] = [
     description:
       "Enterprise AI platform unifying inventory, supply chain, procurement, and customer operations with LLMs, RAG, AI agents, and semantic search.",
     impact: "Reduced manual reconciliation by 90%",
-    stack: ["Python", "FastAPI", "React", "PostgreSQL", "Microservices"],
-    links: [],
+    stack: ["AWS", "Bedrock", "Python", ".NET 8", "React", "Microservices"],
+    links: [
+      {
+        label: "Read the case study",
+        href: "/ai-operations-platform",
+        internal: true,
+      },
+    ],
     image: {
       src: "/images/ai-operations-architecture.png",
       alt: "Architecture diagram of the AI inventory and operations platform: user channels, edge and security, AI platform, business microservices, data, integration, and cloud infrastructure layers, connected by an event-driven backbone",
