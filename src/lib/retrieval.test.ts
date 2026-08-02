@@ -49,6 +49,8 @@ describe("tokenize", () => {
     expect(tokenize("current job")).toEqual(tokenize("current role"));
     expect(tokenize("hiring interest")).toEqual(tokenize("role interested"));
     expect(tokenize("opportunity")).toEqual(tokenize("opportunities"));
+    expect(tokenize("where does he live")).toEqual(tokenize("based"));
+    expect(tokenize("which city")).toEqual(tokenize("Seattle"));
   });
 });
 

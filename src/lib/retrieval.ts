@@ -138,6 +138,13 @@ const ALIASES: ReadonlyMap<string, string> = new Map([
   ["hiring", "role"],
   ["interest", "interested"],
   ["opportunity", "opportunities"],
+  ["live", "based"],
+  ["lives", "based"],
+  ["living", "based"],
+  ["reside", "based"],
+  ["resides", "based"],
+  ["located", "based"],
+  ["city", "seattle"],
 ]);
 
 /** Matches URLs so pasted links don't pollute scoring with junk tokens. */
@@ -153,6 +160,9 @@ export function tokenize(text: string): string[] {
     .toLowerCase()
     .split(/[^a-z0-9.+#-]+/)
     .map((raw) => {
+      // Stopword check runs on the raw form too: stemming would turn
+      // "does" into the non-stopword "doe".
+      if (STOPWORDS.has(raw)) return "";
       const token = ALIASES.get(raw) ?? raw;
       return token.length > 3 && token.endsWith("s") && !token.endsWith("ss")
         ? token.slice(0, -1)
