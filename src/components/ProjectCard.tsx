@@ -60,7 +60,12 @@ export function ProjectCard({ project }: { project: Project }) {
           <ul className="flex gap-3 text-sm font-medium">
             {project.links.map((link) => (
               <li key={link.href}>
-                <InlineLink href={link.href} external={!link.internal}>
+                <InlineLink
+                  href={link.href}
+                  external={!link.internal}
+                  trackEvent="project-link"
+                  trackData={{ project: project.name, label: link.label }}
+                >
                   {link.label}
                   <span aria-hidden="true"> →</span>
                 </InlineLink>

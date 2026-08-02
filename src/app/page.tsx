@@ -34,13 +34,28 @@ export default function Home() {
             <ButtonLink href="#projects" variant="primary">
               View projects
             </ButtonLink>
-            <ButtonLink href={profile.resumeUrl} download>
+            <ButtonLink
+              href={profile.resumeUrl}
+              download
+              trackEvent="resume-download"
+              trackData={{ location: "hero" }}
+            >
               Download resume<span className="sr-only"> (PDF)</span>
             </ButtonLink>
-            <ButtonLink href={profile.github} external>
+            <ButtonLink
+              href={profile.github}
+              external
+              trackEvent="github-click"
+              trackData={{ location: "hero" }}
+            >
               GitHub
             </ButtonLink>
-            <ButtonLink href={profile.linkedin} external>
+            <ButtonLink
+              href={profile.linkedin}
+              external
+              trackEvent="linkedin-click"
+              trackData={{ location: "hero" }}
+            >
               LinkedIn
             </ButtonLink>
           </div>
@@ -131,17 +146,30 @@ export default function Home() {
           </p>
           <ul className="mt-4 flex flex-wrap gap-4 text-sm font-medium">
             <li>
-              <InlineLink href={`mailto:${profile.email}`}>
+              <InlineLink
+                href={`mailto:${profile.email}`}
+                trackEvent="email-click"
+              >
                 {profile.email}
               </InlineLink>
             </li>
             <li>
-              <InlineLink href={profile.github} external>
+              <InlineLink
+                href={profile.github}
+                external
+                trackEvent="github-click"
+                trackData={{ location: "footer" }}
+              >
                 GitHub
               </InlineLink>
             </li>
             <li>
-              <InlineLink href={profile.linkedin} external>
+              <InlineLink
+                href={profile.linkedin}
+                external
+                trackEvent="linkedin-click"
+                trackData={{ location: "footer" }}
+              >
                 LinkedIn
               </InlineLink>
             </li>

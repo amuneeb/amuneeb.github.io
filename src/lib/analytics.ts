@@ -20,3 +20,19 @@ export function track(event: string, data?: EventData): void {
     // Ad blockers can leave a broken stub; ignore.
   }
 }
+
+/**
+ * Declarative click tracking: returns the data-umami-event attributes
+ * Umami's script picks up automatically. Spread onto any element.
+ */
+export function trackingAttributes(
+  event?: string,
+  data?: Record<string, string>,
+): Record<string, string> {
+  if (!event) return {};
+  const attributes: Record<string, string> = { "data-umami-event": event };
+  for (const [key, value] of Object.entries(data ?? {})) {
+    attributes[`data-umami-event-${key}`] = value;
+  }
+  return attributes;
+}

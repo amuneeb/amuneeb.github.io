@@ -40,6 +40,8 @@ export default function CareerVaultPage() {
               href={link.href}
               external
               variant={link.primary ? "primary" : "secondary"}
+              trackEvent="case-study-link"
+              trackData={{ study: study.name, label: link.label }}
             >
               {link.label}
             </ButtonLink>
