@@ -23,7 +23,7 @@ export const site = {
   },
   analytics: {
     /** Umami Cloud website id; empty string disables analytics entirely. */
-    umamiWebsiteId: "",
+    umamiWebsiteId: "370f2b31-f4fe-4010-8ea8-9cbacf6d122d",
     umamiScriptUrl: "https://cloud.umami.is/script.js",
   },
 } as const;
