@@ -28,6 +28,20 @@ export type StackGroup = {
   items: readonly string[];
 };
 
+export type AiSubsection = {
+  id: string;
+  title: string;
+  body: string;
+  points?: readonly string[];
+};
+
+export type CoordinationMechanic = {
+  id: string;
+  title: string;
+  body: string;
+  points?: readonly string[];
+};
+
 export const aiOperationsCaseStudy = {
   slug: "ai-operations-platform",
   name: "AI inventory & operations platform",
@@ -183,6 +197,107 @@ export const aiOperationsCaseStudy = {
       ],
     },
   ] satisfies readonly Decision[],
+  aiLayer: {
+    intro:
+      "The AI layer is where the platform earns its name. Four things make it production-grade rather than a demo: disciplined intent handling, domain-scoped retrieval, layered guardrails, and — most importantly — a coordination model that treats agents like services, not chat participants.",
+    subsections: [
+      {
+        id: "nlp",
+        title: "From language to intent",
+        body: "Every request — a typed question, a voice query, or a business event — enters through the AI gateway, which authenticates the caller before any model runs. The supervisor orchestrator then classifies the request: the user's intent, the business domains involved, the caller's role and permissions, whether the request is informational or action-oriented, and whether human approval will be required. Free-form language becomes a controlled execution plan before a single agent is engaged.",
+      },
+      {
+        id: "rag",
+        title: "Grounded retrieval, scoped per domain",
+        body: "Each agent retrieves from its own domain knowledge base — catalog, pricing and promotions, policies, supplier and operational data — through embeddings, vector search, and reranking. Retrieval scope follows both the agent's domain and the caller's permissions, so an agent can't surface information its user couldn't otherwise see. Answers carry supporting evidence and confidence scores rather than bare assertions.",
+      },
+      {
+        id: "guardrails",
+        title: "Guardrails as layered defense",
+        body: "Safety isn't one filter — it's three boundaries a request must cross:",
+        points: [
+          "Input: content filtering, prompt-injection protection, and topic restrictions before a request reaches any agent",
+          "Data: PII protection and data access control — an agent's effective permissions are the intersection of user, agent, tool, and business policy, which structurally prevents privilege escalation",
+          "Action: tool allow-lists, business-rules validation, human approval for sensitive operations (price overrides, refunds, inventory write-offs, delivery cancellations, supplier changes), and audit logging of every step",
+        ],
+      },
+    ] satisfies readonly AiSubsection[],
+    coordination: {
+      title: "How the agents coordinate",
+      summary:
+        "The platform uses a supervisor-orchestrated, domain-agent architecture. Agents never communicate freely with each other: they coordinate through a central orchestrator using structured requests, approved tools, and controlled outputs.",
+      flow: [
+        "User request or business event",
+        "AI gateway — authentication and policy",
+        "Supervisor orchestrator — intent, execution plan, permissions",
+        "Domain agents — narrowly scoped tasks, parallel where independent",
+        "Business microservices — approved APIs, the systems of record",
+        "Authoritative data stores",
+      ],
+      mechanics: [
+        {
+          id: "execution-plan",
+          title: "A controlled execution plan, not a group chat",
+          body: 'For a question like "which delayed factory orders will affect deliveries next week?", the orchestrator identifies the domains involved — procurement, inventory, delivery — and delegates a narrowly scoped task to each agent: the minimum context required, its authorized tools, its domain knowledge base, and the output schema it must return. An agent never receives data its task doesn\'t need.',
+        },
+        {
+          id: "structured-contracts",
+          title: "Structured contracts between agents",
+          body: "Agents return typed, structured results to the orchestrator — never unrestricted prose to one another. Structured contracts are easier to validate, test, and audit, and they make coordination independent of conversational wording.",
+        },
+        {
+          id: "services-not-databases",
+          title: "Agents call services, never databases",
+          body: "Agents work through approved APIs exposed by the deterministic business services — purchase orders, availability, reservations, delivery schedules. Agents may interpret information, but the microservices remain the systems of record, preserving every domain boundary the platform already enforces.",
+        },
+        {
+          id: "parallel-sequential",
+          title: "Parallel when independent, sequential when dependent",
+          body: "The orchestrator decides execution shape from task dependencies: independent lookups fan out in parallel to cut latency; dependent chains — find delayed items, then check substitutes, then assess delivery impact — run in order.",
+        },
+        {
+          id: "conflict-resolution",
+          title: "Conflicts resolved by rules, not negotiation",
+          body: "When agents produce competing recommendations — say three domains each want the same high-demand unit — they don't negotiate. The orchestrator routes proposals to a deterministic business rules engine: reservation priority, customer-order commitments, eligibility, override rules. Only genuine judgment calls escalate to a manager.",
+        },
+        {
+          id: "failure-isolation",
+          title: "Failure isolation",
+          body: "One agent timing out doesn't fail the workflow. The orchestrator can retry, switch to a fallback model, call the underlying API directly, return a partial answer, or open a manual-review task — and every agent runs with timeout limits, maximum steps, cost ceilings, and circuit breakers.",
+        },
+        {
+          id: "state-and-audit",
+          title: "Central state, distinct identities, full audit",
+          body: "The orchestrator owns workflow state — agents share no hidden conversational memory and receive explicit context per task. Each agent has its own identity and permission set, and every workflow is auditable end to end: who asked, which prompt and model version ran, what was retrieved, which APIs were called, what was recommended with what confidence, who approved, and what finally executed.",
+        },
+      ] satisfies readonly CoordinationMechanic[],
+      structuredOutputExample: `{
+  "delayedPurchaseOrders": [{
+    "purchaseOrderId": "PO-1045",
+    "supplierId": "SUP-18",
+    "delayDays": 12,
+    "affectedOrderLineIds": ["OL-8001", "OL-8002"],
+    "confidence": 0.96
+  }]
+}`,
+      workedExample: {
+        question:
+          "A container is delayed by two weeks. Which customers are affected, and what should we do?",
+        steps: [
+          "The AI gateway authenticates the manager; the orchestrator classifies the request as procurement + inventory + orders + delivery + customer communication",
+          "Procurement agent retrieves the container, its purchase-order lines, the updated ETA, and supplier delay details",
+          "Inventory agent maps the lines to SKUs, checks stock across locations, identifies substitutes, and checks existing reservations",
+          "Order agent maps affected items to customer sales orders and flags priority and partial-fulfilment status",
+          "Delivery agent identifies scheduled deliveries, calculates schedule impact, and drafts rescheduling options",
+          "Customer service agent drafts customer-specific communications — without sending them",
+          "The orchestrator consolidates: affected customers, substitutions, delivery changes, recommended actions",
+          "The business rules engine validates reservation priority, partial-delivery rules, and approval requirements",
+          "The manager reviews the impact summary, evidence, recommendations, and draft communications — then approves",
+          "Only then do the order, delivery, and notification services execute the approved changes, with the audit service recording the complete workflow",
+        ],
+      },
+    },
+  },
   stack: [
     {
       group: "Frontend & mobile",

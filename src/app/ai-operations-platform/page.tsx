@@ -96,6 +96,94 @@ export default function AiOperationsPlatformPage() {
         )}
       </section>
 
+      <section aria-labelledby="ai-layer-heading" className="mb-14">
+        <SectionHeading id="ai-layer-heading">
+          Inside the AI layer
+        </SectionHeading>
+        <p className="mt-4 leading-relaxed text-neutral-700 dark:text-neutral-300">
+          {study.aiLayer.intro}
+        </p>
+        <div className="mt-6 space-y-8">
+          {study.aiLayer.subsections.map((subsection) => (
+            <div key={subsection.id}>
+              <h3 className="font-semibold">{subsection.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+                {subsection.body}
+              </p>
+              {subsection.points && (
+                <ul className="mt-3 space-y-1.5 text-sm text-neutral-600 dark:text-neutral-400">
+                  {subsection.points.map((point) => (
+                    <li key={point} className="flex gap-2">
+                      <span
+                        aria-hidden="true"
+                        className="text-accent-600 dark:text-accent-400"
+                      >
+                        —
+                      </span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10">
+          <h3 className="font-semibold">{study.aiLayer.coordination.title}</h3>
+          <p className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+            {study.aiLayer.coordination.summary}
+          </p>
+          <ol
+            aria-label="Coordination flow"
+            className="mt-4 space-y-1 text-sm text-neutral-700 dark:text-neutral-300"
+          >
+            {study.aiLayer.coordination.flow.map((step, index) => (
+              <li key={step} className="flex gap-2">
+                <span
+                  aria-hidden="true"
+                  className="text-accent-600 dark:text-accent-400"
+                >
+                  {index === 0 ? "●" : "↓"}
+                </span>
+                {step}
+              </li>
+            ))}
+          </ol>
+          <div className="mt-5 space-y-3">
+            {study.aiLayer.coordination.mechanics.map((mechanic) => (
+              <details
+                key={mechanic.id}
+                className="rounded-xl border border-neutral-200 p-4 dark:border-neutral-800"
+              >
+                <summary className="cursor-pointer text-sm font-semibold">
+                  {mechanic.title}
+                </summary>
+                <p className="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+                  {mechanic.body}
+                </p>
+                {mechanic.id === "structured-contracts" && (
+                  <pre className="mt-3 overflow-x-auto rounded-lg bg-neutral-100 p-4 font-mono text-xs leading-relaxed text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
+                    {study.aiLayer.coordination.structuredOutputExample}
+                  </pre>
+                )}
+              </details>
+            ))}
+          </div>
+          <details className="mt-5 rounded-xl border border-neutral-200 p-4 dark:border-neutral-800">
+            <summary className="cursor-pointer text-sm font-semibold">
+              Worked example: “
+              {study.aiLayer.coordination.workedExample.question}”
+            </summary>
+            <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+              {study.aiLayer.coordination.workedExample.steps.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+          </details>
+        </div>
+      </section>
+
       <section aria-labelledby="decisions-heading" className="mb-14">
         <SectionHeading id="decisions-heading">
           Key decisions & trade-offs

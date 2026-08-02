@@ -60,6 +60,16 @@ export function buildCorpus(): Passage[] {
         .join(" "),
       href: "/ai-operations-platform",
     },
+    {
+      id: "agent-coordination",
+      title: "How Muneeb's AI agents coordinate",
+      text: `${aiOperationsCaseStudy.aiLayer.coordination.summary} ${aiOperationsCaseStudy.aiLayer.coordination.mechanics
+        .map((mechanic) => mechanic.title)
+        .join(
+          ". ",
+        )}. Guardrails: effective agent permissions are the intersection of user, agent, tool, and business policy.`,
+      href: "/ai-operations-platform",
+    },
   ];
 
   for (const project of featuredProjects) {
