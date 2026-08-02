@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { buildCorpus } from "../data/corpus";
 import { createIndex } from "./retrieval";
-import { assessFit, INTEREST_THRESHOLD } from "./fit";
+import { assessFit, STRONG_MATCH_THRESHOLD } from "./fit";
 
 const index = createIndex(buildCorpus());
 
@@ -35,7 +35,7 @@ describe("assessFit", () => {
   it("scores a matching AI platform posting above the interest bar", () => {
     const fit = assessFit(AI_PLATFORM_JD, index);
     expect(fit).not.toBeNull();
-    expect(fit!.score).toBeGreaterThanOrEqual(INTEREST_THRESHOLD);
+    expect(fit!.score).toBeGreaterThanOrEqual(STRONG_MATCH_THRESHOLD);
     expect(fit!.verdict).toBe("strong");
     expect(fit!.matchedTerms.length).toBeGreaterThan(5);
   });
@@ -43,7 +43,7 @@ describe("assessFit", () => {
   it("scores an adjacent-but-different posting in the middle", () => {
     const fit = assessFit(FRONTEND_JD, index);
     expect(fit).not.toBeNull();
-    expect(fit!.score).toBeLessThan(INTEREST_THRESHOLD);
+    expect(fit!.score).toBeLessThan(STRONG_MATCH_THRESHOLD);
     expect(fit!.score).toBeGreaterThan(2);
   });
 

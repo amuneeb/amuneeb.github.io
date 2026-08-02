@@ -23,8 +23,8 @@ export type FitAssessment = {
   consideredCount: number;
 };
 
-/** Muneeb's stated bar: at or above this score he is likely interested. */
-export const INTEREST_THRESHOLD = 7.5;
+/** At or above this score, a posting counts as a strong match. */
+export const STRONG_MATCH_THRESHOLD = 7.5;
 const PARTIAL_THRESHOLD = 5;
 /** Coverage at which a posting earns a full 10 (postings always carry
  * company- and product-specific terms no profile could contain). */
@@ -153,7 +153,7 @@ export function assessFit(
   return {
     score,
     verdict:
-      score >= INTEREST_THRESHOLD
+      score >= STRONG_MATCH_THRESHOLD
         ? "strong"
         : score >= PARTIAL_THRESHOLD
           ? "partial"

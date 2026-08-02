@@ -8,7 +8,7 @@ import {
   URL_PATTERN,
   type SearchResult,
 } from "@/lib/retrieval";
-import { assessFit, INTEREST_THRESHOLD, type FitAssessment } from "@/lib/fit";
+import { assessFit, type FitAssessment } from "@/lib/fit";
 import { InlineLink } from "@/components/ui/InlineLink";
 
 const SUGGESTED_QUESTIONS = [
@@ -22,8 +22,8 @@ const SUGGESTED_QUESTIONS = [
 const FIT_MODE_MIN_WORDS = 30;
 
 const VERDICT_COPY: Record<FitAssessment["verdict"], string> = {
-  strong: `Clears Muneeb's interest bar (${INTEREST_THRESHOLD}+). He'd likely be interested — get in touch.`,
-  partial: `Below the ${INTEREST_THRESHOLD} interest bar, but close — could be worth a conversation.`,
+  strong: "Strong match with Muneeb's experience — get in touch.",
+  partial: "Solid overlap — could be worth a conversation.",
   weak: "Not a strong match for this profile.",
 };
 
