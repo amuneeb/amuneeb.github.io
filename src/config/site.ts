@@ -21,4 +21,9 @@ export const site = {
     height: 630,
     alt: "Muneeb Abbasi — Principal AI Engineer. LLMs, RAG & agentic systems, 15+ years, ex-Microsoft.",
   },
+  analytics: {
+    /** Umami Cloud website id; empty string disables analytics entirely. */
+    umamiWebsiteId: "",
+    umamiScriptUrl: "https://cloud.umami.is/script.js",
+  },
 } as const;

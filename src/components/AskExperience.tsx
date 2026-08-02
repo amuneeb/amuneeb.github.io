@@ -9,6 +9,7 @@ import {
   type SearchResult,
 } from "@/lib/retrieval";
 import { assessFit, type FitAssessment } from "@/lib/fit";
+import { track } from "@/lib/analytics";
 import { InlineLink } from "@/components/ui/InlineLink";
 
 const SUGGESTED_QUESTIONS = [
@@ -50,6 +51,13 @@ export function AskExperience() {
     const jdFit =
       wordCount >= FIT_MODE_MIN_WORDS ? assessFit(trimmed, index) : null;
     if (jdFit) {
+      // Disclosed policy: pasted job descriptions never leave the page;
+      // only the outcome is recorded.
+      track("fit-check", {
+        score: jdFit.score,
+        verdict: jdFit.verdict,
+        words: wordCount,
+      });
       setFit(jdFit);
       setAsked(null);
       setAskedHadUrl(false);
@@ -64,10 +72,16 @@ export function AskExperience() {
       .replace(URL_PATTERN, "")
       .replace(/\s+/g, " ")
       .trim();
+    const found = search(index, trimmed);
+    // Disclosed policy: questions are logged anonymously (URLs stripped).
+    track("ask-question", {
+      question: withoutUrls || "(link only)",
+      results: found.length,
+    });
     setFit(null);
     setAsked(withoutUrls || "your question");
     setAskedHadUrl(new RegExp(URL_PATTERN.source, "i").test(trimmed));
-    setResults(search(index, trimmed));
+    setResults(found);
   };
 
   return (
@@ -187,9 +201,9 @@ export function AskExperience() {
             )}
             <p className="mt-4 text-xs leading-relaxed text-neutral-500">
               Keyword-coverage estimate over {fit.consideredCount} distinct
-              terms, computed entirely in your browser — nothing you paste
-              leaves this page. A Claude-powered semantic assessment is on the
-              roadmap.
+              terms, computed entirely in your browser. The job description you
+              pasted never leaves this page — only the score is recorded. A
+              Claude-powered semantic assessment is on the roadmap.
             </p>
           </div>
         )}
@@ -232,10 +246,12 @@ export function AskExperience() {
         <p className="mt-2 max-w-2xl leading-relaxed">
           Questions are matched against this site&apos;s content with BM25
           ranking; pasted job descriptions are scored by keyword coverage
-          against the same content — all entirely in your browser, with no
-          server, no API calls, and no tracking. Results are my actual
-          experience, verbatim, so nothing is AI-generated or hallucinated. A
-          conversational, Claude-powered version is on the roadmap.
+          against the same content — all entirely in your browser. Results are
+          my actual experience, verbatim, so nothing is AI-generated or
+          hallucinated. Privacy: questions are logged anonymously (via
+          cookie-free analytics) so I can improve the answers; pasted job
+          descriptions are never stored or transmitted — only their final score.
+          A conversational, Claude-powered version is on the roadmap.
         </p>
       </details>
     </div>

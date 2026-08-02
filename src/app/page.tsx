@@ -57,7 +57,9 @@ export default function Home() {
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
             Ask a question about my work — or paste a whole job description to
             see how closely the role matches my experience, scored out of 10.
-            Everything runs in your browser; nothing you type leaves this page.
+            Matching runs in your browser: questions are logged anonymously to
+            improve this panel, and pasted job descriptions never leave the page
+            — only their score.
           </p>
           <div className="mt-6">
             <AskExperience />
@@ -124,8 +126,8 @@ export default function Home() {
             Open to Principal / Staff AI engineering and applied AI roles —
             hands-on IC preferred, open to tech lead — and willing to relocate
             for the right one. US citizen, no visa sponsorship required,
-            available on two weeks&apos; notice. The fastest way to reach me
-            is email.
+            available on two weeks&apos; notice. The fastest way to reach me is
+            email.
           </p>
           <ul className="mt-4 flex flex-wrap gap-4 text-sm font-medium">
             <li>
