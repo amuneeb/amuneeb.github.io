@@ -24,7 +24,7 @@ export function buildCorpus(): Passage[] {
     {
       id: "availability",
       title: "Availability and contact",
-      text: `Muneeb is interested in new opportunities: open to Principal and Staff AI engineering and applied AI roles — remote, hybrid, or on-site depending on the role. Based in ${profile.location} (Seattle area). Reachable by email at ${profile.email}, or on GitHub and LinkedIn.`,
+      text: `Muneeb is interested in new opportunities: open to Principal and Staff AI engineering and applied AI roles — remote, hybrid, or on-site depending on the role. He is a US citizen, authorized to work in the US, and needs no visa sponsorship. Willing to relocate for the right role. Based in ${profile.location} (Seattle area). Reachable by email at ${profile.email}, or on GitHub and LinkedIn.`,
       href: "/#contact-heading",
     },
     {

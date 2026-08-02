@@ -145,6 +145,16 @@ const ALIASES: ReadonlyMap<string, string> = new Map([
   ["resides", "based"],
   ["located", "based"],
   ["city", "seattle"],
+  ["sponsor", "sponsorship"],
+  ["sponsorships", "sponsorship"],
+  ["citizenship", "citizen"],
+  ["authorization", "authorized"],
+  ["greencard", "citizen"],
+  ["h1b", "sponsorship"],
+  ["h-1b", "sponsorship"],
+  ["relocation", "relocate"],
+  ["relocating", "relocate"],
+  ["relocated", "relocate"],
 ]);
 
 /** Matches URLs so pasted links don't pollute scoring with junk tokens. */
