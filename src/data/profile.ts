@@ -85,7 +85,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/abdul-muneeb-abbasi/",
   resumeUrl: "/Muneeb-Abbasi-Resume.pdf",
   intro:
-    "I build enterprise AI platforms that turn messy business workflows into intelligent, automated systems — from RAG knowledge platforms and AI copilots to cloud-native automation on Azure. I've spent 15+ years shipping software at enterprise scale, including a decade at Microsoft, and I care most about pairing hands-on engineering with real, measurable business outcomes.",
+    "I build enterprise AI platforms that turn messy business workflows into intelligent, automated systems — from RAG knowledge platforms and AI copilots to cloud-native automation on AWS and Azure. I've spent 15+ years shipping software at enterprise scale, including a decade at Microsoft, and I care most about pairing hands-on engineering with real, measurable business outcomes.",
 } as const;
 
 export const featuredProjects: readonly Project[] = [
@@ -193,9 +193,16 @@ export const enterpriseProjects: readonly Project[] = [
     name: "AI inventory & operations platform",
     badge: "Production",
     description:
-      "Enterprise AI platform unifying inventory, supply chain, procurement, and customer operations with LLMs, RAG, AI agents, and semantic search.",
+      "Enterprise AI platform unifying inventory, supply chain, procurement, and customer operations with AI agents, RAG, and semantic search — an AWS-native, event-driven build.",
     impact: "Reduced manual reconciliation by 90%",
-    stack: ["AWS", "Bedrock", "Python", ".NET 8", "React", "Microservices"],
+    stack: [
+      "AWS",
+      "Amazon Bedrock",
+      "SageMaker",
+      "EventBridge",
+      "Python / FastAPI",
+      "React",
+    ],
     links: [
       {
         label: "Read the case study",
@@ -263,10 +270,12 @@ export const experience: readonly Role[] = [
     title: "Principal AI Engineer",
     period: "Feb 2025 – Present",
     summary:
-      "Own end-to-end delivery of an enterprise AI platform for inventory, supply chain, and customer operations.",
+      "Own end-to-end architecture and delivery of an AI-powered inventory & operations platform — an enterprise ERP built on AWS with an event-driven, cloud-native, AI-first architecture.",
     highlights: [
-      "Partner directly with customers and stakeholders to translate business challenges into scalable AI solutions",
-      "Lead technical discovery, solution architecture, workshops, and demonstrations through to production adoption",
+      "Built the AI platform on Amazon Bedrock (Claude, Titan, Llama): RAG with AWS Knowledge Bases over OpenSearch vectors and Aurora pgvector, Titan embeddings, and SageMaker models for demand forecasting, lead scoring, delivery ETA/risk, and anomaly detection",
+      "Designed domain AI agents (quoting, procurement, warehouse, delivery exceptions, warranty, finance, executive insights) with orchestration, tool calling, and human-in-the-loop approval behind an AI guardrails layer",
+      "Deliver event-driven microservices across 18+ business domains on EventBridge, SNS/SQS, Step Functions, Lambda, and EKS/ECS — with blue/green and canary deployments",
+      "Partner directly with customers and stakeholders, leading technical discovery, solution architecture, and demonstrations through to production adoption",
     ],
   },
   {
@@ -291,6 +300,11 @@ export const skills: readonly SkillGroup[] = [
       "RAG",
       "AI agents",
       "Agentic workflows",
+      "Amazon Bedrock",
+      "AWS Knowledge Bases (RAG)",
+      "Titan embeddings",
+      "Amazon SageMaker",
+      "AI guardrails",
       "Semantic & vector search",
       "Prompt engineering",
       "OpenAI / Azure OpenAI",
@@ -300,9 +314,14 @@ export const skills: readonly SkillGroup[] = [
   {
     group: "Cloud & infrastructure",
     items: [
+      "AWS Lambda",
+      "AWS Step Functions",
+      "Amazon EventBridge",
+      "Amazon EKS/ECS",
       "Microsoft Azure",
       "Azure Functions",
       "Event-driven architecture",
+      "Blue/green & canary deployments",
       "Docker",
       "Kubernetes",
       "GitHub Actions",
@@ -324,7 +343,11 @@ export const skills: readonly SkillGroup[] = [
   {
     group: "Data",
     items: [
-      "PostgreSQL",
+      "Amazon Aurora PostgreSQL",
+      "DynamoDB",
+      "Amazon Redshift",
+      "OpenSearch",
+      "ElastiCache",
       "SQL Server",
       "MongoDB",
       "Vector databases",

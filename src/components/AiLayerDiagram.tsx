@@ -238,7 +238,7 @@ export function AiLayerDiagram() {
       {/* Guardrails rail */}
       <rect
         x="24"
-        y="96"
+        y="52"
         width="150"
         height="98"
         rx="8"
@@ -247,7 +247,7 @@ export function AiLayerDiagram() {
       />
       <text
         x="99"
-        y="116"
+        y="72"
         textAnchor="middle"
         className={`${TEXT} text-[12px] font-semibold`}
       >
@@ -255,7 +255,7 @@ export function AiLayerDiagram() {
       </text>
       <text
         x="99"
-        y="136"
+        y="92"
         textAnchor="middle"
         className={`${TEXT_MUTED} text-[10px]`}
       >
@@ -263,7 +263,7 @@ export function AiLayerDiagram() {
       </text>
       <text
         x="99"
-        y="152"
+        y="108"
         textAnchor="middle"
         className={`${TEXT_MUTED} text-[10px]`}
       >
@@ -271,7 +271,7 @@ export function AiLayerDiagram() {
       </text>
       <text
         x="99"
-        y="168"
+        y="124"
         textAnchor="middle"
         className={`${TEXT_MUTED} text-[10px]`}
       >
@@ -279,7 +279,7 @@ export function AiLayerDiagram() {
       </text>
       <text
         x="99"
-        y="184"
+        y="140"
         textAnchor="middle"
         className={`${TEXT_MUTED} text-[10px]`}
       >
@@ -297,7 +297,7 @@ export function AiLayerDiagram() {
       {/* Audit rail */}
       <rect
         x="626"
-        y="96"
+        y="52"
         width="150"
         height="98"
         rx="8"
@@ -306,7 +306,7 @@ export function AiLayerDiagram() {
       />
       <text
         x="701"
-        y="116"
+        y="72"
         textAnchor="middle"
         className={`${TEXT} text-[12px] font-semibold`}
       >
@@ -314,7 +314,7 @@ export function AiLayerDiagram() {
       </text>
       <text
         x="701"
-        y="136"
+        y="92"
         textAnchor="middle"
         className={`${TEXT_MUTED} text-[10px]`}
       >
@@ -322,7 +322,7 @@ export function AiLayerDiagram() {
       </text>
       <text
         x="701"
-        y="152"
+        y="108"
         textAnchor="middle"
         className={`${TEXT_MUTED} text-[10px]`}
       >
@@ -330,7 +330,7 @@ export function AiLayerDiagram() {
       </text>
       <text
         x="701"
-        y="168"
+        y="124"
         textAnchor="middle"
         className={`${TEXT_MUTED} text-[10px]`}
       >
@@ -338,7 +338,7 @@ export function AiLayerDiagram() {
       </text>
       <text
         x="701"
-        y="184"
+        y="140"
         textAnchor="middle"
         className={`${TEXT_MUTED} text-[10px]`}
       >

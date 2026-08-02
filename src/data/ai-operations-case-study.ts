@@ -56,7 +56,7 @@ export const aiOperationsCaseStudy = {
   problem:
     "Before the platform, the business ran on disconnected systems — no single source of truth. Quoting depended on individual salespeople carrying deep product knowledge in their heads: suggesting the right items and pricing a quote required experience no system could back up. Inventory wasn't reliably tracked, so stock decisions ran on guesswork; financial reporting was largely manual or missing. The result: slow quotes, error-prone reconciliation between systems, and operational decisions made without data.",
   approach:
-    "The answer was an AI-first ERP platform built as an integrated whole: fourteen domain microservices on an event-driven backbone, with an AI layer woven through every workflow — domain-scoped agents for quoting, procurement, warehouse, delivery, warranty, and finance; RAG grounding over enterprise data; predictive models for demand, inventory, and delivery; and guardrails with human approval on consequential actions. I own the architecture end to end and lead the AI platform hands-on.",
+    "The answer was an AI-first ERP platform built as an integrated whole on AWS: event-driven microservices across 18+ business domains, with an AI layer woven through every workflow — domain-scoped agents for quoting, procurement, warehouse, delivery, warranty, and finance; RAG grounding over enterprise data; predictive models for demand, inventory, and delivery; and guardrails with human approval on consequential actions. I own the architecture end to end and lead the AI platform hands-on.",
   outcomes: [
     {
       stat: "90%",
@@ -95,18 +95,18 @@ export const aiOperationsCaseStudy = {
       tagline: "The intelligence layer — agents, RAG, prediction, guardrails",
       points: [
         "Domain-scoped agents: quote assistant, procurement, warehouse, delivery exception, warranty, finance and executive insight",
-        "Bedrock LLMs with RAG knowledge bases over the product catalog, pricing, policies, and operational data (OpenSearch vectors)",
-        "Predictive ML on SageMaker: demand forecasting, inventory optimization, delivery ETA, warranty risk, anomaly detection",
-        "Document intelligence for OCR, entity extraction, and PII handling",
-        "Guardrails: content filtering, prompt-injection protection, data access control, tool allow-lists, action approval, audit logging",
+        "Amazon Bedrock LLMs (Claude, Titan, Llama) with RAG via AWS Knowledge Bases over OpenSearch vectors and Aurora pgvector, using Titan embeddings",
+        "Predictive ML on SageMaker: demand forecasting, lead scoring, inventory optimization, delivery ETA/risk, anomaly detection",
+        "Document intelligence with Amazon Textract and Comprehend — OCR, entity extraction, and PII handling",
+        "Guardrails: content filtering, PII protection, prompt-injection protection, tool allow-lists, action approval, audit logging",
       ],
     },
     {
       id: "services",
       name: "Business microservices",
-      tagline: "Fourteen domain services, independently owned and scaled",
+      tagline: "18+ domain services, independently owned and scaled",
       points: [
-        "Customer, sales & quote, order, product & catalog, pricing & promotion, inventory, procurement, warehouse, logistics & delivery, installation & service, warranty & RMA, notifications, reporting, documents",
+        "Customer, sales & quote, order, product & catalog, pricing & promotion, inventory, procurement, warehouse, logistics & delivery, installation & service, warranty & RMA, notifications, reporting, documents, and more",
         "Internal gateway patterns: service discovery, circuit breakers, rate limiting, idempotency, schema registry",
       ],
     },
@@ -115,7 +115,7 @@ export const aiOperationsCaseStudy = {
       name: "Data layer",
       tagline: "Transactional truth plus analytics at scale",
       points: [
-        "Aurora PostgreSQL (multi-AZ) with read replicas for transactions",
+        "Aurora PostgreSQL (multi-AZ) with read replicas for transactions; DynamoDB for high-performance access",
         "S3 document and data lake with Glacier retention; Redshift for enterprise analytics",
         "OpenSearch for search and vectors; ElastiCache Redis for caching and distributed locks",
       ],
@@ -134,9 +134,9 @@ export const aiOperationsCaseStudy = {
       name: "Infrastructure",
       tagline: "Containerized, reproducible, observable",
       points: [
-        "ECS on Fargate in a multi-AZ VPC, with auto scaling",
+        "Containers on EKS/ECS in a multi-AZ VPC, with auto scaling",
         "Infrastructure as code with AWS CDK (TypeScript)",
-        "CloudWatch and X-Ray/OpenTelemetry observability",
+        "CloudWatch, X-Ray/OpenTelemetry, and CloudTrail observability",
         "GitHub Actions + CodePipeline CI/CD with blue/green and canary deploys; cross-region disaster recovery",
       ],
     },
@@ -300,7 +300,7 @@ export const aiOperationsCaseStudy = {
       items: [
         ".NET 8 / ASP.NET Core",
         "Python / FastAPI (AI services)",
-        "ECS on Fargate",
+        "Amazon EKS / ECS",
         "AWS Lambda",
         "Step Functions",
       ],
@@ -308,17 +308,19 @@ export const aiOperationsCaseStudy = {
     {
       group: "AI & ML",
       items: [
-        "Amazon Bedrock",
-        "Bedrock Knowledge Bases (RAG)",
-        "Embedding & reranking models",
+        "Amazon Bedrock (Claude, Titan, Llama)",
+        "AWS Knowledge Bases (RAG)",
+        "Titan embeddings & reranking",
         "Amazon SageMaker",
-        "Amazon OpenSearch (vectors)",
+        "OpenSearch vectors + Aurora pgvector",
+        "Textract & Comprehend",
       ],
     },
     {
       group: "Data & analytics",
       items: [
         "Aurora PostgreSQL",
+        "DynamoDB",
         "ElastiCache Redis",
         "Amazon S3 + Glue + Athena",
         "Amazon Redshift",
@@ -330,7 +332,7 @@ export const aiOperationsCaseStudy = {
       items: [
         "Amazon EventBridge",
         "Amazon SQS / SNS",
-        "Amazon API Gateway",
+        "Amazon API Gateway (REST/GraphQL)",
         "Amazon SES",
       ],
     },
@@ -350,7 +352,7 @@ export const aiOperationsCaseStudy = {
         "AWS CDK (TypeScript)",
         "GitHub Actions + CodePipeline",
         "Blue/green & canary deploys",
-        "CloudWatch + X-Ray / OpenTelemetry",
+        "CloudWatch + X-Ray + CloudTrail",
         "Multi-AZ + cross-region DR",
       ],
     },

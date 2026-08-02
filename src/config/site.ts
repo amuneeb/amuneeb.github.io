@@ -3,9 +3,9 @@ export const site = {
   url: "https://amuneeb.github.io",
   title: "Muneeb Abbasi — Principal AI Engineer",
   description:
-    "Principal AI Engineer building enterprise AI platforms — LLMs, RAG, AI agents, and cloud-native systems on Azure. 15+ years of experience, ex-Microsoft.",
+    "Principal AI Engineer building enterprise AI platforms — LLMs, RAG, AI agents, and cloud-native systems on AWS and Azure. 15+ years of experience, ex-Microsoft.",
   ogDescription:
-    "Enterprise AI platforms: LLMs, RAG, AI agents, and cloud-native systems on Azure.",
+    "Enterprise AI platforms: LLMs, RAG, AI agents, and cloud-native systems on AWS and Azure.",
   keywords: [
     "Muneeb Abbasi",
     "AI Engineer",
