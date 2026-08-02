@@ -24,7 +24,13 @@ export function buildCorpus(): Passage[] {
     {
       id: "availability",
       title: "Availability and contact",
-      text: `Muneeb is interested in new opportunities: open to Principal and Staff AI engineering and applied AI roles — remote, hybrid, or on-site depending on the role. He is a US citizen, authorized to work in the US, and needs no visa sponsorship. Willing to relocate for the right role. Based in ${profile.location} (Seattle area). Reachable by email at ${profile.email}, or on GitHub and LinkedIn.`,
+      text: `Muneeb is available to interview now and can start after a standard two-week notice period. He is a US citizen, authorized to work in the US, and needs no visa sponsorship. Willing to relocate for the right role. Based in ${profile.location} (Seattle area). Reachable by email at ${profile.email}, or on GitHub and LinkedIn.`,
+      href: "/#contact-heading",
+    },
+    {
+      id: "role-preferences",
+      title: "What Muneeb is looking for",
+      text: "Interested in new opportunities: Principal and Staff AI engineering and applied AI roles — remote, hybrid, or on-site depending on the role. He prefers hands-on individual contributor (IC) work, and is also open to tech lead roles that keep him close to the code.",
       href: "/#contact-heading",
     },
     {

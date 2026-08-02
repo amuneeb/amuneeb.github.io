@@ -155,6 +155,8 @@ const ALIASES: ReadonlyMap<string, string> = new Map([
   ["relocation", "relocate"],
   ["relocating", "relocate"],
   ["relocated", "relocate"],
+  ["manager", "lead"],
+  ["management", "lead"],
 ]);
 
 /** Matches URLs so pasted links don't pollute scoring with junk tokens. */

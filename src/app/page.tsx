@@ -122,8 +122,10 @@ export default function Home() {
           <SectionHeading id="contact-heading">Get in touch</SectionHeading>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
             Open to Principal / Staff AI engineering and applied AI roles —
-            and willing to relocate for the right one. US citizen — no visa
-            sponsorship required. The fastest way to reach me is email.
+            hands-on IC preferred, open to tech lead — and willing to relocate
+            for the right one. US citizen, no visa sponsorship required,
+            available on two weeks&apos; notice. The fastest way to reach me
+            is email.
           </p>
           <ul className="mt-4 flex flex-wrap gap-4 text-sm font-medium">
             <li>
