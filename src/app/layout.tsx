@@ -2,7 +2,26 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import { site } from "@/config/site";
+import { profile } from "@/data/profile";
 import "./globals.css";
+
+/** Structured data for rich search results ("Muneeb Abbasi AI engineer"). */
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.name,
+  jobTitle: profile.title,
+  description: site.ogDescription,
+  url: site.url,
+  email: `mailto:${profile.email}`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Kent",
+    addressRegion: "WA",
+    addressCountry: "US",
+  },
+  sameAs: [profile.github, profile.linkedin],
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,6 +78,10 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
         {site.analytics.umamiWebsiteId && (
           <Script
             src={site.analytics.umamiScriptUrl}
