@@ -1,502 +1,493 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 733" width="1100" height="733">
-<defs><marker id="evhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#c026a3" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="1100" height="733" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="1"/>
-<text x="550" y="22" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#14235c" text-anchor="middle">AI Inventory &amp; Operations Platform — Enterprise Architecture</text>
-<text x="550" y="37" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" fill="#5b6472" text-anchor="middle">Modern · Scalable · Secure · Event-Driven · AI-First · Cloud Native</text>
-<rect x="8" y="46" width="60" height="48" rx="5" fill="#14235c" stroke="#14235c" stroke-width="1"/>
-<text x="38" y="66" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
-<text x="38" y="78" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">USER</text>
-<text x="38" y="85.5" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">CHANNELS</text>
-<rect x="74" y="48" width="107.77777777777777" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="80" cy="56" r="2.5" fill="#14235c"/>
-<text x="86" y="58" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Sales Teams (Web App)</text>
-<rect x="187.77777777777777" y="48" width="107.77777777777777" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="193.77777777777777" cy="56" r="2.5" fill="#14235c"/>
-<text x="199.77777777777777" y="58" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Managers (Web App)</text>
-<rect x="301.55555555555554" y="48" width="107.77777777777777" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="307.55555555555554" cy="56" r="2.5" fill="#14235c"/>
-<text x="313.55555555555554" y="58" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Customers (Web Portal)</text>
-<rect x="415.3333333333333" y="48" width="107.77777777777777" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="421.3333333333333" cy="56" r="2.5" fill="#14235c"/>
-<text x="427.3333333333333" y="58" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Mobile App (Sales /</text>
-<text x="427.3333333333333" y="66" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Delivery / Service)</text>
-<rect x="529.1111111111111" y="48" width="107.77777777777777" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="535.1111111111111" cy="56" r="2.5" fill="#14235c"/>
-<text x="541.1111111111111" y="58" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Supplier Portal</text>
-<rect x="642.8888888888889" y="48" width="107.77777777777777" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="648.8888888888889" cy="56" r="2.5" fill="#14235c"/>
-<text x="654.8888888888889" y="58" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Technician App</text>
-<rect x="756.6666666666666" y="48" width="107.77777777777777" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="762.6666666666666" cy="56" r="2.5" fill="#14235c"/>
-<text x="768.6666666666666" y="58" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Driver App</text>
-<rect x="870.4444444444443" y="48" width="107.77777777777777" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="876.4444444444443" cy="56" r="2.5" fill="#14235c"/>
-<text x="882.4444444444443" y="58" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">EDI / API Partners</text>
-<rect x="984.2222222222222" y="48" width="107.77777777777777" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="990.2222222222222" cy="56" r="2.5" fill="#14235c"/>
-<text x="996.2222222222222" y="58" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">External Integrations</text>
-<rect x="8" y="98" width="60" height="74" rx="5" fill="#2456a6" stroke="#2456a6" stroke-width="1"/>
-<text x="38" y="118" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
-<text x="38" y="130" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">EDGE &amp;</text>
-<text x="38" y="137.5" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">SECURITY</text>
-<rect x="74" y="100" width="109.33333333333333" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="80" cy="108" r="2.5" fill="#2456a6"/>
-<text x="86" y="110" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Route 53</text>
-<text x="80" y="120" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· DNS</text>
-<rect x="189.33333333333331" y="100" width="109.33333333333333" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="195.33333333333331" cy="108" r="2.5" fill="#2456a6"/>
-<text x="201.33333333333331" y="110" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">CloudFront</text>
-<text x="195.33333333333331" y="120" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· CDN</text>
-<rect x="304.66666666666663" y="100" width="109.33333333333333" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="310.66666666666663" cy="108" r="2.5" fill="#2456a6"/>
-<text x="316.66666666666663" y="110" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">AWS WAF</text>
-<text x="310.66666666666663" y="120" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· DDoS / OWASP</text>
-<rect x="420" y="100" width="109.33333333333333" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="426" cy="108" r="2.5" fill="#2456a6"/>
-<text x="432" y="110" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">App Load Balancer</text>
-<text x="426" y="120" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· SSL / Routing</text>
-<rect x="535.3333333333333" y="100" width="109.33333333333333" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="541.3333333333333" cy="108" r="2.5" fill="#2456a6"/>
-<text x="547.3333333333333" y="110" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">API Gateway</text>
-<text x="541.3333333333333" y="120" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· REST / GraphQL</text>
-<rect x="650.6666666666666" y="100" width="109.33333333333333" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="656.6666666666666" cy="108" r="2.5" fill="#2456a6"/>
-<text x="662.6666666666666" y="110" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">AWS Cognito</text>
-<text x="656.6666666666666" y="120" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· AuthN / AuthZ / SSO</text>
-<text x="656.6666666666666" y="126.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· customers</text>
-<rect x="774" y="100" width="318" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="780" cy="108" r="2.5" fill="#2456a6"/>
-<text x="786" y="110" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Security Services</text>
-<text x="780" y="120" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· IAM · KMS · Secrets Manager · Shield</text>
-<text x="780" y="126.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· GuardDuty · Security Hub · Inspector</text>
-<text x="780" y="132.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· IAM Identity Center (employees)</text>
-<rect x="8" y="176" width="60" height="222" rx="5" fill="#2e7d46" stroke="#2e7d46" stroke-width="1"/>
-<text x="38" y="196" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
-<text x="38" y="208" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">AI</text>
-<text x="38" y="215.5" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">PLATFORM</text>
-<text x="133" y="188" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#2e7d46" text-anchor="middle">AI Interaction Layer</text>
-<rect x="74" y="194" width="118" height="200" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="80" cy="202" r="2.5" fill="#2e7d46"/>
-<text x="80" y="206" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· AI Copilot (Employees)</text>
-<text x="80" y="212.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Customer AI Assistant</text>
-<text x="80" y="218.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Supplier AI Assistant</text>
-<text x="80" y="224.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Voice / Chat Interface</text>
-<text x="80" y="230.79999999999995" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Natural Language Queries</text>
-<text x="80" y="236.99999999999994" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Insight / Recommendation UI</text>
-<text x="259" y="188" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#2e7d46" text-anchor="middle">AI Gateway &amp; Orchestration</text>
-<rect x="198" y="194" width="122" height="200" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="204" cy="202" r="2.5" fill="#2e7d46"/>
-<text x="204" y="206" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· AI Gateway (authn, quotas, model</text>
-<text x="204" y="212.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· allow-list)</text>
-<text x="204" y="218.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Intent &amp; domain classification</text>
-<text x="204" y="224.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· AI Orchestrator (execution plan,</text>
-<text x="204" y="230.79999999999995" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· workflow state)</text>
-<text x="204" y="236.99999999999994" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Model Router</text>
-<text x="204" y="243.19999999999993" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Tool Registry (OpenAPI, per-agent</text>
-<text x="204" y="249.39999999999992" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· allow-lists)</text>
-<text x="204" y="255.5999999999999" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Response validation</text>
-<text x="204" y="261.7999999999999" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Human-in-the-loop</text>
-<text x="581" y="188" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#2e7d46" text-anchor="middle">AI Services</text>
-<rect x="326" y="194" width="126" height="200" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="332" cy="202" r="2.5" fill="#2e7d46"/>
-<text x="338" y="204" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Generative AI (LLM)</text>
-<text x="332" y="214" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Amazon Bedrock (Claude / Titan /</text>
-<text x="332" y="220.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Llama)</text>
-<text x="332" y="226.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Knowledge Bases (RAG) → OpenSearch</text>
-<text x="332" y="232.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· hybrid (BM25 + vector)</text>
-<text x="332" y="238.79999999999995" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Titan embeddings + reranking</text>
-<text x="332" y="244.99999999999994" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Catalog embeddings → Aurora pgvector</text>
-<rect x="458" y="194" width="120" height="200" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="464" cy="202" r="2.5" fill="#2e7d46"/>
-<text x="470" y="204" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Document Intelligence</text>
-<text x="464" y="214" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Amazon Textract (OCR / Forms /</text>
-<text x="464" y="220.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Tables)</text>
-<text x="464" y="226.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Amazon Comprehend (NLP / Entities</text>
-<text x="464" y="232.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· / PII)</text>
-<text x="464" y="238.79999999999995" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Custom Document Classifier</text>
-<text x="464" y="244.99999999999994" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Document Summary &amp; Q&amp;A</text>
-<rect x="584" y="194" width="120" height="200" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="590" cy="202" r="2.5" fill="#2e7d46"/>
-<text x="596" y="204" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Predictive AI / ML</text>
-<text x="590" y="214" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Amazon SageMaker</text>
-<text x="590" y="220.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Demand forecasting</text>
-<text x="590" y="226.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Supplier-delay risk</text>
-<text x="590" y="232.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Delivery ETA / risk</text>
-<text x="590" y="238.79999999999995" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Quote conversion</text>
-<text x="590" y="244.99999999999994" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Anomaly detection</text>
-<rect x="710" y="194" width="126" height="200" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="716" cy="202" r="2.5" fill="#2e7d46"/>
-<text x="722" y="204" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">AI Agents (tooling)</text>
-<text x="716" y="214" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Quote Assistant Agent</text>
-<text x="716" y="220.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Procurement Agent</text>
-<text x="716" y="226.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Inventory &amp; Warehouse Agent</text>
-<text x="716" y="232.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Delivery Exception Agent</text>
-<text x="716" y="238.79999999999995" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Warranty &amp; Service Agent</text>
-<text x="716" y="244.99999999999994" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Finance Insight Agent</text>
-<text x="716" y="251.19999999999993" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Executive Insight Agent</text>
-<text x="901" y="188" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#2e7d46" text-anchor="middle">Enterprise Data &amp; Context</text>
-<rect x="842" y="194" width="118" height="200" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="848" cy="202" r="2.5" fill="#2e7d46"/>
-<text x="848" y="206" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Product Catalog</text>
-<text x="848" y="212.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Pricing &amp; Promotions</text>
-<text x="848" y="218.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Policies &amp; Procedures</text>
-<text x="848" y="224.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Customer &amp; Order Data</text>
-<text x="848" y="230.79999999999995" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Supplier &amp; Procurement Data</text>
-<text x="848" y="236.99999999999994" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Inventory &amp; Warehouse Data</text>
-<text x="848" y="243.19999999999993" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Delivery &amp; Service Data</text>
-<text x="848" y="249.39999999999992" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Financial &amp; Payment Data</text>
-<text x="848" y="255.5999999999999" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Unstructured Documents</text>
-<text x="848" y="261.7999999999999" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· External Market Data</text>
-<text x="1029" y="188" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#2e7d46" text-anchor="middle">AI Guardrails</text>
-<rect x="966" y="194" width="126" height="128" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="972" cy="202" r="2.5" fill="#2e7d46"/>
-<text x="972" y="206" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Content Filtering</text>
-<text x="972" y="212.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· PII / Sensitive Data Protection</text>
-<text x="972" y="218.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Prompt Injection Protection</text>
-<text x="972" y="224.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Topic Restrictions</text>
-<text x="972" y="230.79999999999995" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Data Access Control</text>
-<text x="972" y="236.99999999999994" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Tool Allow List</text>
-<text x="972" y="243.19999999999993" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Action Approval</text>
-<text x="972" y="249.39999999999992" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Audit &amp; Logging</text>
-<rect x="966" y="328" width="126" height="66" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="972" cy="336" r="2.5" fill="#2e7d46"/>
-<text x="978" y="338" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Evaluation &amp; Observability</text>
-<text x="972" y="348" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Golden datasets (~1,200)</text>
-<text x="972" y="354.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· 4-layer evals</text>
-<text x="972" y="360.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Regression → shadow → canary</text>
-<text x="972" y="366.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· End-to-end tracing</text>
-<line x1="8" y1="401" x2="1092" y2="401" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
-<text x="1092" y="399" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#475569" text-anchor="end">System of Intelligence ↑ · System of Record ↓ — AI recommends; deterministic services execute</text>
-<rect x="8" y="406" width="60" height="88" rx="5" fill="#5b3aa4" stroke="#5b3aa4" stroke-width="1"/>
-<text x="38" y="426" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
-<text x="38" y="438" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">BUSINESS</text>
-<text x="38" y="445.5" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">MICROSERVICES</text>
-<rect x="74" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="80" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="86" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Customer</text>
-<text x="86" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Mgmt</text>
-<text x="80" y="436" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Customer 360</text>
-<text x="80" y="442.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Contacts</text>
-<text x="80" y="448.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Segments</text>
-<rect x="128.375" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="134.375" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="140.375" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Sales &amp;</text>
-<text x="140.375" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Quote</text>
-<text x="134.375" y="436" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Quotes</text>
-<text x="134.375" y="442.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Discount</text>
-<text x="134.375" y="448.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Mgmt</text>
-<text x="134.375" y="454.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Pricing</text>
-<text x="134.375" y="460.79999999999995" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Rules</text>
-<rect x="182.75" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="188.75" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="194.75" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Order</text>
-<text x="194.75" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Mgmt</text>
-<text x="188.75" y="436" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Orchestration</text>
-<text x="188.75" y="442.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Status</text>
-<text x="188.75" y="448.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Tracking</text>
-<text x="188.75" y="454.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Cancellations</text>
-<rect x="237.125" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="243.125" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="249.125" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Product &amp;</text>
-<text x="249.125" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Catalog</text>
-<text x="243.125" y="436" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Products</text>
-<text x="243.125" y="442.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Variants</text>
-<text x="243.125" y="448.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Configurations</text>
-<rect x="291.5" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="297.5" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="303.5" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Pricing &amp;</text>
-<text x="303.5" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Promotion</text>
-<text x="297.5" y="436" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Price Lists</text>
-<text x="297.5" y="442.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Promotions</text>
-<text x="297.5" y="448.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Rules Engine</text>
-<rect x="345.875" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="351.875" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="357.875" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Inventory</text>
-<text x="357.875" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Mgmt</text>
-<text x="351.875" y="436" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Inventory</text>
-<text x="351.875" y="442.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Reservations</text>
-<text x="351.875" y="448.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Adjustments</text>
-<rect x="400.25" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="406.25" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="412.25" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Procurement</text>
-<text x="406.25" y="428" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· PO Mgmt</text>
-<text x="406.25" y="434.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Supplier</text>
-<text x="406.25" y="440.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Mgmt</text>
-<text x="406.25" y="446.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Approvals</text>
-<rect x="454.625" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="460.625" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="466.625" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Warehouse</text>
-<text x="460.625" y="428" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Receiving</text>
-<text x="460.625" y="434.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Putaway</text>
-<text x="460.625" y="440.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Picking /</text>
-<text x="460.625" y="446.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Packing</text>
-<rect x="509" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="515" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="521" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Logistics</text>
-<text x="521" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">&amp;</text>
-<text x="521" y="434" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Delivery</text>
-<text x="515" y="444" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Route</text>
-<text x="515" y="450.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Planning</text>
-<text x="515" y="456.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Delivery</text>
-<text x="515" y="462.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Tracking</text>
-<text x="515" y="468.79999999999995" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· POD / Proof</text>
-<rect x="563.375" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="569.375" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="575.375" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Installation</text>
-<text x="575.375" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">&amp; Service</text>
-<text x="569.375" y="436" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Scheduling</text>
-<text x="569.375" y="442.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Technicians</text>
-<text x="569.375" y="448.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Service Jobs</text>
-<rect x="617.75" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="623.75" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="629.75" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Warranty</text>
-<text x="629.75" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">&amp; RMA</text>
-<text x="623.75" y="436" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Claims</text>
-<text x="623.75" y="442.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Evaluations</text>
-<text x="623.75" y="448.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Replacements</text>
-<rect x="672.125" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="678.125" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="684.125" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Notification</text>
-<text x="684.125" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Service</text>
-<text x="678.125" y="436" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Email / SMS</text>
-<text x="678.125" y="442.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· WhatsApp</text>
-<text x="678.125" y="448.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· In-App</text>
-<rect x="726.5" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="732.5" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="738.5" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Reporting</text>
-<text x="738.5" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">&amp; BI</text>
-<text x="732.5" y="436" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Operational</text>
-<text x="732.5" y="442.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Analytics</text>
-<text x="732.5" y="448.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Dashboards</text>
-<rect x="780.875" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="786.875" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="792.875" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">File &amp;</text>
-<text x="792.875" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Document</text>
-<text x="786.875" y="436" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Storage</text>
-<text x="786.875" y="442.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Versioning</text>
-<text x="786.875" y="448.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Retention</text>
-<rect x="835.25" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="841.25" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="847.25" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Business</text>
-<text x="847.25" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Policy</text>
-<text x="847.25" y="434" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Service</text>
-<text x="841.25" y="444" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Reservation</text>
-<text x="841.25" y="450.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· priority</text>
-<text x="841.25" y="456.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Discount</text>
-<text x="841.25" y="462.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· authority</text>
-<text x="841.25" y="468.79999999999995" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Approval</text>
-<text x="841.25" y="474.99999999999994" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· thresholds</text>
-<text x="841.25" y="481.19999999999993" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Override</text>
-<text x="841.25" y="487.3999999999999" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· rules</text>
-<rect x="889.625" y="408" width="50.375" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="895.625" cy="416" r="2.5" fill="#5b3aa4"/>
-<text x="901.625" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Reconciliation</text>
-<text x="901.625" y="426" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Service</text>
-<text x="895.625" y="436" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Deterministic</text>
-<text x="895.625" y="442.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· matching</text>
-<text x="895.625" y="448.4" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Semantic</text>
-<text x="895.625" y="454.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· matching</text>
-<text x="895.625" y="460.79999999999995" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Exception</text>
-<text x="895.625" y="466.99999999999994" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· surfacing</text>
-<rect x="74" y="480" width="866" height="12" rx="4" fill="#f1edf9" stroke="#cbb8e6" stroke-width="1"/>
-<text x="507" y="489" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="bold" fill="#5b3aa4" text-anchor="middle">API Gateway (Internal) | Service Discovery | Circuit Breaker | Rate Limiting | Idempotency | Validation | Schema Registry | Transactional Outbox</text>
-<rect x="8" y="498" width="60" height="60" rx="5" fill="#1f8a70" stroke="#1f8a70" stroke-width="1"/>
-<text x="38" y="518" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
-<text x="38" y="530" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">DATA</text>
-<rect x="74" y="500" width="103" height="56" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="80" cy="508" r="2.5" fill="#1f8a70"/>
-<text x="86" y="510" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Amazon Aurora</text>
-<text x="86" y="518" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">(PostgreSQL)</text>
-<text x="80" y="528" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· OLTP · Multi-AZ · pgvector</text>
-<text x="80" y="534.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· (catalog embeddings)</text>
-<rect x="183" y="500" width="103" height="56" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="189" cy="508" r="2.5" fill="#1f8a70"/>
-<text x="195" y="510" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Aurora Read Replicas</text>
-<text x="189" y="520" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Read Scaling</text>
-<rect x="292" y="500" width="103" height="56" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="298" cy="508" r="2.5" fill="#1f8a70"/>
-<text x="304" y="510" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Amazon S3</text>
-<text x="298" y="520" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Documents, Files, Reports</text>
-<text x="298" y="526.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Raw Data · Data Lake</text>
-<rect x="401" y="500" width="103" height="56" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="407" cy="508" r="2.5" fill="#1f8a70"/>
-<text x="413" y="510" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">S3 Glacier</text>
-<text x="407" y="520" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Archive · Long-term Retention</text>
-<rect x="510" y="500" width="103" height="56" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="516" cy="508" r="2.5" fill="#1f8a70"/>
-<text x="522" y="510" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Amazon Redshift</text>
-<text x="516" y="520" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Data Warehouse · Analytics</text>
-<rect x="619" y="500" width="103" height="56" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="625" cy="508" r="2.5" fill="#1f8a70"/>
-<text x="631" y="510" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">DynamoDB</text>
-<text x="625" y="520" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Cache / Sessions · High</text>
-<text x="625" y="526.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Performance</text>
-<rect x="728" y="500" width="103" height="56" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="734" cy="508" r="2.5" fill="#1f8a70"/>
-<text x="740" y="510" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">OpenSearch</text>
-<text x="734" y="520" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Knowledge vectors (hybrid) ·</text>
-<text x="734" y="526.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Search · Logs</text>
-<rect x="837" y="500" width="103" height="56" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="843" cy="508" r="2.5" fill="#1f8a70"/>
-<text x="849" y="510" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">ElastiCache (Redis)</text>
-<text x="843" y="520" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Caching · Sessions / Tokens</text>
-<rect x="8" y="562" width="60" height="44" rx="5" fill="#2456a6" stroke="#2456a6" stroke-width="1"/>
-<text x="38" y="582" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
-<text x="38" y="594" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">INTEGRATION</text>
-<rect x="74" y="564" width="118.57142857142857" height="40" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="80" cy="572" r="2.5" fill="#2456a6"/>
-<text x="86" y="574" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Payment Gateways</text>
-<text x="80" y="584" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Square, Stripe, Banks</text>
-<rect x="198.57142857142856" y="564" width="118.57142857142857" height="40" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="204.57142857142856" cy="572" r="2.5" fill="#2456a6"/>
-<text x="210.57142857142856" y="574" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Shipping Carriers</text>
-<text x="204.57142857142856" y="584" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· FedEx, DHL, UPS, Others</text>
-<rect x="323.1428571428571" y="564" width="118.57142857142857" height="40" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="329.1428571428571" cy="572" r="2.5" fill="#2456a6"/>
-<text x="335.1428571428571" y="574" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">EDI / Suppliers</text>
-<text x="329.1428571428571" y="584" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· POs, ASNs, Invoices</text>
-<rect x="447.7142857142857" y="564" width="118.57142857142857" height="40" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="453.7142857142857" cy="572" r="2.5" fill="#2456a6"/>
-<text x="459.7142857142857" y="574" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Accounting Systems</text>
-<text x="453.7142857142857" y="584" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Odoo (general ledger)</text>
-<rect x="572.2857142857142" y="564" width="118.57142857142857" height="40" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="578.2857142857142" cy="572" r="2.5" fill="#2456a6"/>
-<text x="584.2857142857142" y="574" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Tax Systems</text>
-<text x="578.2857142857142" y="584" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Avalara, Vertex, Others</text>
-<rect x="696.8571428571429" y="564" width="118.57142857142857" height="40" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="702.8571428571429" cy="572" r="2.5" fill="#2456a6"/>
-<text x="708.8571428571429" y="574" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">ID Verification</text>
-<text x="702.8571428571429" y="584" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· KYC / AML</text>
-<rect x="821.4285714285714" y="564" width="118.57142857142857" height="40" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="827.4285714285714" cy="572" r="2.5" fill="#2456a6"/>
-<text x="833.4285714285714" y="574" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">BI Tools</text>
-<text x="827.4285714285714" y="584" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Power BI, Tableau</text>
-<rect x="8" y="610" width="60" height="56" rx="5" fill="#d9822b" stroke="#d9822b" stroke-width="1"/>
-<text x="38" y="630" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
-<text x="38" y="642" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">INFRASTRUCTURE</text>
-<text x="38" y="649.5" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">(AWS</text>
-<text x="38" y="657" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">CLOUD)</text>
-<rect x="74" y="612" width="73.27272727272727" height="52" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="80" cy="620" r="2.5" fill="#d9822b"/>
-<text x="86" y="622" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">VPC</text>
-<text x="80" y="632" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Multi-AZ</text>
-<rect x="153.27272727272725" y="612" width="73.27272727272727" height="52" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="159.27272727272725" cy="620" r="2.5" fill="#d9822b"/>
-<text x="165.27272727272725" y="622" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Public Subnets</text>
-<text x="159.27272727272725" y="632" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Edge Services</text>
-<rect x="232.54545454545453" y="612" width="73.27272727272727" height="52" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="238.54545454545453" cy="620" r="2.5" fill="#d9822b"/>
-<text x="244.54545454545453" y="622" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Private Subnets</text>
-<text x="238.54545454545453" y="632" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· App Services</text>
-<rect x="311.8181818181818" y="612" width="73.27272727272727" height="52" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="317.8181818181818" cy="620" r="2.5" fill="#d9822b"/>
-<text x="323.8181818181818" y="622" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">EKS / ECS</text>
-<text x="317.8181818181818" y="632" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Containers</text>
-<rect x="391.09090909090907" y="612" width="73.27272727272727" height="52" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="397.09090909090907" cy="620" r="2.5" fill="#d9822b"/>
-<text x="403.09090909090907" y="622" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Auto Scaling</text>
-<text x="397.09090909090907" y="632" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Compute</text>
-<rect x="470.3636363636363" y="612" width="73.27272727272727" height="52" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="476.3636363636363" cy="620" r="2.5" fill="#d9822b"/>
-<text x="482.3636363636363" y="622" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">RDS / Aurora</text>
-<text x="476.3636363636363" y="632" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Databases</text>
-<rect x="549.6363636363636" y="612" width="73.27272727272727" height="52" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="555.6363636363636" cy="620" r="2.5" fill="#d9822b"/>
-<text x="561.6363636363636" y="622" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">ElastiCache</text>
-<text x="555.6363636363636" y="632" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Caching</text>
-<rect x="628.9090909090909" y="612" width="73.27272727272727" height="52" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="634.9090909090909" cy="620" r="2.5" fill="#d9822b"/>
-<text x="640.9090909090909" y="622" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">S3</text>
-<text x="634.9090909090909" y="632" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Object Storage</text>
-<rect x="708.1818181818181" y="612" width="73.27272727272727" height="52" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="714.1818181818181" cy="620" r="2.5" fill="#d9822b"/>
-<text x="720.1818181818181" y="622" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">CloudWatch</text>
-<text x="714.1818181818181" y="632" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Monitoring</text>
-<rect x="787.4545454545454" y="612" width="73.27272727272727" height="52" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="793.4545454545454" cy="620" r="2.5" fill="#d9822b"/>
-<text x="799.4545454545454" y="622" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">CloudTrail</text>
-<text x="793.4545454545454" y="632" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Audit</text>
-<rect x="866.7272727272726" y="612" width="73.27272727272727" height="52" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="872.7272727272726" cy="620" r="2.5" fill="#d9822b"/>
-<text x="878.7272727272726" y="622" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">KMS</text>
-<text x="872.7272727272726" y="632" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Encryption</text>
-<rect x="8" y="672" width="932" height="56" rx="4" fill="#faf7ff" stroke="#cbb8e6" stroke-width="1"/>
-<text x="16" y="688" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#5b3aa4" text-anchor="start">EVENT-DRIVEN ARCHITECTURE</text>
-<text x="16" y="700" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#6b5b8a" text-anchor="start">All business events publish to Amazon EventBridge</text>
-<text x="16" y="709" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#6b5b8a" text-anchor="start">and are consumed by interested microservices and integrations.</text>
-<rect x="210" y="678" width="92.85714285714286" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="216" cy="686" r="2.5" fill="#5b3aa4"/>
-<text x="222" y="688" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Domain Events</text>
-<text x="216" y="698" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Order Created</text>
-<text x="216" y="704.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Inventory Reserved</text>
-<line x1="303.8571428571429" y1="700" x2="313.8571428571429" y2="700" stroke="#c026a3" stroke-width="1.4" marker-end="url(#evhead)"/>
-<rect x="314.8571428571429" y="678" width="92.85714285714286" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="320.8571428571429" cy="686" r="2.5" fill="#5b3aa4"/>
-<text x="326.8571428571429" y="688" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Transactional Outbox</text>
-<text x="320.8571428571429" y="698" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Reliable publish</text>
-<line x1="408.7142857142858" y1="700" x2="418.7142857142858" y2="700" stroke="#c026a3" stroke-width="1.4" marker-end="url(#evhead)"/>
-<rect x="419.7142857142857" y="678" width="92.85714285714286" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="425.7142857142857" cy="686" r="2.5" fill="#5b3aa4"/>
-<text x="431.7142857142857" y="688" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">EventBridge</text>
-<text x="425.7142857142857" y="698" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Event Bus</text>
-<line x1="513.5714285714286" y1="700" x2="523.5714285714286" y2="700" stroke="#c026a3" stroke-width="1.4" marker-end="url(#evhead)"/>
-<rect x="524.5714285714286" y="678" width="92.85714285714286" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="530.5714285714286" cy="686" r="2.5" fill="#5b3aa4"/>
-<text x="536.5714285714286" y="688" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">SNS Topics</text>
-<text x="530.5714285714286" y="698" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Fanout</text>
-<line x1="618.4285714285714" y1="700" x2="628.4285714285714" y2="700" stroke="#c026a3" stroke-width="1.4" marker-end="url(#evhead)"/>
-<rect x="629.4285714285714" y="678" width="92.85714285714286" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="635.4285714285714" cy="686" r="2.5" fill="#5b3aa4"/>
-<text x="641.4285714285714" y="688" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">SQS Queues</text>
-<text x="635.4285714285714" y="698" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Decoupling</text>
-<line x1="723.2857142857143" y1="700" x2="733.2857142857143" y2="700" stroke="#c026a3" stroke-width="1.4" marker-end="url(#evhead)"/>
-<rect x="734.2857142857143" y="678" width="92.85714285714286" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="740.2857142857143" cy="686" r="2.5" fill="#5b3aa4"/>
-<text x="746.2857142857143" y="688" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">Lambda / Consumers</text>
-<text x="740.2857142857143" y="698" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Idempotent consumers</text>
-<text x="740.2857142857143" y="704.2" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· Async Processing</text>
-<line x1="828.1428571428572" y1="700" x2="838.1428571428572" y2="700" stroke="#c026a3" stroke-width="1.4" marker-end="url(#evhead)"/>
-<rect x="839.1428571428571" y="678" width="92.85714285714286" height="44" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-<circle cx="845.1428571428571" cy="686" r="2.5" fill="#5b3aa4"/>
-<text x="851.1428571428571" y="688" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#1f2937" text-anchor="start">External Systems</text>
-<text x="845.1428571428571" y="698" font-family="Arial, Helvetica, sans-serif" font-size="5.3" font-weight="normal" fill="#475569" text-anchor="start">· EDI, Notifications, etc.</text>
-<rect x="948" y="406" width="144" height="62" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
-<text x="956" y="418" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#14235c" text-anchor="start">LEGEND</text>
-<line x1="956" y1="430" x2="978" y2="430" stroke="#334155" stroke-width="1.3"/>
-<text x="982" y="432" font-family="Arial, Helvetica, sans-serif" font-size="5.6" font-weight="normal" fill="#475569" text-anchor="start">Synchronous (HTTPS / REST / gRPC)</text>
-<line x1="956" y1="439" x2="978" y2="439" stroke="#334155" stroke-width="1.3" stroke-dasharray="4 3"/>
-<text x="982" y="441" font-family="Arial, Helvetica, sans-serif" font-size="5.6" font-weight="normal" fill="#475569" text-anchor="start">Asynchronous (Events / Messages)</text>
-<line x1="956" y1="448" x2="978" y2="448" stroke="#2456a6" stroke-width="1.3" stroke-dasharray="1 2"/>
-<text x="982" y="450" font-family="Arial, Helvetica, sans-serif" font-size="5.6" font-weight="normal" fill="#475569" text-anchor="start">Data Flow / Replication</text>
-<line x1="956" y1="457" x2="978" y2="457" stroke="#2e7d46" stroke-width="1.3" stroke-dasharray="2 3"/>
-<text x="982" y="459" font-family="Arial, Helvetica, sans-serif" font-size="5.6" font-weight="normal" fill="#475569" text-anchor="start">AI / Context Flow</text>
-<rect x="948" y="474" width="144" height="82" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
-<text x="956" y="486" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#14235c" text-anchor="start">DEPLOYMENT STRATEGY</text>
-<circle cx="959" cy="496" r="2" fill="#d9822b"/>
-<text x="966" y="498" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">Blue / Green Deployments</text>
-<circle cx="959" cy="506" r="2" fill="#d9822b"/>
-<text x="966" y="508" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">Canary Releases</text>
-<circle cx="959" cy="516" r="2" fill="#d9822b"/>
-<text x="966" y="518" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">Automated Rollback</text>
-<circle cx="959" cy="526" r="2" fill="#d9822b"/>
-<text x="966" y="528" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">Multi-AZ High Availability</text>
-<circle cx="959" cy="536" r="2" fill="#d9822b"/>
-<text x="966" y="538" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">Cross-region pilot-light DR</text>
-<rect x="948" y="560" width="144" height="106" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
-<text x="956" y="572" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#14235c" text-anchor="start">KEY DESIGN PRINCIPLES</text>
-<circle cx="959" cy="582" r="2" fill="#2e7d46"/>
-<text x="966" y="584" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">AI recommends; deterministic</text>
-<text x="966" y="591" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">business services execute</text>
-<circle cx="959" cy="600" r="2" fill="#2e7d46"/>
-<text x="966" y="602" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">Event-Driven — decoupled,</text>
-<text x="966" y="609" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">resilient, real-time</text>
-<circle cx="959" cy="618" r="2" fill="#2e7d46"/>
-<text x="966" y="620" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">Microservices — independent,</text>
-<text x="966" y="627" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">scalable, ownership boundaries</text>
-<circle cx="959" cy="636" r="2" fill="#2e7d46"/>
-<text x="966" y="638" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">Cloud Native — AWS managed,</text>
-<text x="966" y="645" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">scalable, secure</text>
-<circle cx="959" cy="654" r="2" fill="#2e7d46"/>
-<text x="966" y="656" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">Security &amp; Compliance —</text>
-<text x="966" y="663" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="normal" fill="#475569" text-anchor="start">guardrails, encryption, audit</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 742" width="1100" height="742">
+<defs><marker id="evhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#c026a3" stroke-width="1.3"/></marker></defs>
+<rect x="0" y="0" width="1100" height="742" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="1"/>
+<text x="550" y="30" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" fill="#14235c" text-anchor="middle">AI Inventory &amp; Operations Platform — Enterprise Architecture</text>
+<text x="550" y="47" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="normal" fill="#5b6472" text-anchor="middle">Modern · Scalable · Secure · Event-Driven · AI-First · Cloud Native</text>
+<rect x="8" y="58" width="60" height="44" rx="6" fill="#14235c" stroke="#14235c" stroke-width="1"/>
+<text x="38" y="76" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text x="38" y="90" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">USER</text>
+<text x="38" y="98.5" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">CHANNELS</text>
+<rect x="74" y="60" width="107.77777777777777" height="40" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="81" cy="70" r="2.6" fill="#14235c"/>
+<text x="87" y="72" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Sales Teams (Web</text>
+<text x="87" y="81.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">App)</text>
+<rect x="187.77777777777777" y="60" width="107.77777777777777" height="40" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="194.77777777777777" cy="70" r="2.6" fill="#14235c"/>
+<text x="200.77777777777777" y="72" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Managers (Web App)</text>
+<rect x="301.55555555555554" y="60" width="107.77777777777777" height="40" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="308.55555555555554" cy="70" r="2.6" fill="#14235c"/>
+<text x="314.55555555555554" y="72" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Customers (Web</text>
+<text x="314.55555555555554" y="81.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Portal)</text>
+<rect x="415.3333333333333" y="60" width="107.77777777777777" height="40" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="422.3333333333333" cy="70" r="2.6" fill="#14235c"/>
+<text x="428.3333333333333" y="72" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Mobile App (Sales /</text>
+<text x="428.3333333333333" y="81.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Delivery / Service)</text>
+<rect x="529.1111111111111" y="60" width="107.77777777777777" height="40" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="536.1111111111111" cy="70" r="2.6" fill="#14235c"/>
+<text x="542.1111111111111" y="72" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Supplier Portal</text>
+<rect x="642.8888888888889" y="60" width="107.77777777777777" height="40" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="649.8888888888889" cy="70" r="2.6" fill="#14235c"/>
+<text x="655.8888888888889" y="72" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Technician App</text>
+<rect x="756.6666666666666" y="60" width="107.77777777777777" height="40" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="763.6666666666666" cy="70" r="2.6" fill="#14235c"/>
+<text x="769.6666666666666" y="72" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Driver App</text>
+<rect x="870.4444444444443" y="60" width="107.77777777777777" height="40" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="877.4444444444443" cy="70" r="2.6" fill="#14235c"/>
+<text x="883.4444444444443" y="72" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">EDI / API Partners</text>
+<rect x="984.2222222222222" y="60" width="107.77777777777777" height="40" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="991.2222222222222" cy="70" r="2.6" fill="#14235c"/>
+<text x="997.2222222222222" y="72" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">External</text>
+<text x="997.2222222222222" y="81.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Integrations</text>
+<rect x="8" y="110" width="60" height="60" rx="6" fill="#2456a6" stroke="#2456a6" stroke-width="1"/>
+<text x="38" y="136" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text x="38" y="150" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">EDGE &amp;</text>
+<text x="38" y="158.5" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">SECURITY</text>
+<rect x="74" y="112" width="109.33333333333333" height="56" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="81" cy="122" r="2.6" fill="#2456a6"/>
+<text x="87" y="124" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Route 53</text>
+<text x="81" y="136.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· DNS</text>
+<rect x="189.33333333333331" y="112" width="109.33333333333333" height="56" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="196.33333333333331" cy="122" r="2.6" fill="#2456a6"/>
+<text x="202.33333333333331" y="124" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">CloudFront</text>
+<text x="196.33333333333331" y="136.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· CDN</text>
+<rect x="304.66666666666663" y="112" width="109.33333333333333" height="56" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="311.66666666666663" cy="122" r="2.6" fill="#2456a6"/>
+<text x="317.66666666666663" y="124" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">AWS WAF</text>
+<text x="311.66666666666663" y="136.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· DDoS / OWASP</text>
+<rect x="420" y="112" width="109.33333333333333" height="56" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="427" cy="122" r="2.6" fill="#2456a6"/>
+<text x="433" y="124" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">App Load Balancer</text>
+<text x="427" y="136.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· SSL / Routing</text>
+<rect x="535.3333333333333" y="112" width="109.33333333333333" height="56" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="542.3333333333333" cy="122" r="2.6" fill="#2456a6"/>
+<text x="548.3333333333333" y="124" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">API Gateway</text>
+<text x="542.3333333333333" y="136.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· REST / GraphQL</text>
+<rect x="650.6666666666666" y="112" width="109.33333333333333" height="56" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="657.6666666666666" cy="122" r="2.6" fill="#2456a6"/>
+<text x="663.6666666666666" y="124" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">AWS Cognito</text>
+<text x="657.6666666666666" y="136.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· AuthN / AuthZ / SSO</text>
+<text x="657.6666666666666" y="144.79999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· customers</text>
+<rect x="774" y="112" width="318" height="56" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="781" cy="122" r="2.6" fill="#2456a6"/>
+<text x="787" y="124" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Security Services</text>
+<text x="781" y="136.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· IAM · KMS · Secrets Manager · Shield</text>
+<text x="781" y="144.79999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· GuardDuty · Security Hub · Inspector</text>
+<text x="781" y="153.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· IAM Identity Center (employees)</text>
+<rect x="8" y="178" width="60" height="158" rx="6" fill="#2e7d46" stroke="#2e7d46" stroke-width="1"/>
+<text x="38" y="253" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text x="38" y="267" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">AI</text>
+<text x="38" y="275.5" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">PLATFORM</text>
+<text x="133" y="192" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#2e7d46" text-anchor="middle">AI Interaction Layer</text>
+<rect x="74" y="198" width="118" height="134" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="81" cy="208" r="2.6" fill="#2e7d46"/>
+<text x="81" y="212" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· AI Copilot (Employees)</text>
+<text x="81" y="220.6" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Customer AI Assistant</text>
+<text x="81" y="229.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Supplier AI Assistant</text>
+<text x="81" y="237.79999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Voice / Chat Interface</text>
+<text x="81" y="246.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Natural Language Queries</text>
+<text x="81" y="254.99999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Insight / Recommendation UI</text>
+<text x="259" y="192" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#2e7d46" text-anchor="middle">AI Gateway &amp; Orchestration</text>
+<rect x="198" y="198" width="122" height="134" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="205" cy="208" r="2.6" fill="#2e7d46"/>
+<text x="205" y="212" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· AI Gateway (authn, quotas,</text>
+<text x="205" y="220.6" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· model allow-list)</text>
+<text x="205" y="229.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Intent &amp; domain classification</text>
+<text x="205" y="237.79999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· AI Orchestrator (execution</text>
+<text x="205" y="246.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· plan, workflow state)</text>
+<text x="205" y="254.99999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Model Router</text>
+<text x="205" y="263.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Tool Registry (OpenAPI,</text>
+<text x="205" y="272.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· per-agent allow-lists)</text>
+<text x="205" y="280.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Response validation</text>
+<text x="205" y="289.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Human-in-the-loop</text>
+<text x="581" y="192" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#2e7d46" text-anchor="middle">AI Services</text>
+<rect x="326" y="198" width="126" height="134" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="333" cy="208" r="2.6" fill="#2e7d46"/>
+<text x="339" y="210" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Generative AI (LLM)</text>
+<text x="333" y="222.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Amazon Bedrock (Claude / Titan /</text>
+<text x="333" y="230.79999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Llama)</text>
+<text x="333" y="239.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Knowledge Bases (RAG) →</text>
+<text x="333" y="247.99999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· OpenSearch hybrid (BM25 +</text>
+<text x="333" y="256.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· vector)</text>
+<text x="333" y="265.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Titan embeddings + reranking</text>
+<text x="333" y="273.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Catalog embeddings → Aurora</text>
+<text x="333" y="282.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· pgvector</text>
+<rect x="458" y="198" width="120" height="134" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="465" cy="208" r="2.6" fill="#2e7d46"/>
+<text x="471" y="210" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Document Intelligence</text>
+<text x="465" y="222.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Amazon Textract (OCR / Forms /</text>
+<text x="465" y="230.79999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Tables)</text>
+<text x="465" y="239.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Amazon Comprehend (NLP /</text>
+<text x="465" y="247.99999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Entities / PII)</text>
+<text x="465" y="256.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Custom Document Classifier</text>
+<text x="465" y="265.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Document Summary &amp; Q&amp;A</text>
+<rect x="584" y="198" width="120" height="134" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="591" cy="208" r="2.6" fill="#2e7d46"/>
+<text x="597" y="210" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Predictive AI / ML</text>
+<text x="591" y="222.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Amazon SageMaker</text>
+<text x="591" y="230.79999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Demand forecasting</text>
+<text x="591" y="239.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Supplier-delay risk</text>
+<text x="591" y="247.99999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Delivery ETA / risk</text>
+<text x="591" y="256.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Quote conversion</text>
+<text x="591" y="265.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Anomaly detection</text>
+<rect x="710" y="198" width="126" height="134" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="717" cy="208" r="2.6" fill="#2e7d46"/>
+<text x="723" y="210" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">AI Agents (tooling)</text>
+<text x="717" y="222.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Quote Assistant Agent</text>
+<text x="717" y="230.79999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Procurement Agent</text>
+<text x="717" y="239.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Inventory &amp; Warehouse Agent</text>
+<text x="717" y="247.99999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Delivery Exception Agent</text>
+<text x="717" y="256.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Warranty &amp; Service Agent</text>
+<text x="717" y="265.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Finance Insight Agent</text>
+<text x="717" y="273.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Executive Insight Agent</text>
+<text x="901" y="192" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#2e7d46" text-anchor="middle">Enterprise Data &amp; Context</text>
+<rect x="842" y="198" width="118" height="134" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="849" cy="208" r="2.6" fill="#2e7d46"/>
+<text x="849" y="212" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Product Catalog</text>
+<text x="849" y="220.6" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Pricing &amp; Promotions</text>
+<text x="849" y="229.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Policies &amp; Procedures</text>
+<text x="849" y="237.79999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Customer &amp; Order Data</text>
+<text x="849" y="246.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Supplier &amp; Procurement Data</text>
+<text x="849" y="254.99999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Inventory &amp; Warehouse Data</text>
+<text x="849" y="263.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Delivery &amp; Service Data</text>
+<text x="849" y="272.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Financial &amp; Payment Data</text>
+<text x="849" y="280.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Unstructured Documents</text>
+<text x="849" y="289.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· External Market Data</text>
+<text x="1029" y="192" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#2e7d46" text-anchor="middle">AI Guardrails</text>
+<rect x="966" y="198" width="126" height="78" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="973" cy="208" r="2.6" fill="#2e7d46"/>
+<text x="973" y="212" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Content Filtering</text>
+<text x="973" y="220.6" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· PII / Sensitive Data Protection</text>
+<text x="973" y="229.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Prompt Injection Protection</text>
+<text x="973" y="237.79999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Topic Restrictions</text>
+<text x="973" y="246.39999999999998" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Data Access Control</text>
+<text x="973" y="254.99999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Tool Allow List</text>
+<text x="973" y="263.59999999999997" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Action Approval</text>
+<text x="973" y="272.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Audit &amp; Logging</text>
+<rect x="966" y="282" width="126" height="50" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="973" cy="292" r="2.6" fill="#2e7d46"/>
+<text x="979" y="294" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Evaluation &amp;</text>
+<text x="979" y="303.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Observability</text>
+<text x="973" y="315.4" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Golden datasets (~1,200) ·</text>
+<text x="973" y="324" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· 4-layer evals</text>
+<text x="973" y="332.6" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Regression → shadow → canary ·</text>
+<text x="973" y="341.20000000000005" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· tracing</text>
+<line x1="8" y1="340" x2="1092" y2="340" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="1092" y="337" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#475569" text-anchor="end">System of Intelligence ↑ · System of Record ↓ — AI recommends; deterministic services execute</text>
+<rect x="8" y="348" width="60" height="150" rx="6" fill="#5b3aa4" stroke="#5b3aa4" stroke-width="1"/>
+<text x="38" y="419" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<text x="38" y="433" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">BUSINESS</text>
+<text x="38" y="441.5" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">MICROSERVICES</text>
+<rect x="74" y="350" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="81" cy="360" r="2.6" fill="#5b3aa4"/>
+<text x="87" y="362" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Customer Mgmt</text>
+<text x="81" y="374.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Customer 360</text>
+<text x="81" y="382.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Contacts</text>
+<text x="81" y="391.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Segments</text>
+<rect x="183" y="350" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="190" cy="360" r="2.6" fill="#5b3aa4"/>
+<text x="196" y="362" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Sales &amp; Quote</text>
+<text x="190" y="374.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Quotes</text>
+<text x="190" y="382.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Discount Mgmt</text>
+<text x="190" y="391.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Pricing Rules</text>
+<rect x="292" y="350" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="299" cy="360" r="2.6" fill="#5b3aa4"/>
+<text x="305" y="362" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Order Mgmt</text>
+<text x="299" y="374.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Orchestration</text>
+<text x="299" y="382.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Status Tracking</text>
+<text x="299" y="391.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Cancellations</text>
+<rect x="401" y="350" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="408" cy="360" r="2.6" fill="#5b3aa4"/>
+<text x="414" y="362" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Product &amp; Catalog</text>
+<text x="408" y="374.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Products</text>
+<text x="408" y="382.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Variants</text>
+<text x="408" y="391.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Configurations</text>
+<rect x="510" y="350" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="517" cy="360" r="2.6" fill="#5b3aa4"/>
+<text x="523" y="362" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Pricing &amp; Promotion</text>
+<text x="517" y="374.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Price Lists</text>
+<text x="517" y="382.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Promotions</text>
+<text x="517" y="391.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Rules Engine</text>
+<rect x="619" y="350" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="626" cy="360" r="2.6" fill="#5b3aa4"/>
+<text x="632" y="362" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Inventory Mgmt</text>
+<text x="626" y="374.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Inventory</text>
+<text x="626" y="382.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Reservations</text>
+<text x="626" y="391.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Adjustments</text>
+<rect x="728" y="350" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="735" cy="360" r="2.6" fill="#5b3aa4"/>
+<text x="741" y="362" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Procurement</text>
+<text x="735" y="374.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· PO Mgmt</text>
+<text x="735" y="382.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Supplier Mgmt</text>
+<text x="735" y="391.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Approvals</text>
+<rect x="837" y="350" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="844" cy="360" r="2.6" fill="#5b3aa4"/>
+<text x="850" y="362" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Warehouse</text>
+<text x="844" y="374.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Receiving</text>
+<text x="844" y="382.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Putaway</text>
+<text x="844" y="391.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Picking / Packing</text>
+<rect x="74" y="420" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="81" cy="430" r="2.6" fill="#5b3aa4"/>
+<text x="87" y="432" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Logistics &amp;</text>
+<text x="87" y="441.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Delivery</text>
+<text x="81" y="453.4" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Route Planning</text>
+<text x="81" y="462" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Delivery Tracking</text>
+<text x="81" y="470.6" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· POD / Proof</text>
+<rect x="183" y="420" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="190" cy="430" r="2.6" fill="#5b3aa4"/>
+<text x="196" y="432" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Installation &amp;</text>
+<text x="196" y="441.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Service</text>
+<text x="190" y="453.4" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Scheduling</text>
+<text x="190" y="462" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Technicians</text>
+<text x="190" y="470.6" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Service Jobs</text>
+<rect x="292" y="420" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="299" cy="430" r="2.6" fill="#5b3aa4"/>
+<text x="305" y="432" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Warranty &amp; RMA</text>
+<text x="299" y="444.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Claims</text>
+<text x="299" y="452.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Evaluations</text>
+<text x="299" y="461.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Replacements</text>
+<rect x="401" y="420" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="408" cy="430" r="2.6" fill="#5b3aa4"/>
+<text x="414" y="432" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Notification</text>
+<text x="414" y="441.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Service</text>
+<text x="408" y="453.4" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Email / SMS</text>
+<text x="408" y="462" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· WhatsApp</text>
+<text x="408" y="470.6" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· In-App</text>
+<rect x="510" y="420" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="517" cy="430" r="2.6" fill="#5b3aa4"/>
+<text x="523" y="432" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Reporting &amp; BI</text>
+<text x="517" y="444.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Operational</text>
+<text x="517" y="452.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Analytics</text>
+<text x="517" y="461.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Dashboards</text>
+<rect x="619" y="420" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="626" cy="430" r="2.6" fill="#5b3aa4"/>
+<text x="632" y="432" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">File &amp; Document</text>
+<text x="626" y="444.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Storage</text>
+<text x="626" y="452.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Versioning</text>
+<text x="626" y="461.40000000000003" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Retention</text>
+<rect x="728" y="420" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="735" cy="430" r="2.6" fill="#5b3aa4"/>
+<text x="741" y="432" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Business Policy</text>
+<text x="741" y="441.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Service</text>
+<text x="735" y="453.4" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Reservation priority</text>
+<text x="735" y="462" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Discount authority</text>
+<text x="735" y="470.6" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Approval thresholds</text>
+<text x="735" y="479.20000000000005" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Override rules</text>
+<rect x="837" y="420" width="103" height="66" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="844" cy="430" r="2.6" fill="#5b3aa4"/>
+<text x="850" y="432" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Reconciliation</text>
+<text x="850" y="441.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Service</text>
+<text x="844" y="453.4" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Deterministic matching</text>
+<text x="844" y="462" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Semantic matching</text>
+<text x="844" y="470.6" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Exception surfacing</text>
+<rect x="74" y="490" width="866" height="14" rx="4" fill="#f1edf9" stroke="#cbb8e6" stroke-width="1"/>
+<text x="507" y="500" font-family="Arial, Helvetica, sans-serif" font-size="6.8" font-weight="bold" fill="#5b3aa4" text-anchor="middle">API Gateway (Internal) | Service Discovery | Circuit Breaker | Rate Limiting | Idempotency | Validation | Schema Registry | Transactional Outbox</text>
+<rect x="8" y="510" width="60" height="54" rx="6" fill="#1f8a70" stroke="#1f8a70" stroke-width="1"/>
+<text x="38" y="533" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+<text x="38" y="547" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">DATA</text>
+<rect x="74" y="512" width="103" height="50" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="81" cy="522" r="2.6" fill="#1f8a70"/>
+<text x="87" y="524" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Amazon Aurora</text>
+<text x="87" y="533.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">(PostgreSQL)</text>
+<text x="81" y="545.4000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· OLTP · Multi-AZ</text>
+<text x="81" y="554.0000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· pgvector (catalog</text>
+<text x="81" y="562.6000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· embeddings)</text>
+<rect x="183" y="512" width="103" height="50" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="190" cy="522" r="2.6" fill="#1f8a70"/>
+<text x="196" y="524" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Aurora Read</text>
+<text x="196" y="533.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Replicas</text>
+<text x="190" y="545.4000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Read Scaling</text>
+<rect x="292" y="512" width="103" height="50" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="299" cy="522" r="2.6" fill="#1f8a70"/>
+<text x="305" y="524" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Amazon S3</text>
+<text x="299" y="536.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Documents · Data Lake</text>
+<text x="299" y="544.8000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Raw Data</text>
+<rect x="401" y="512" width="103" height="50" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="408" cy="522" r="2.6" fill="#1f8a70"/>
+<text x="414" y="524" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">S3 Glacier</text>
+<text x="408" y="536.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Archive · Long-term</text>
+<rect x="510" y="512" width="103" height="50" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="517" cy="522" r="2.6" fill="#1f8a70"/>
+<text x="523" y="524" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Amazon Redshift</text>
+<text x="517" y="536.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Data Warehouse</text>
+<text x="517" y="544.8000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Analytics</text>
+<rect x="619" y="512" width="103" height="50" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="626" cy="522" r="2.6" fill="#1f8a70"/>
+<text x="632" y="524" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">DynamoDB</text>
+<text x="626" y="536.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Cache / Sessions</text>
+<text x="626" y="544.8000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· High Performance</text>
+<rect x="728" y="512" width="103" height="50" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="735" cy="522" r="2.6" fill="#1f8a70"/>
+<text x="741" y="524" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">OpenSearch</text>
+<text x="735" y="536.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Knowledge vectors (hybrid)</text>
+<text x="735" y="544.8000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Search · Logs</text>
+<rect x="837" y="512" width="103" height="50" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="844" cy="522" r="2.6" fill="#1f8a70"/>
+<text x="850" y="524" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">ElastiCache (Redis)</text>
+<text x="844" y="536.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Caching</text>
+<text x="844" y="544.8000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Sessions / Tokens</text>
+<rect x="8" y="570" width="60" height="46" rx="6" fill="#2456a6" stroke="#2456a6" stroke-width="1"/>
+<text x="38" y="589" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+<text x="38" y="603" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">INTEGRATION</text>
+<rect x="74" y="572" width="118.57142857142857" height="42" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="81" cy="582" r="2.6" fill="#2456a6"/>
+<text x="87" y="584" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Payment Gateways</text>
+<text x="81" y="596.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Square, Stripe, Banks</text>
+<rect x="198.57142857142856" y="572" width="118.57142857142857" height="42" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="205.57142857142856" cy="582" r="2.6" fill="#2456a6"/>
+<text x="211.57142857142856" y="584" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Shipping Carriers</text>
+<text x="205.57142857142856" y="596.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· FedEx, DHL, UPS</text>
+<rect x="323.1428571428571" y="572" width="118.57142857142857" height="42" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="330.1428571428571" cy="582" r="2.6" fill="#2456a6"/>
+<text x="336.1428571428571" y="584" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">EDI / Suppliers</text>
+<text x="330.1428571428571" y="596.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· POs, ASNs, Invoices</text>
+<rect x="447.7142857142857" y="572" width="118.57142857142857" height="42" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="454.7142857142857" cy="582" r="2.6" fill="#2456a6"/>
+<text x="460.7142857142857" y="584" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Accounting Systems</text>
+<text x="454.7142857142857" y="596.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Odoo (general ledger)</text>
+<rect x="572.2857142857142" y="572" width="118.57142857142857" height="42" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="579.2857142857142" cy="582" r="2.6" fill="#2456a6"/>
+<text x="585.2857142857142" y="584" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Tax Systems</text>
+<text x="579.2857142857142" y="596.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Avalara, Vertex</text>
+<rect x="696.8571428571429" y="572" width="118.57142857142857" height="42" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="703.8571428571429" cy="582" r="2.6" fill="#2456a6"/>
+<text x="709.8571428571429" y="584" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">ID Verification</text>
+<text x="703.8571428571429" y="596.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· KYC / AML</text>
+<rect x="821.4285714285714" y="572" width="118.57142857142857" height="42" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="828.4285714285714" cy="582" r="2.6" fill="#2456a6"/>
+<text x="834.4285714285714" y="584" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">BI Tools</text>
+<text x="828.4285714285714" y="596.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Power BI, Tableau</text>
+<rect x="8" y="622" width="60" height="52" rx="6" fill="#d9822b" stroke="#d9822b" stroke-width="1"/>
+<text x="38" y="644" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+<text x="38" y="658" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">INFRASTRUCTURE</text>
+<text x="38" y="666.5" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">(AWS</text>
+<text x="38" y="675" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">CLOUD)</text>
+<rect x="74" y="624" width="73.27272727272727" height="48" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="81" cy="634" r="2.6" fill="#d9822b"/>
+<text x="87" y="636" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">VPC</text>
+<text x="81" y="648.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Multi-AZ</text>
+<rect x="153.27272727272725" y="624" width="73.27272727272727" height="48" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="160.27272727272725" cy="634" r="2.6" fill="#d9822b"/>
+<text x="166.27272727272725" y="636" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Public</text>
+<text x="166.27272727272725" y="645.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Subnets</text>
+<text x="160.27272727272725" y="657.4000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Edge Services</text>
+<rect x="232.54545454545453" y="624" width="73.27272727272727" height="48" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="239.54545454545453" cy="634" r="2.6" fill="#d9822b"/>
+<text x="245.54545454545453" y="636" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Private</text>
+<text x="245.54545454545453" y="645.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Subnets</text>
+<text x="239.54545454545453" y="657.4000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· App Services</text>
+<rect x="311.8181818181818" y="624" width="73.27272727272727" height="48" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="318.8181818181818" cy="634" r="2.6" fill="#d9822b"/>
+<text x="324.8181818181818" y="636" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">EKS / ECS</text>
+<text x="318.8181818181818" y="648.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Containers</text>
+<rect x="391.09090909090907" y="624" width="73.27272727272727" height="48" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="398.09090909090907" cy="634" r="2.6" fill="#d9822b"/>
+<text x="404.09090909090907" y="636" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Auto Scaling</text>
+<text x="398.09090909090907" y="648.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Compute</text>
+<rect x="470.3636363636363" y="624" width="73.27272727272727" height="48" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="477.3636363636363" cy="634" r="2.6" fill="#d9822b"/>
+<text x="483.3636363636363" y="636" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">RDS / Aurora</text>
+<text x="477.3636363636363" y="648.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Databases</text>
+<rect x="549.6363636363636" y="624" width="73.27272727272727" height="48" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="556.6363636363636" cy="634" r="2.6" fill="#d9822b"/>
+<text x="562.6363636363636" y="636" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">ElastiCache</text>
+<text x="556.6363636363636" y="648.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Caching</text>
+<rect x="628.9090909090909" y="624" width="73.27272727272727" height="48" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="635.9090909090909" cy="634" r="2.6" fill="#d9822b"/>
+<text x="641.9090909090909" y="636" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">S3</text>
+<text x="635.9090909090909" y="648.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Object Storage</text>
+<rect x="708.1818181818181" y="624" width="73.27272727272727" height="48" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="715.1818181818181" cy="634" r="2.6" fill="#d9822b"/>
+<text x="721.1818181818181" y="636" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">CloudWatch</text>
+<text x="715.1818181818181" y="648.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Monitoring</text>
+<rect x="787.4545454545454" y="624" width="73.27272727272727" height="48" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="794.4545454545454" cy="634" r="2.6" fill="#d9822b"/>
+<text x="800.4545454545454" y="636" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">CloudTrail</text>
+<text x="794.4545454545454" y="648.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Audit</text>
+<rect x="866.7272727272726" y="624" width="73.27272727272727" height="48" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="873.7272727272726" cy="634" r="2.6" fill="#d9822b"/>
+<text x="879.7272727272726" y="636" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">KMS</text>
+<text x="873.7272727272726" y="648.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Encryption</text>
+<rect x="8" y="680" width="932" height="58" rx="5" fill="#faf7ff" stroke="#cbb8e6" stroke-width="1"/>
+<text x="16" y="697" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#5b3aa4" text-anchor="start">EVENT-DRIVEN ARCHITECTURE</text>
+<text x="16" y="710" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#6b5b8a" text-anchor="start">All business events publish to Amazon EventBridge</text>
+<text x="16" y="720" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#6b5b8a" text-anchor="start">and are consumed by interested services and integrations.</text>
+<rect x="214" y="686" width="90.57142857142857" height="46" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="221" cy="696" r="2.6" fill="#5b3aa4"/>
+<text x="227" y="698" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Domain Events</text>
+<text x="221" y="710.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Order Created</text>
+<text x="221" y="718.8000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Inventory Reserved</text>
+<line x1="305.57142857142856" y1="709" x2="317.57142857142856" y2="709" stroke="#c026a3" stroke-width="1.5" marker-end="url(#evhead)"/>
+<rect x="318.57142857142856" y="686" width="90.57142857142857" height="46" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="325.57142857142856" cy="696" r="2.6" fill="#5b3aa4"/>
+<text x="331.57142857142856" y="698" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Transactional</text>
+<text x="331.57142857142856" y="707.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Outbox</text>
+<text x="325.57142857142856" y="719.4000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Reliable publish</text>
+<line x1="410.1428571428571" y1="709" x2="422.1428571428571" y2="709" stroke="#c026a3" stroke-width="1.5" marker-end="url(#evhead)"/>
+<rect x="423.1428571428571" y="686" width="90.57142857142857" height="46" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="430.1428571428571" cy="696" r="2.6" fill="#5b3aa4"/>
+<text x="436.1428571428571" y="698" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">EventBridge</text>
+<text x="430.1428571428571" y="710.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Event Bus</text>
+<line x1="514.7142857142857" y1="709" x2="526.7142857142857" y2="709" stroke="#c026a3" stroke-width="1.5" marker-end="url(#evhead)"/>
+<rect x="527.7142857142858" y="686" width="90.57142857142857" height="46" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="534.7142857142858" cy="696" r="2.6" fill="#5b3aa4"/>
+<text x="540.7142857142858" y="698" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">SNS Topics</text>
+<text x="534.7142857142858" y="710.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Fanout</text>
+<line x1="619.2857142857143" y1="709" x2="631.2857142857143" y2="709" stroke="#c026a3" stroke-width="1.5" marker-end="url(#evhead)"/>
+<rect x="632.2857142857142" y="686" width="90.57142857142857" height="46" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="639.2857142857142" cy="696" r="2.6" fill="#5b3aa4"/>
+<text x="645.2857142857142" y="698" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">SQS Queues</text>
+<text x="639.2857142857142" y="710.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Decoupling</text>
+<line x1="723.8571428571428" y1="709" x2="735.8571428571428" y2="709" stroke="#c026a3" stroke-width="1.5" marker-end="url(#evhead)"/>
+<rect x="736.8571428571429" y="686" width="90.57142857142857" height="46" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="743.8571428571429" cy="696" r="2.6" fill="#5b3aa4"/>
+<text x="749.8571428571429" y="698" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Lambda /</text>
+<text x="749.8571428571429" y="707.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">Consumers</text>
+<text x="743.8571428571429" y="719.4000000000001" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· Idempotent consumers</text>
+<line x1="828.4285714285714" y1="709" x2="840.4285714285714" y2="709" stroke="#c026a3" stroke-width="1.5" marker-end="url(#evhead)"/>
+<rect x="841.4285714285714" y="686" width="90.57142857142857" height="46" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="848.4285714285714" cy="696" r="2.6" fill="#5b3aa4"/>
+<text x="854.4285714285714" y="698" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#1f2937" text-anchor="start">External Systems</text>
+<text x="848.4285714285714" y="710.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">· EDI, Notifications</text>
+<rect x="948" y="348" width="144" height="68" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+<text x="957" y="362" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#14235c" text-anchor="start">LEGEND</text>
+<line x1="957" y1="376" x2="980" y2="376" stroke="#334155" stroke-width="1.4"/>
+<text x="985" y="378.5" font-family="Arial, Helvetica, sans-serif" font-size="6.6" font-weight="normal" fill="#475569" text-anchor="start">Synchronous (HTTPS / REST)</text>
+<line x1="957" y1="386" x2="980" y2="386" stroke="#334155" stroke-width="1.4" stroke-dasharray="4 3"/>
+<text x="985" y="388.5" font-family="Arial, Helvetica, sans-serif" font-size="6.6" font-weight="normal" fill="#475569" text-anchor="start">Asynchronous (Events)</text>
+<line x1="957" y1="396" x2="980" y2="396" stroke="#2456a6" stroke-width="1.4" stroke-dasharray="1 2"/>
+<text x="985" y="398.5" font-family="Arial, Helvetica, sans-serif" font-size="6.6" font-weight="normal" fill="#475569" text-anchor="start">Data Flow / Replication</text>
+<line x1="957" y1="406" x2="980" y2="406" stroke="#2e7d46" stroke-width="1.4" stroke-dasharray="2 3"/>
+<text x="985" y="408.5" font-family="Arial, Helvetica, sans-serif" font-size="6.6" font-weight="normal" fill="#475569" text-anchor="start">AI / Context Flow</text>
+<rect x="948" y="420" width="144" height="96" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+<text x="957" y="434" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#14235c" text-anchor="start">DEPLOYMENT STRATEGY</text>
+<circle cx="960" cy="446.5" r="2.2" fill="#d9822b"/>
+<text x="967" y="449" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">Blue / Green Deployments</text>
+<circle cx="960" cy="458.5" r="2.2" fill="#d9822b"/>
+<text x="967" y="461" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">Canary Releases</text>
+<circle cx="960" cy="470.5" r="2.2" fill="#d9822b"/>
+<text x="967" y="473" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">Automated Rollback</text>
+<circle cx="960" cy="482.5" r="2.2" fill="#d9822b"/>
+<text x="967" y="485" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">Multi-AZ High Availability</text>
+<circle cx="960" cy="494.5" r="2.2" fill="#d9822b"/>
+<text x="967" y="497" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">Cross-region pilot-light DR</text>
+<rect x="948" y="520" width="144" height="152" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+<text x="957" y="534" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="bold" fill="#14235c" text-anchor="start">KEY DESIGN PRINCIPLES</text>
+<circle cx="960" cy="545.5" r="2.2" fill="#2e7d46"/>
+<text x="967" y="548" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">AI recommends;</text>
+<text x="967" y="556.4" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">deterministic business</text>
+<text x="967" y="564.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">services execute</text>
+<circle cx="960" cy="575.7" r="2.2" fill="#2e7d46"/>
+<text x="967" y="578.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">Event-Driven — decoupled,</text>
+<text x="967" y="586.6" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">resilient, real-time</text>
+<circle cx="960" cy="597.5" r="2.2" fill="#2e7d46"/>
+<text x="967" y="600" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">Microservices —</text>
+<text x="967" y="608.4" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">independent, scalable</text>
+<text x="967" y="616.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">ownership</text>
+<circle cx="960" cy="627.7" r="2.2" fill="#2e7d46"/>
+<text x="967" y="630.2" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">Cloud Native — AWS managed,</text>
+<text x="967" y="638.6" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">scalable, secure</text>
+<circle cx="960" cy="649.5" r="2.2" fill="#2e7d46"/>
+<text x="967" y="652" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">Security &amp; Compliance —</text>
+<text x="967" y="660.4" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">guardrails, encryption,</text>
+<text x="967" y="668.8" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="normal" fill="#475569" text-anchor="start">audit</text>
 </svg>
