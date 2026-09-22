@@ -136,6 +136,9 @@ export default function AiOperationsPlatformPage() {
             </details>
           ))}
         </div>
+        <p className="mt-5 text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">
+          {study.decisionsNote}
+        </p>
       </section>
 
       <section aria-labelledby="outcomes-heading" className="mb-14">
