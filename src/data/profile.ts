@@ -211,7 +211,7 @@ export const enterpriseProjects: readonly Project[] = [
       },
     ],
     image: {
-      src: "/images/ai-operations-architecture.png",
+      src: "/images/ai-operations-architecture.svg",
       alt: "Enterprise architecture diagram of the AI inventory and operations platform: eight stacked layers — user channels, edge and security, the AI platform (agents, retrieval, prediction, guardrails and evaluation), business microservices, data, integration, and cloud infrastructure — divided by a system-of-intelligence over system-of-record boundary and linked by an event-driven backbone",
       width: 1100,
       height: 733,
