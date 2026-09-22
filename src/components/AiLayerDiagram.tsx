@@ -1,7 +1,8 @@
 /**
  * Inline SVG of the AI-layer coordination architecture. Inline (not an
  * image file) so colors follow the theme and text stays crisp; the
- * title/desc pair carries the flow for screen readers.
+ * title/desc pair carries the flow for screen readers. Numbered
+ * callouts 1–10 trace the worked example in the deep dive.
  */
 
 const BOX =
@@ -15,36 +16,62 @@ const TEXT_ACCENT = "fill-accent-800 dark:fill-accent-300";
 const TEXT_MUTED = "fill-neutral-500";
 const ARROW = "stroke-neutral-400";
 
-const AGENTS = [
-  "Sales",
-  "Procurement",
-  "Inventory",
-  "Delivery",
-  "Warranty",
-  "Finance",
-] as const;
+/** Seven domain agents, roster order, as up-to-two-line labels. */
+const AGENTS: readonly { l1: string; l2?: string }[] = [
+  { l1: "Quote", l2: "Assistant" },
+  { l1: "Procurement" },
+  { l1: "Inventory &", l2: "Warehouse" },
+  { l1: "Delivery", l2: "Exception" },
+  { l1: "Warranty &", l2: "Service" },
+  { l1: "Finance", l2: "Insight" },
+  { l1: "Executive", l2: "Insight" },
+];
+
+const AGENT_X = (i: number) => 40 + i * 106;
+const AGENT_W = 96;
+const AGENT_C = (i: number) => AGENT_X(i) + AGENT_W / 2;
+
+/** Worked-example callouts: number + placement. */
+const CALLOUTS: readonly { n: string; x: number; y: number }[] = [
+  { n: "1", x: 270, y: 73 },
+  { n: "7", x: 52, y: 126 },
+  { n: "2", x: AGENT_C(1) - 34, y: 230 },
+  { n: "3", x: AGENT_C(2) - 34, y: 230 },
+  { n: "5", x: AGENT_C(3) - 36, y: 230 },
+  { n: "6", x: AGENT_C(3) - 18, y: 230 },
+  { n: "4", x: 802, y: 246 },
+  { n: "8", x: 62, y: 410 },
+  { n: "9", x: 246, y: 410 },
+  { n: "10", x: 412, y: 410 },
+  { n: "10", x: 596, y: 410 },
+];
 
 export function AiLayerDiagram() {
   return (
     <svg
-      viewBox="0 0 800 400"
+      viewBox="0 0 820 662"
       role="img"
       aria-labelledby="ai-diagram-title ai-diagram-desc"
       className="h-auto w-full"
     >
       <title id="ai-diagram-title">AI layer coordination architecture</title>
       <desc id="ai-diagram-desc">
-        A user request or business event passes through the AI gateway to the
-        supervisor orchestrator, which delegates scoped tasks to six domain
-        agents (sales, procurement, inventory, delivery, warranty, finance) and
-        receives typed results back. Outputs flow through the business rules
-        engine and human approval before business microservices execute changes
-        against authoritative data stores. Guardrails constrain inputs, data,
-        and tools; audit and workflow state record every step.
+        A user request or business event enters through the AI Gateway to the AI
+        Orchestrator, which routes work to a Model Router and Tool Registry and
+        delegates scoped tasks to seven domain agents — Quote Assistant,
+        Procurement, Inventory &amp; Warehouse, Delivery Exception, Warranty
+        &amp; Service, Finance Insight, Executive Insight — that return typed
+        JSON. Agents ground on Bedrock Knowledge Bases over OpenSearch and
+        Aurora pgvector and read operational truth from business APIs, while the
+        orchestrator can call those APIs directly for lookups. Proposals cross
+        an action boundary — Business Policy Service validation, human approval,
+        deterministic execution, and audit — and a footer band records
+        four-layer evaluation and end-to-end tracing. Numbered callouts one to
+        ten trace the worked example.
       </desc>
       <defs>
         <marker
-          id="arrowhead"
+          id="ai-arrowhead"
           markerWidth="8"
           markerHeight="8"
           refX="7"
@@ -60,298 +87,469 @@ export function AiLayerDiagram() {
         </marker>
       </defs>
 
-      {/* Spine */}
-      <rect x="250" y="8" width="300" height="30" rx="8" className={BOX} />
+      {/* Entry row */}
+      <rect x="90" y="12" width="270" height="34" rx="8" className={BOX} />
       <text
-        x="400"
-        y="27"
+        x="225"
+        y="33"
         textAnchor="middle"
-        className={`${TEXT} text-[12px]`}
+        className={`${TEXT} text-[11px]`}
       >
-        User request or business event
+        User request (NL / voice / copilot)
+      </text>
+      <rect x="450" y="12" width="270" height="34" rx="8" className={BOX} />
+      <text
+        x="585"
+        y="33"
+        textAnchor="middle"
+        className={`${TEXT} text-[11px]`}
+      >
+        Business event (EventBridge)
       </text>
       <line
-        x1="400"
-        y1="38"
-        x2="400"
-        y2="50"
+        x1="225"
+        y1="46"
+        x2="345"
+        y2="63"
         className={ARROW}
-        markerEnd="url(#arrowhead)"
+        markerEnd="url(#ai-arrowhead)"
+      />
+      <line
+        x1="585"
+        y1="46"
+        x2="475"
+        y2="63"
+        className={ARROW}
+        markerEnd="url(#ai-arrowhead)"
       />
 
-      <rect x="250" y="52" width="300" height="30" rx="8" className={BOX} />
+      {/* AI Gateway */}
+      <rect x="260" y="64" width="300" height="34" rx="8" className={BOX} />
       <text
-        x="400"
-        y="71"
+        x="410"
+        y="85"
         textAnchor="middle"
-        className={`${TEXT} text-[12px]`}
+        className={`${TEXT} text-[11px]`}
       >
-        AI gateway — authentication &amp; policy
+        AI Gateway — authn · quotas · model allow-list
       </text>
       <line
-        x1="400"
-        y1="82"
-        x2="400"
-        y2="94"
+        x1="410"
+        y1="98"
+        x2="410"
+        y2="110"
         className={ARROW}
-        markerEnd="url(#arrowhead)"
+        markerEnd="url(#ai-arrowhead)"
       />
 
+      {/* Orchestrator band */}
       <rect
-        x="230"
-        y="96"
-        width="340"
-        height="44"
+        x="40"
+        y="112"
+        width="740"
+        height="58"
         rx="8"
         className={ACCENT_BOX}
       />
       <text
-        x="400"
-        y="114"
+        x="410"
+        y="132"
         textAnchor="middle"
         className={`${TEXT_ACCENT} text-[13px] font-semibold`}
       >
-        Supervisor orchestrator
+        AI Orchestrator
       </text>
       <text
-        x="400"
-        y="131"
+        x="410"
+        y="148"
         textAnchor="middle"
-        className={`${TEXT_ACCENT} text-[11px]`}
+        className={`${TEXT_ACCENT} text-[10px]`}
       >
-        intent · execution plan · permissions
+        classify intent &amp; domain · build execution plan · own workflow state
       </text>
-      <line
-        x1="400"
-        y1="140"
-        x2="400"
-        y2="160"
-        className={ARROW}
-        markerEnd="url(#arrowhead)"
-      />
-      <text x="412" y="154" className={`${TEXT_MUTED} text-[10px]`}>
-        scoped tasks ⇅ typed results
+      <text
+        x="410"
+        y="162"
+        textAnchor="middle"
+        className={`${TEXT_ACCENT} text-[10px]`}
+      >
+        bounded: 60 s/agent · 10 steps · 12 tool calls · $1 ceiling
       </text>
 
+      {/* Model Router + Tool Registry */}
+      <rect x="120" y="178" width="270" height="26" rx="7" className={BOX} />
+      <text
+        x="255"
+        y="195"
+        textAnchor="middle"
+        className={`${TEXT} text-[9px]`}
+      >
+        Model Router → Bedrock: Claude · Titan · Llama
+      </text>
+      <rect x="430" y="178" width="270" height="26" rx="7" className={BOX} />
+      <text
+        x="565"
+        y="195"
+        textAnchor="middle"
+        className={`${TEXT} text-[9px]`}
+      >
+        Tool Registry · OpenAPI · per-agent allow-lists
+      </text>
+      <line x1="410" y1="170" x2="410" y2="212" className={ARROW} />
+
+      {/* Orchestrator → agents fan-out */}
+      <line x1="88" y1="212" x2="724" y2="212" className={ARROW} />
       {AGENTS.map((agent, i) => (
-        <g key={agent}>
+        <g key={agent.l1}>
+          <line
+            x1={AGENT_C(i)}
+            y1="212"
+            x2={AGENT_C(i)}
+            y2="221"
+            className={ARROW}
+            markerEnd="url(#ai-arrowhead)"
+          />
           <rect
-            x={150 + i * 84.4}
-            y="162"
-            width="78"
-            height="32"
+            x={AGENT_X(i)}
+            y="222"
+            width={AGENT_W}
+            height="46"
             rx="8"
             className={ACCENT_BOX}
           />
-          <text
-            x={189 + i * 84.4}
-            y="182"
-            textAnchor="middle"
-            className={`${TEXT_ACCENT} text-[11px]`}
-          >
-            {agent}
-          </text>
+          {agent.l2 ? (
+            <>
+              <text
+                x={AGENT_C(i)}
+                y="242"
+                textAnchor="middle"
+                className={`${TEXT_ACCENT} text-[9px]`}
+              >
+                {agent.l1}
+              </text>
+              <text
+                x={AGENT_C(i)}
+                y="253"
+                textAnchor="middle"
+                className={`${TEXT_ACCENT} text-[9px]`}
+              >
+                {agent.l2}
+              </text>
+            </>
+          ) : (
+            <text
+              x={AGENT_C(i)}
+              y="248"
+              textAnchor="middle"
+              className={`${TEXT_ACCENT} text-[9px]`}
+            >
+              {agent.l1}
+            </text>
+          )}
         </g>
       ))}
       <text
-        x="400"
-        y="208"
+        x="410"
+        y="284"
         textAnchor="middle"
-        className={`${TEXT_MUTED} text-[10px]`}
+        className={`${TEXT_MUTED} text-[9px]`}
       >
-        each agent: own identity · least-privilege tools · domain RAG knowledge
-        base
+        each agent: 8–15 tools · own identity · scoped knowledge
       </text>
-      <line
-        x1="400"
-        y1="212"
-        x2="400"
-        y2="224"
-        className={ARROW}
-        markerEnd="url(#arrowhead)"
-      />
-
-      <rect x="250" y="226" width="300" height="30" rx="8" className={BOX} />
       <text
-        x="400"
-        y="245"
+        x="410"
+        y="297"
         textAnchor="middle"
-        className={`${TEXT} text-[12px]`}
+        className={`${TEXT_MUTED} text-[9px]`}
       >
-        Business rules engine — conflict resolution
+        typed JSON contracts back to the orchestrator — never prose between
+        agents
       </text>
-      <line
-        x1="400"
-        y1="256"
-        x2="400"
-        y2="268"
-        className={ARROW}
-        markerEnd="url(#arrowhead)"
-      />
 
-      <rect x="250" y="270" width="300" height="30" rx="8" className={BOX} />
+      {/* Knowledge band (left) */}
+      <rect x="40" y="316" width="360" height="32" rx="7" className={RAIL} />
       <text
-        x="400"
-        y="289"
+        x="220"
+        y="330"
         textAnchor="middle"
-        className={`${TEXT} text-[12px]`}
+        className={`${TEXT} text-[9px]`}
       >
-        Human approval — consequential actions
+        Bedrock Knowledge Bases → OpenSearch
       </text>
-      <line
-        x1="400"
-        y1="300"
-        x2="400"
-        y2="312"
-        className={ARROW}
-        markerEnd="url(#arrowhead)"
-      />
-
-      <rect x="210" y="314" width="380" height="32" rx="8" className={BOX} />
       <text
-        x="400"
-        y="334"
+        x="220"
+        y="342"
         textAnchor="middle"
-        className={`${TEXT} text-[12px]`}
+        className={`${TEXT_MUTED} text-[9px]`}
       >
-        Business microservices — approved APIs · systems of record
+        hybrid + rerank · metadata-first filters
       </text>
-      <line
-        x1="400"
-        y1="346"
-        x2="400"
-        y2="358"
-        className={ARROW}
-        markerEnd="url(#arrowhead)"
-      />
-
-      <rect x="250" y="360" width="300" height="30" rx="8" className={BOX} />
+      <rect x="40" y="354" width="360" height="26" rx="7" className={RAIL} />
       <text
-        x="400"
-        y="379"
+        x="220"
+        y="371"
         textAnchor="middle"
-        className={`${TEXT} text-[12px]`}
+        className={`${TEXT} text-[9px]`}
       >
-        Authoritative data stores
+        Aurora pgvector (catalog embeddings)
+      </text>
+      {/* grounding arrows (dotted) */}
+      <line
+        x1={AGENT_C(1)}
+        y1="268"
+        x2="190"
+        y2="315"
+        className={ARROW}
+        strokeDasharray="1 3"
+        markerEnd="url(#ai-arrowhead)"
+      />
+      <line
+        x1={AGENT_C(4)}
+        y1="268"
+        x2="320"
+        y2="315"
+        className={ARROW}
+        strokeDasharray="1 3"
+        markerEnd="url(#ai-arrowhead)"
+      />
+      <text x="150" y="306" className={`${TEXT_MUTED} text-[8px]`}>
+        grounding
       </text>
 
-      {/* Guardrails rail */}
+      {/* Business APIs band (right) */}
+      <rect x="420" y="316" width="360" height="64" rx="7" className={BOX} />
+      <text
+        x="600"
+        y="332"
+        textAnchor="middle"
+        className={`${TEXT} text-[10px] font-semibold`}
+      >
+        Business APIs — operational truth
+      </text>
+      <text
+        x="600"
+        y="350"
+        textAnchor="middle"
+        className={`${TEXT} text-[9px]`}
+      >
+        Order · Inventory · Procurement · Delivery
+      </text>
+      <text
+        x="600"
+        y="364"
+        textAnchor="middle"
+        className={`${TEXT} text-[9px]`}
+      >
+        Warranty · Pricing · Customer
+      </text>
+      {/* direct-lookup arrow (orchestrator → business APIs, no agent) */}
+      <polyline
+        points="780,150 800,150 800,330 782,330"
+        fill="none"
+        className={ARROW}
+        markerEnd="url(#ai-arrowhead)"
+      />
+      <text
+        x="806"
+        y="290"
+        className={`${TEXT_MUTED} text-[8px]`}
+        transform="rotate(90 806 290)"
+      >
+        direct lookups (no agent needed)
+      </text>
+
+      {/* Action boundary band (dashed) */}
       <rect
-        x="24"
-        y="52"
-        width="150"
-        height="98"
+        x="40"
+        y="392"
+        width="740"
+        height="72"
         rx="8"
-        strokeDasharray="4 3"
+        strokeDasharray="5 3"
         className={RAIL}
       />
-      <text
-        x="99"
-        y="72"
-        textAnchor="middle"
-        className={`${TEXT} text-[12px] font-semibold`}
-      >
-        Guardrails
-      </text>
-      <text
-        x="99"
-        y="92"
-        textAnchor="middle"
-        className={`${TEXT_MUTED} text-[10px]`}
-      >
-        input · prompt injection
-      </text>
-      <text
-        x="99"
-        y="108"
-        textAnchor="middle"
-        className={`${TEXT_MUTED} text-[10px]`}
-      >
-        data access control
-      </text>
-      <text
-        x="99"
-        y="124"
-        textAnchor="middle"
-        className={`${TEXT_MUTED} text-[10px]`}
-      >
-        tool allow-lists
-      </text>
-      <text
-        x="99"
-        y="140"
-        textAnchor="middle"
-        className={`${TEXT_MUTED} text-[10px]`}
-      >
-        user ∩ agent ∩ tool ∩ policy
+      <text x="48" y="388" className={`${TEXT} text-[9px] font-semibold`}>
+        Action boundary
       </text>
       <line
-        x1="174"
-        y1="118"
-        x2="228"
-        y2="118"
-        strokeDasharray="4 3"
+        x1="136"
+        y1="381"
+        x2="136"
+        y2="405"
         className={ARROW}
+        markerEnd="url(#ai-arrowhead)"
       />
+      {/* BPS */}
+      <rect x="52" y="406" width="168" height="46" rx="7" className={BOX} />
+      <text
+        x="136"
+        y="424"
+        textAnchor="middle"
+        className={`${TEXT} text-[9px]`}
+      >
+        Business Policy Service
+      </text>
+      <text
+        x="136"
+        y="437"
+        textAnchor="middle"
+        className={`${TEXT_MUTED} text-[8px]`}
+      >
+        validate(proposal) →
+      </text>
+      <text
+        x="136"
+        y="447"
+        textAnchor="middle"
+        className={`${TEXT_MUTED} text-[8px]`}
+      >
+        allow / requires-approval / deny
+      </text>
+      <line
+        x1="220"
+        y1="429"
+        x2="234"
+        y2="429"
+        className={ARROW}
+        markerEnd="url(#ai-arrowhead)"
+      />
+      {/* Human approval */}
+      <rect x="236" y="406" width="150" height="46" rx="7" className={BOX} />
+      <text
+        x="311"
+        y="429"
+        textAnchor="middle"
+        className={`${TEXT} text-[9px]`}
+      >
+        Human approval
+      </text>
+      <text
+        x="311"
+        y="441"
+        textAnchor="middle"
+        className={`${TEXT_MUTED} text-[8px]`}
+      >
+        (manager)
+      </text>
+      <line
+        x1="386"
+        y1="429"
+        x2="400"
+        y2="429"
+        className={ARROW}
+        markerEnd="url(#ai-arrowhead)"
+      />
+      {/* Deterministic execution */}
+      <rect x="402" y="406" width="168" height="46" rx="7" className={BOX} />
+      <text
+        x="486"
+        y="424"
+        textAnchor="middle"
+        className={`${TEXT} text-[9px]`}
+      >
+        Deterministic execution
+      </text>
+      <text
+        x="486"
+        y="441"
+        textAnchor="middle"
+        className={`${TEXT_MUTED} text-[8px]`}
+      >
+        Order · Delivery · Notification
+      </text>
+      <line
+        x1="570"
+        y1="429"
+        x2="584"
+        y2="429"
+        className={ARROW}
+        markerEnd="url(#ai-arrowhead)"
+      />
+      {/* Audit */}
+      <rect x="586" y="406" width="180" height="46" rx="7" className={BOX} />
+      <text
+        x="676"
+        y="424"
+        textAnchor="middle"
+        className={`${TEXT} text-[9px]`}
+      >
+        Audit
+      </text>
+      <text
+        x="676"
+        y="437"
+        textAnchor="middle"
+        className={`${TEXT_MUTED} text-[8px]`}
+      >
+        prompt · model · index versions
+      </text>
+      <text
+        x="676"
+        y="447"
+        textAnchor="middle"
+        className={`${TEXT_MUTED} text-[8px]`}
+      >
+        retrieved docs · API calls · approver
+      </text>
 
-      {/* Audit rail */}
-      <rect
-        x="626"
-        y="52"
-        width="150"
-        height="98"
-        rx="8"
-        strokeDasharray="4 3"
-        className={RAIL}
-      />
+      {/* Footer band */}
+      <rect x="40" y="482" width="740" height="30" rx="8" className={RAIL} />
       <text
-        x="701"
-        y="72"
+        x="410"
+        y="501"
         textAnchor="middle"
-        className={`${TEXT} text-[12px] font-semibold`}
+        className={`${TEXT} text-[9px]`}
       >
-        Audit &amp; state
+        Evaluation &amp; tracing — 4-layer evals · golden dataset ~1,200 ·
+        regression → shadow → canary · every workflow traced end to end
       </text>
-      <text
-        x="701"
-        y="92"
-        textAnchor="middle"
-        className={`${TEXT_MUTED} text-[10px]`}
-      >
-        workflow state
+
+      {/* Legend */}
+      <rect x="520" y="528" width="260" height="96" rx="8" className={RAIL} />
+      <text x="536" y="548" className={`${TEXT} text-[10px] font-semibold`}>
+        Legend
       </text>
-      <text
-        x="701"
-        y="108"
-        textAnchor="middle"
-        className={`${TEXT_MUTED} text-[10px]`}
-      >
-        prompts · models · tools
-      </text>
-      <text
-        x="701"
-        y="124"
-        textAnchor="middle"
-        className={`${TEXT_MUTED} text-[10px]`}
-      >
-        retrievals · confidence
-      </text>
-      <text
-        x="701"
-        y="140"
-        textAnchor="middle"
-        className={`${TEXT_MUTED} text-[10px]`}
-      >
-        approvals · outcomes
+      <line x1="536" y1="566" x2="576" y2="566" className={ARROW} />
+      <text x="586" y="569" className={`${TEXT_MUTED} text-[9px]`}>
+        synchronous
       </text>
       <line
-        x1="626"
-        y1="118"
-        x2="572"
-        y2="118"
-        strokeDasharray="4 3"
+        x1="536"
+        y1="588"
+        x2="576"
+        y2="588"
         className={ARROW}
+        strokeDasharray="5 3"
       />
+      <text x="586" y="591" className={`${TEXT_MUTED} text-[9px]`}>
+        asynchronous / event
+      </text>
+      <line
+        x1="536"
+        y1="610"
+        x2="576"
+        y2="610"
+        className={ARROW}
+        strokeDasharray="1 3"
+      />
+      <text x="586" y="613" className={`${TEXT_MUTED} text-[9px]`}>
+        grounding / data
+      </text>
+
+      {/* Worked-example callouts */}
+      {CALLOUTS.map((c, i) => (
+        <g key={`${c.n}-${i}`}>
+          <circle cx={c.x} cy={c.y} r="8" className="fill-accent-700" />
+          <text
+            x={c.x}
+            y={c.y + 3}
+            textAnchor="middle"
+            className="fill-white text-[9px] font-semibold"
+          >
+            {c.n}
+          </text>
+        </g>
+      ))}
     </svg>
   );
 }
