@@ -371,6 +371,14 @@ export function AiLayerDiagram() {
       <text x="48" y="388" className={`${TEXT} text-[9px] font-semibold`}>
         Action boundary
       </text>
+      <text
+        x="620"
+        y="388"
+        textAnchor="middle"
+        className={`${TEXT_MUTED} text-[8px]`}
+      >
+        AI recommends; deterministic business services execute
+      </text>
       <line
         x1="136"
         y1="381"
