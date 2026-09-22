@@ -91,18 +91,18 @@ export function AiLayerDiagram() {
       <rect x="90" y="12" width="270" height="34" rx="8" className={BOX} />
       <text
         x="225"
-        y="33"
+        y="34"
         textAnchor="middle"
-        className={`${TEXT} text-[11px]`}
+        className={`${TEXT} text-[12px]`}
       >
         User request (NL / voice / copilot)
       </text>
       <rect x="450" y="12" width="270" height="34" rx="8" className={BOX} />
       <text
         x="585"
-        y="33"
+        y="34"
         textAnchor="middle"
-        className={`${TEXT} text-[11px]`}
+        className={`${TEXT} text-[12px]`}
       >
         Business event (EventBridge)
       </text>
@@ -124,12 +124,12 @@ export function AiLayerDiagram() {
       />
 
       {/* AI Gateway */}
-      <rect x="260" y="64" width="300" height="34" rx="8" className={BOX} />
+      <rect x="230" y="64" width="360" height="34" rx="8" className={BOX} />
       <text
         x="410"
-        y="85"
+        y="86"
         textAnchor="middle"
-        className={`${TEXT} text-[11px]`}
+        className={`${TEXT} text-[12px]`}
       >
         AI Gateway — authn · quotas · model allow-list
       </text>
@@ -155,7 +155,7 @@ export function AiLayerDiagram() {
         x="410"
         y="132"
         textAnchor="middle"
-        className={`${TEXT_ACCENT} text-[13px] font-semibold`}
+        className={`${TEXT_ACCENT} text-[15px] font-semibold`}
       >
         AI Orchestrator
       </text>
@@ -163,35 +163,35 @@ export function AiLayerDiagram() {
         x="410"
         y="148"
         textAnchor="middle"
-        className={`${TEXT_ACCENT} text-[10px]`}
+        className={`${TEXT_ACCENT} text-[11px]`}
       >
         classify intent &amp; domain · build execution plan · own workflow state
       </text>
       <text
         x="410"
-        y="162"
+        y="163"
         textAnchor="middle"
-        className={`${TEXT_ACCENT} text-[10px]`}
+        className={`${TEXT_ACCENT} text-[11px]`}
       >
         bounded: 60 s/agent · 10 steps · 12 tool calls · $1 ceiling
       </text>
 
       {/* Model Router + Tool Registry */}
-      <rect x="120" y="178" width="270" height="26" rx="7" className={BOX} />
+      <rect x="98" y="178" width="300" height="26" rx="7" className={BOX} />
       <text
-        x="255"
+        x="248"
         y="195"
         textAnchor="middle"
-        className={`${TEXT} text-[9px]`}
+        className={`${TEXT} text-[10.5px]`}
       >
         Model Router → Bedrock: Claude · Titan · Llama
       </text>
-      <rect x="430" y="178" width="270" height="26" rx="7" className={BOX} />
+      <rect x="422" y="178" width="300" height="26" rx="7" className={BOX} />
       <text
-        x="565"
+        x="572"
         y="195"
         textAnchor="middle"
-        className={`${TEXT} text-[9px]`}
+        className={`${TEXT} text-[10.5px]`}
       >
         Tool Registry · OpenAPI · per-agent allow-lists
       </text>
@@ -221,9 +221,9 @@ export function AiLayerDiagram() {
             <>
               <text
                 x={AGENT_C(i)}
-                y="242"
+                y="241"
                 textAnchor="middle"
-                className={`${TEXT_ACCENT} text-[9px]`}
+                className={`${TEXT_ACCENT} text-[10.5px]`}
               >
                 {agent.l1}
               </text>
@@ -231,7 +231,7 @@ export function AiLayerDiagram() {
                 x={AGENT_C(i)}
                 y="253"
                 textAnchor="middle"
-                className={`${TEXT_ACCENT} text-[9px]`}
+                className={`${TEXT_ACCENT} text-[10.5px]`}
               >
                 {agent.l2}
               </text>
@@ -241,7 +241,7 @@ export function AiLayerDiagram() {
               x={AGENT_C(i)}
               y="248"
               textAnchor="middle"
-              className={`${TEXT_ACCENT} text-[9px]`}
+              className={`${TEXT_ACCENT} text-[10.5px]`}
             >
               {agent.l1}
             </text>
@@ -250,17 +250,17 @@ export function AiLayerDiagram() {
       ))}
       <text
         x="410"
-        y="284"
+        y="285"
         textAnchor="middle"
-        className={`${TEXT_MUTED} text-[9px]`}
+        className={`${TEXT_MUTED} text-[10.5px]`}
       >
         each agent: 8–15 tools · own identity · scoped knowledge
       </text>
       <text
         x="410"
-        y="297"
+        y="299"
         textAnchor="middle"
-        className={`${TEXT_MUTED} text-[9px]`}
+        className={`${TEXT_MUTED} text-[10.5px]`}
       >
         typed JSON contracts back to the orchestrator — never prose between
         agents
@@ -272,15 +272,15 @@ export function AiLayerDiagram() {
         x="220"
         y="330"
         textAnchor="middle"
-        className={`${TEXT} text-[9px]`}
+        className={`${TEXT} text-[10.5px]`}
       >
         Bedrock Knowledge Bases → OpenSearch
       </text>
       <text
         x="220"
-        y="342"
+        y="343"
         textAnchor="middle"
-        className={`${TEXT_MUTED} text-[9px]`}
+        className={`${TEXT_MUTED} text-[10px]`}
       >
         hybrid + rerank · metadata-first filters
       </text>
@@ -289,7 +289,7 @@ export function AiLayerDiagram() {
         x="220"
         y="371"
         textAnchor="middle"
-        className={`${TEXT} text-[9px]`}
+        className={`${TEXT} text-[10.5px]`}
       >
         Aurora pgvector (catalog embeddings)
       </text>
@@ -312,7 +312,7 @@ export function AiLayerDiagram() {
         strokeDasharray="1 3"
         markerEnd="url(#ai-arrowhead)"
       />
-      <text x="150" y="306" className={`${TEXT_MUTED} text-[8px]`}>
+      <text x="150" y="306" className={`${TEXT_MUTED} text-[9.5px]`}>
         grounding
       </text>
 
@@ -320,25 +320,25 @@ export function AiLayerDiagram() {
       <rect x="420" y="316" width="360" height="64" rx="7" className={BOX} />
       <text
         x="600"
-        y="332"
+        y="333"
         textAnchor="middle"
-        className={`${TEXT} text-[10px] font-semibold`}
+        className={`${TEXT} text-[11.5px] font-semibold`}
       >
         Business APIs — operational truth
       </text>
       <text
         x="600"
-        y="350"
+        y="351"
         textAnchor="middle"
-        className={`${TEXT} text-[9px]`}
+        className={`${TEXT} text-[10.5px]`}
       >
         Order · Inventory · Procurement · Delivery
       </text>
       <text
         x="600"
-        y="364"
+        y="365"
         textAnchor="middle"
-        className={`${TEXT} text-[9px]`}
+        className={`${TEXT} text-[10.5px]`}
       >
         Warranty · Pricing · Customer
       </text>
@@ -352,7 +352,7 @@ export function AiLayerDiagram() {
       <text
         x="806"
         y="290"
-        className={`${TEXT_MUTED} text-[8px]`}
+        className={`${TEXT_MUTED} text-[9.5px]`}
         transform="rotate(90 806 290)"
       >
         direct lookups (no agent needed)
@@ -368,14 +368,14 @@ export function AiLayerDiagram() {
         strokeDasharray="5 3"
         className={RAIL}
       />
-      <text x="48" y="388" className={`${TEXT} text-[9px] font-semibold`}>
+      <text x="48" y="388" className={`${TEXT} text-[10.5px] font-semibold`}>
         Action boundary
       </text>
       <text
         x="620"
         y="388"
         textAnchor="middle"
-        className={`${TEXT_MUTED} text-[8px]`}
+        className={`${TEXT_MUTED} text-[9.5px]`}
       >
         AI recommends; deterministic business services execute
       </text>
@@ -391,17 +391,17 @@ export function AiLayerDiagram() {
       <rect x="52" y="406" width="168" height="46" rx="7" className={BOX} />
       <text
         x="136"
-        y="424"
+        y="423"
         textAnchor="middle"
-        className={`${TEXT} text-[9px]`}
+        className={`${TEXT} text-[10.5px]`}
       >
         Business Policy Service
       </text>
       <text
         x="136"
-        y="437"
+        y="436"
         textAnchor="middle"
-        className={`${TEXT_MUTED} text-[8px]`}
+        className={`${TEXT_MUTED} text-[9px]`}
       >
         validate(proposal) →
       </text>
@@ -409,7 +409,7 @@ export function AiLayerDiagram() {
         x="136"
         y="447"
         textAnchor="middle"
-        className={`${TEXT_MUTED} text-[8px]`}
+        className={`${TEXT_MUTED} text-[9px]`}
       >
         allow / requires-approval / deny
       </text>
@@ -425,9 +425,9 @@ export function AiLayerDiagram() {
       <rect x="236" y="406" width="150" height="46" rx="7" className={BOX} />
       <text
         x="311"
-        y="429"
+        y="428"
         textAnchor="middle"
-        className={`${TEXT} text-[9px]`}
+        className={`${TEXT} text-[10.5px]`}
       >
         Human approval
       </text>
@@ -435,7 +435,7 @@ export function AiLayerDiagram() {
         x="311"
         y="441"
         textAnchor="middle"
-        className={`${TEXT_MUTED} text-[8px]`}
+        className={`${TEXT_MUTED} text-[9px]`}
       >
         (manager)
       </text>
@@ -451,9 +451,9 @@ export function AiLayerDiagram() {
       <rect x="402" y="406" width="168" height="46" rx="7" className={BOX} />
       <text
         x="486"
-        y="424"
+        y="423"
         textAnchor="middle"
-        className={`${TEXT} text-[9px]`}
+        className={`${TEXT} text-[10.5px]`}
       >
         Deterministic execution
       </text>
@@ -461,7 +461,7 @@ export function AiLayerDiagram() {
         x="486"
         y="441"
         textAnchor="middle"
-        className={`${TEXT_MUTED} text-[8px]`}
+        className={`${TEXT_MUTED} text-[9px]`}
       >
         Order · Delivery · Notification
       </text>
@@ -477,17 +477,17 @@ export function AiLayerDiagram() {
       <rect x="586" y="406" width="180" height="46" rx="7" className={BOX} />
       <text
         x="676"
-        y="424"
+        y="423"
         textAnchor="middle"
-        className={`${TEXT} text-[9px]`}
+        className={`${TEXT} text-[10.5px]`}
       >
         Audit
       </text>
       <text
         x="676"
-        y="437"
+        y="436"
         textAnchor="middle"
-        className={`${TEXT_MUTED} text-[8px]`}
+        className={`${TEXT_MUTED} text-[9px]`}
       >
         prompt · model · index versions
       </text>
@@ -495,7 +495,7 @@ export function AiLayerDiagram() {
         x="676"
         y="447"
         textAnchor="middle"
-        className={`${TEXT_MUTED} text-[8px]`}
+        className={`${TEXT_MUTED} text-[9px]`}
       >
         retrieved docs · API calls · approver
       </text>
@@ -506,7 +506,7 @@ export function AiLayerDiagram() {
         x="410"
         y="501"
         textAnchor="middle"
-        className={`${TEXT} text-[9px]`}
+        className={`${TEXT} text-[10px]`}
       >
         Evaluation &amp; tracing — 4-layer evals · golden dataset ~1,200 ·
         regression → shadow → canary · every workflow traced end to end
@@ -514,45 +514,45 @@ export function AiLayerDiagram() {
 
       {/* Legend */}
       <rect x="520" y="528" width="260" height="96" rx="8" className={RAIL} />
-      <text x="536" y="548" className={`${TEXT} text-[10px] font-semibold`}>
+      <text x="536" y="549" className={`${TEXT} text-[11.5px] font-semibold`}>
         Legend
       </text>
-      <line x1="536" y1="566" x2="576" y2="566" className={ARROW} />
-      <text x="586" y="569" className={`${TEXT_MUTED} text-[9px]`}>
+      <line x1="536" y1="567" x2="576" y2="567" className={ARROW} />
+      <text x="586" y="570" className={`${TEXT_MUTED} text-[10.5px]`}>
         synchronous
       </text>
       <line
         x1="536"
-        y1="588"
+        y1="589"
         x2="576"
-        y2="588"
+        y2="589"
         className={ARROW}
         strokeDasharray="5 3"
       />
-      <text x="586" y="591" className={`${TEXT_MUTED} text-[9px]`}>
+      <text x="586" y="592" className={`${TEXT_MUTED} text-[10.5px]`}>
         asynchronous / event
       </text>
       <line
         x1="536"
-        y1="610"
+        y1="611"
         x2="576"
-        y2="610"
+        y2="611"
         className={ARROW}
         strokeDasharray="1 3"
       />
-      <text x="586" y="613" className={`${TEXT_MUTED} text-[9px]`}>
+      <text x="586" y="614" className={`${TEXT_MUTED} text-[10.5px]`}>
         grounding / data
       </text>
 
       {/* Worked-example callouts */}
       {CALLOUTS.map((c, i) => (
         <g key={`${c.n}-${i}`}>
-          <circle cx={c.x} cy={c.y} r="8" className="fill-accent-700" />
+          <circle cx={c.x} cy={c.y} r="8.5" className="fill-accent-700" />
           <text
             x={c.x}
             y={c.y + 3}
             textAnchor="middle"
-            className="fill-white text-[9px] font-semibold"
+            className="fill-white text-[10px] font-semibold"
           >
             {c.n}
           </text>
