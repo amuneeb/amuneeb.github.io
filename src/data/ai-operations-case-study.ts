@@ -343,7 +343,7 @@ export const aiOperationsCaseStudy = {
     {
       group: "Backend & compute",
       items: [
-        "Java / Spring Boot (business services)",
+        "Java 21 / Spring Boot (business services)",
         "Python / FastAPI (AI services)",
         "Amazon EKS / ECS",
         "AWS Lambda",
