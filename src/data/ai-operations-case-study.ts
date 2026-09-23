@@ -290,7 +290,7 @@ export const aiOperationsCaseStudy = {
         {
           id: "conflict-resolution",
           title: "Conflicts resolved by rules, not negotiation",
-          body: "When agents produce competing recommendations — say three domains each want the same high-demand unit — they don't negotiate. The orchestrator routes each proposal to the Business Policy Service: a deterministic, versioned .NET service whose one contract is validate(proposal) → allow | requires_approval(level, reasons) | deny(reasons). Its rule sets — reservation priority, discount authority by role, partial-delivery eligibility, approval thresholds by dollar impact, override rules — are data-driven tables plus code, changed by PR with tests and owned by the domain team. Commercial rule engines were rejected as over-engineering for a few dozen rules. Only genuine judgment calls escalate to a manager.",
+          body: "When agents produce competing recommendations — say three domains each want the same high-demand unit — they don't negotiate. The orchestrator routes each proposal to the Business Policy Service: a deterministic, versioned Spring Boot service whose one contract is validate(proposal) → allow | requires_approval(level, reasons) | deny(reasons). Its rule sets — reservation priority, discount authority by role, partial-delivery eligibility, approval thresholds by dollar impact, override rules — are data-driven tables plus code, changed by PR with tests and owned by the domain team. Commercial rule engines were rejected as over-engineering for a few dozen rules. Only genuine judgment calls escalate to a manager.",
         },
         {
           id: "failure-isolation",
@@ -343,7 +343,7 @@ export const aiOperationsCaseStudy = {
     {
       group: "Backend & compute",
       items: [
-        ".NET 8 / ASP.NET Core (business services)",
+        "Java / Spring Boot (business services)",
         "Python / FastAPI (AI services)",
         "Amazon EKS / ECS",
         "AWS Lambda",
