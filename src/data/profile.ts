@@ -90,6 +90,36 @@ export const profile = {
 
 export const featuredProjects: readonly Project[] = [
   {
+    slug: "falah-academy",
+    name: "Falah Academy",
+    badge: "Live",
+    description:
+      "Website and family-operations platform for Kent's first full-time Islamic school — public site, parent portal, admissions, attendance, fees, and teacher workflows. Built and operated solo on $0 free-tier infrastructure.",
+    impact: "$0/month infrastructure · every family on the portal",
+    stack: [
+      "React",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "GitHub Pages",
+      "Google Apps Script",
+    ],
+    links: [
+      {
+        label: "Read the case study",
+        href: "/falah-platform",
+        internal: true,
+      },
+      { label: "Visit website", href: "https://www.falahacademywa.org" },
+    ],
+    image: {
+      src: "/images/falah-academy.png",
+      alt: "Screenshot of the Falah Academy website homepage",
+      width: 800,
+      height: 500,
+    },
+  },
+  {
     slug: "career-vault",
     name: "Career Vault",
     badge: "Live",
@@ -110,21 +140,6 @@ export const featuredProjects: readonly Project[] = [
     image: {
       src: "/images/career-vault.png",
       alt: "Screenshot of the Career Vault dashboard showing a two-week calendar and job-search stat tiles",
-      width: 800,
-      height: 500,
-    },
-  },
-  {
-    slug: "falah-academy",
-    name: "Falah Academy",
-    badge: "Live",
-    description:
-      "Website for Kent's first full-time Islamic school — programs, admissions, and events, designed and shipped end to end on a custom domain. Launched as an MVP, with additional functionality in active development.",
-    stack: ["Web design", "Static site", "GitHub Pages"],
-    links: [{ label: "Visit website", href: "https://www.falahacademywa.org" }],
-    image: {
-      src: "/images/falah-academy.png",
-      alt: "Screenshot of the Falah Academy website homepage",
       width: 800,
       height: 500,
     },
